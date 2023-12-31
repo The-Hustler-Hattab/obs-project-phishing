@@ -1,0 +1,3322 @@
+<!DOCTYPE html>
+<html id="XF" lang="en-US" dir="LTR"
+	data-app="public"
+	data-template="xfrm_resource_view"
+	data-container-key="xfrmCategory-6"
+	data-content-key=""
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1703993799,9e9b71b7ab2069b053d67efe91cebd7f"
+	class="has-no-js template-xfrm_resource_view"
+	>
+
+<!-- Mirrored from obsproject.com/forum/resources/advanced-scene-switcher.395/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+	
+	
+	
+
+	<title>Advanced Scene Switcher | OBS Forums</title>
+
+	
+		
+		<meta name="description" content="This plugin will allow you to automate various tasks using &quot;Macros&quot;.
+Macros consist of a list of conditions under which a list of actions will be performed..." />
+		<meta property="og:description" content="This plugin will allow you to automate various tasks using &quot;Macros&quot;.
+Macros consist of a list of conditions under which a list of actions will be performed.
+
+
+
+Examples and guides can be found in the wiki.
+Feel free to contribute!
+
+Currently..." />
+		<meta property="twitter:description" content="This plugin will allow you to automate various tasks using &quot;Macros&quot;.
+Macros consist of a list of conditions under which a list of actions will be performed.
+
+
+
+Examples and guides can be found in..." />
+	
+	
+		<meta property="og:url" content="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" />
+	
+		<link rel="canonical" href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" />
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="OBS Forums" />
+
+
+	
+	
+		
+	
+	
+	<meta property="og:type" content="website" />
+
+
+	
+	
+		
+	
+	
+	
+		<meta property="og:title" content="Advanced Scene Switcher" />
+		<meta property="twitter:title" content="Advanced Scene Switcher" />
+	
+
+
+	
+	
+	
+	
+
+	
+		<meta name="theme-color" content="#000000" />
+	
+
+	
+	
+
+	
+
+
+	<link rel="preload" href="https://obsproject.com/forum/styles/fonts/fa/fa-regular-400.woff2?_v=5.15.3" as="font" type="font/woff2" crossorigin="anonymous" />
+
+
+	<link rel="preload" href="https://obsproject.com/forum/styles/fonts/fa/fa-solid-900.woff2?_v=5.15.3" as="font" type="font/woff2" crossorigin="anonymous" />
+
+
+<link rel="preload" href="https://obsproject.com/forum/styles/fonts/fa/fa-brands-400.woff2?_v=5.15.3" as="font" type="font/woff2" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://obsproject.com/forum/css.php?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=11&amp;l=1&amp;d=1684574114&amp;k=9c8b648dfe5221457afa24c138c803bcc6cb9ff0" />
+
+	<link rel="stylesheet" href="https://obsproject.com/forum/css.php?css=public%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Amessage.less%2Cpublic%3Anotices.less%2Cpublic%3Arating_stars.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Axfrm.less%2Cpublic%3Aextra.less&amp;s=11&amp;l=1&amp;d=1684574114&amp;k=c103ddb394df7fa1bc9ef3315054c1e65698214e" />
+
+	
+		<script src="https://obsproject.com/forum/js/xf/preamble.min.js?_v=fdedd7e7"></script>
+	
+
+
+	
+	
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-34644124-1', {
+			// 
+			
+			
+				'anonymize_ip': true,
+			
+		});
+	</script>
+
+</head>
+<body data-template="xfrm_resource_view">
+
+<div class="p-pageWrapper" id="top">
+
+
+
+<header class="p-header" id="header">
+	<div class="p-header-inner">
+		<div class="p-header-content">
+
+			<div class="p-header-logo p-header-logo--image">
+				<a href="https://obsproject.com/">
+					<img src="https://obsproject.com/assets/images/new_icon_small-r.png"
+						alt="OBS Forums"
+						 />
+				</a>
+			</div>
+
+			<div class="header_title">
+				<div class="header_title_main">OBS</div>
+				<div class="header_subtitle">Open Broadcaster Software<span class="header_smalltext">®️</span></div>
+			</div>
+
+			<div id="SocialButtons">
+				
+				<div id="DiscordButton">
+					<a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+						<img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+					</a>
+					<span class="tooltip">Discord</span>
+				</div>
+
+				<div id="TwitterButton">
+					<a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+						<i class="icon-twitter"></i>
+					</a>
+					<span class="tooltip">Twitter</span>
+				</div>
+
+				<div id="GitHubButton">
+					<a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+						<i class="icon-github"></i>
+					</a>
+					<span class="tooltip">GitHub</span>
+				</div>
+<!--
+				<div id="BlogButton">
+					<a href="https://obsproject.com/blog">
+						<i class="icon-blog">Blog</i>
+					</a>
+				</div>
+
+				<div id="LivechatButton">
+					<a href="https://obsproject.com/chat" target="_blank">
+						<i class="icon-comment">Community Chat</i>
+					</a>
+				</div>
+-->
+
+				<div id="ContributeButton">
+					<a href="https://obsproject.com/contribute">
+						<i class="icon-heart">Contribute</i>
+					</a>
+				</div>
+
+			</div>
+
+			<nav>
+
+			  <ul class="website-menu cf">
+					<li>
+						<a href="https://obsproject.com/">Home</a>
+					</li>
+					<li>
+						<a href="https://obsproject.com/download">Download</a>
+					</li>
+					<li>
+						<a href="https://obsproject.com/blog">Blog</a>
+					</li>
+					<li>
+						<a href="https://obsproject.com/help">Help</a>
+					</li>
+					<li>
+						<a class="active" href="https://obsproject.com/forum/">Forum</a>
+					</li>
+				  </ul>
+
+			</nav>
+
+		</div>
+	</div>
+</header>
+
+
+
+
+
+	<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+		
+	<nav class="p-nav">
+		<div class="p-nav-inner">
+			<a class="p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
+				<i aria-hidden="true"></i>
+				<span class="p-nav-menuText">Menu</span>
+			</a>
+
+			<div class="p-nav-smallLogo">
+				<a href="https://obsproject.com/">
+					<img src="https://obsproject.com/assets/images/new_icon_small-r.png"
+						alt="OBS Forums"
+					 />
+				</a>
+			</div>
+
+			<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+				<div class="hScroller-scroll">
+					<ul class="p-nav-list js-offCanvasNavSource">
+					
+						<li>
+							
+	<div class="p-navEl " >
+		
+
+			
+	
+	<a href="https://obsproject.com/"
+		class="p-navEl-link "
+		
+		data-xf-key="1"
+		data-nav-id="home">Home</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " data-has-children="true">
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+		
+		
+		data-nav-id="forums">Forums</a>
+
+
+			<a data-xf-key="2"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/whats-new/posts/"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="newPosts">New posts</a>
+
+	
+
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/search/?type=post"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="searchForums">Search forums</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " data-has-children="true">
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/plugins/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+		
+		
+		data-nav-id="obs_plugins">Plugins</a>
+
+
+			<a data-xf-key="3"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/resources/latest-reviews"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="pluginsLatestReviews">Latest reviews</a>
+
+	
+
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/search/?type=resource&amp;c%5Bcategories%5D%5B0%5D=6"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="pluginsSearchResources">Search plugins</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl is-selected" data-has-children="true">
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/resources/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+		
+		
+		data-nav-id="xfrm">Resources</a>
+
+
+			<a data-xf-key="4"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/resources/latest-reviews"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="xfrmLatestReviews">Latest reviews</a>
+
+	
+
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/search/?type=resource"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="xfrmSearchResources">Search resources</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+
+			<div class="p-nav-opposite">
+				<div class="p-navgroup p-account p-navgroup--guest">
+					
+						<a href="https://obsproject.com/forum/login/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+							data-xf-click="overlay" data-follow-redirects="on">
+							<span class="p-navgroup-linkText">Log in</span>
+						</a>
+						
+							<a href="https://obsproject.com/forum/register/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Register</span>
+							</a>
+						
+					
+				</div>
+
+				<div class="p-navgroup p-discovery">
+					<a href="https://obsproject.com/forum/whats-new/"
+						class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+						aria-label="What&#039;s new"
+						title="What&#039;s new">
+						<i aria-hidden="true"></i>
+						<span class="p-navgroup-linkText">What's new</span>
+					</a>
+
+					
+						<a href="https://obsproject.com/forum/search/"
+							class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+							data-xf-click="menu"
+							data-xf-key="/"
+							aria-label="Search"
+							aria-expanded="false"
+							aria-haspopup="true"
+							title="Search">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Search</span>
+						</a>
+						<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+							<form action="https://obsproject.com/forum/search/search" method="post"
+								class="menu-content"
+								data-xf-init="quick-search">
+
+								<h3 class="menu-header">Search</h3>
+								
+								<div class="menu-row">
+									
+										<div class="inputGroup inputGroup--joined">
+											<input type="text" class="input" name="keywords" placeholder="Search…" aria-label="Search" data-menu-autofocus="true" />
+											
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Search within">
+				<option value="">Everywhere</option>
+<option value="{&quot;search_type&quot;:&quot;resource&quot;}">Resources</option>
+<option value="{&quot;search_type&quot;:&quot;resource&quot;,&quot;c&quot;:{&quot;categories&quot;:[6],&quot;child_categories&quot;:1}}">This category</option>
+
+			</select>
+		
+										</div>
+									
+								</div>
+
+								
+								<div class="menu-row">
+									<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Search titles only</span></label>
+
+								</div>
+								
+								<div class="menu-row">
+									<div class="inputGroup">
+										<span class="inputGroup-text" id="ctrl_search_menu_by_member">By:</span>
+										<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Member" aria-labelledby="ctrl_search_menu_by_member" />
+									</div>
+								</div>
+								<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button--primary button button--icon button--icon--search"><span class="button-text">Search</span></button>
+										<a href="https://obsproject.com/forum/search/" class="button"><span class="button-text">Advanced search…</span></a>
+									</span>
+								</div>
+
+								<input type="hidden" name="_xfToken" value="1703993799,9e9b71b7ab2069b053d67efe91cebd7f" />
+							</form>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	</div>
+	
+	
+		<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+					
+						<li>
+							
+	<div class="p-navEl " >
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/resources/latest-reviews"
+		class="p-navEl-link "
+		
+		data-xf-key="alt+1"
+		data-nav-id="xfrmLatestReviews">Latest reviews</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " >
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/search/?type=resource"
+		class="p-navEl-link "
+		
+		data-xf-key="alt+2"
+		data-nav-id="xfrmSearchResources">Search resources</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+
+
+
+<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+	<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+	<div class="offCanvasMenu-content">
+		<div class="offCanvasMenu-header">
+			Menu
+			<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Close"></a>
+		</div>
+		
+			<div class="p-offCanvasRegisterLink">
+				<div class="offCanvasMenu-linkHolder">
+					<a href="https://obsproject.com/forum/login/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+						Log in
+					</a>
+				</div>
+				<hr class="offCanvasMenu-separator" />
+				
+					<div class="offCanvasMenu-linkHolder">
+						<a href="https://obsproject.com/forum/register/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Register
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+				
+			</div>
+		
+		<div class="js-offCanvasNavTarget"></div>
+	</div>
+</div>
+
+<div class="p-body">
+	<div class="p-body-inner">
+		<!--XF:EXTRA_OUTPUT-->
+
+		
+
+		
+
+		
+		
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+		
+			
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/" itemprop="item">
+			<span itemprop="name">Home</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+			
+
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/resources/" itemprop="item">
+			<span itemprop="name">Resources</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/plugins/" itemprop="item">
+			<span itemprop="name">OBS Studio Plugins</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+			
+
+		
+		</ul>
+	
+
+		
+
+		
+	<noscript><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding.</div></noscript>
+
+		
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">alternative browser</a>.</div>
+
+
+		
+			<div class="p-body-header">
+				
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<span class="contentRow-figure">
+				
+					<span  class="avatar avatar--s avatar--resourceIconDefault"><span></span><span class="u-srOnly">Resource icon</span></span>
+				
+			</span>
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							Advanced Scene Switcher
+						
+						
+							<span class="u-muted">1.24.2</span>
+						
+					</h1>
+					
+						<div class="p-title-pageAction">
+							
+								
+									<a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/download" class="button--cta button button--icon button--icon--redirect" target="_blank" rel="noopener" data-xf-init="tooltip" title="github.com"><span class="button-text">Go to download</span></a>
+								
+							
+						</div>
+					
+				</div>
+				
+					<div class="p-description">
+						
+							<ul class="listInline listInline--bullet">
+								<li>
+									<i class="fa--xf far fa-user" aria-hidden="true" title="Author"></i>
+									<span class="u-srOnly">Author</span>
+
+									<a href="https://obsproject.com/forum/members/warmuptill.64711/" class="username  u-concealed" dir="auto" data-user-id="64711" data-xf-init="member-tooltip">Warmuptill</a>
+								</li>
+								<li>
+									<i class="fa--xf far fa-clock" aria-hidden="true" title="Creation date"></i>
+									<span class="u-srOnly">Creation date</span>
+
+									<a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2016-05-19T20:34:20+0100" data-time="1463686460" data-date-string="May 19, 2016" data-time-string="8:34 PM" title="May 19, 2016 at 8:34 PM">May 19, 2016</time></a>
+								</li>
+								
+								
+									<li><span class="label label--accent">Featured</span></li>
+								
+								
+							</ul>
+						
+					</div>
+				
+			</div>
+		</div>
+	
+			</div>
+		
+
+		<div class="p-body-main  ">
+			
+
+			<div class="p-body-content">
+				
+				<div class="p-body-pageContent">
+
+
+
+
+
+	
+
+	
+
+
+
+
+	
+
+
+
+	
+		<div class="tabs tabs--standalone">
+			<div class="hScroller" data-xf-init="h-scroller">
+				<span class="hScroller-scroll">
+					<a class="tabs-tab is-active" href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/">Overview</a>
+					
+						
+						
+						
+							<a class="tabs-tab " href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/updates">Updates (75)</a>
+						
+						
+							<a class="tabs-tab " href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/reviews">Reviews (70)</a>
+						
+						
+							<a class="tabs-tab " href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/history">History</a>
+						
+						
+							<a class="tabs-tab " href="https://obsproject.com/forum/threads/advanced-scene-switcher.48264/">Discussion</a>
+						
+					
+				</span>
+			</div>
+		</div>
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			<script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Close",
+				"lightbox_next": "Next",
+				"lightbox_previous": "Previous",
+				"lightbox_error": "The requested content cannot be loaded. Please try again later.",
+				"lightbox_start_slideshow": "Start slideshow",
+				"lightbox_stop_slideshow": "Stop slideshow",
+				"lightbox_full_screen": "Full screen",
+				"lightbox_thumbnails": "Thumbnails",
+				"lightbox_download": "Download",
+				"lightbox_share": "Share",
+				"lightbox_zoom": "Zoom",
+				"lightbox_new_window": "New window",
+				"lightbox_toggle_sidebar": "Toggle sidebar"
+			}
+			</script>
+		
+		
+	
+
+
+<div class="block">
+	
+	<div class="block-container">
+		<div class="block-body lbContainer js-resourceBody"
+			data-xf-init="lightbox"
+			data-lb-id="resource-395"
+			data-lb-caption-desc="Warmuptill &middot; May 19, 2016 at 8:34 PM">
+
+			<div class="resourceBody">
+				<article class="resourceBody-main js-lbContainer">
+					
+
+	
+		<div class="resourceBody-fields resourceBody-fields--before">
+		
+			
+
+	
+		
+			
+
+			
+				<dl class="pairs pairs--columns pairs--fixedSmall pairs--customField" data-field="supp_ver">
+					<dt>Supported Bit Versions</dt>
+					<dd>
+	
+		
+			<ol class="listInline listInline--customField" data-field="supp_ver"><li>64-bit</li></ol>
+		
+	
+</dd>
+				</dl>
+			
+		
+	
+		
+			
+
+			
+				<dl class="pairs pairs--columns pairs--fixedSmall pairs--customField" data-field="source_code">
+					<dt>Source Code URL</dt>
+					<dd>
+	
+		
+			<a href="https://github.com/WarmUpTill/SceneSwitcher" class="link link--external" rel="nofollow" target="_blank">https://github.com/WarmUpTill/SceneSwitcher</a>
+		
+	
+</dd>
+				</dl>
+			
+		
+	
+		
+			
+
+			
+				<dl class="pairs pairs--columns pairs--fixedSmall pairs--customField" data-field="min_studio_ver">
+					<dt>Minimum OBS Studio Version</dt>
+					<dd>
+	
+		
+			28.0.0
+		
+	
+</dd>
+				</dl>
+			
+		
+	
+		
+			
+
+			
+				<dl class="pairs pairs--columns pairs--fixedSmall pairs--customField" data-field="supp_platforms">
+					<dt>Supported Platforms</dt>
+					<dd>
+	
+		
+			<ol class="listInline listInline--customField" data-field="supp_platforms"><li>Windows</li><li>Mac OS X</li><li>Linux</li></ol>
+		
+	
+</dd>
+				</dl>
+			
+		
+	
+
+		
+		</div>
+	
+
+
+					
+						<div class="bbWrapper">This plugin will allow you to automate various tasks using &quot;Macros&quot;.<br />
+Macros consist of a list of conditions under which a list of actions will be performed.<br />
+<br />
+<div class="bbImageWrapper  js-lbImage" title="MacroTabExample.PNG"
+		data-src="https://obsproject.com/forum/attachments/macrotabexample-png.82393/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/macrotabexample-png.82393/"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="MacroTabExample.PNG"
+			title="MacroTabExample.PNG"
+			width="1069" height="517" loading="lazy" />
+	</div><br />
+<br />
+<span style="font-size: 18px">Examples and guides can be found in the <a href="https://github.com/WarmUpTill/SceneSwitcher/wiki" target="_blank" class="link link--external" rel="nofollow ugc noopener">wiki</a>.<br />
+Feel free to contribute!</span><br />
+<br />
+Currently supported <b>condition </b>types are:<br />
+<ul>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Audio-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Audio</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Cursor-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Cursor position</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Date-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Date and time</a></li>
+<li data-xf-list-type="ul">File</li>
+<li data-xf-list-type="ul">Filter</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Hotkey#hotkey-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Hotkey</a></li>
+<li data-xf-list-type="ul">Idle detection</li>
+<li data-xf-list-type="ul">MIDI</li>
+<li data-xf-list-type="ul">Macro</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Media-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Media</a></li>
+<li data-xf-list-type="ul">OBS statistics</li>
+<li data-xf-list-type="ul">OpenVR</li>
+<li data-xf-list-type="ul">Plugin state</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Process-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Process</a></li>
+<li data-xf-list-type="ul">Profile</li>
+<li data-xf-list-type="ul">Recording</li>
+<li data-xf-list-type="ul">Replay buffer</li>
+<li data-xf-list-type="ul">Run</li>
+<li data-xf-list-type="ul">Scene</li>
+<li data-xf-list-type="ul">Scene item order</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Scene-item-transform-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Scene item transform</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Scene-item-visibility#scene-item-visibility-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Scene item visibility</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Slide-Show-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Slide Show</a></li>
+<li data-xf-list-type="ul">Source</li>
+<li data-xf-list-type="ul">Streaming</li>
+<li data-xf-list-type="ul">Studio mode</li>
+<li data-xf-list-type="ul">Timer</li>
+<li data-xf-list-type="ul">Transition</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Variables#variable-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Variable</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Video-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Video</a></li>
+<li data-xf-list-type="ul">Virtual camera</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Websockets#websocket-condition" target="_blank" class="link link--external" rel="nofollow ugc noopener">Websocket</a></li>
+<li data-xf-list-type="ul">Window title</li>
+</ul>Currently supported <b>action </b>types are:<br />
+<ul>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Audio-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Audio</a></li>
+<li data-xf-list-type="ul">File</li>
+<li data-xf-list-type="ul">Filter</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Http-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Http</a></li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Hotkey#hotkey-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Hotkey</a></li>
+<li data-xf-list-type="ul">MIDI</li>
+<li data-xf-list-type="ul">Macro</li>
+<li data-xf-list-type="ul">Media</li>
+<li data-xf-list-type="ul">Open Sound Control</li>
+<li data-xf-list-type="ul">Plugin state</li>
+<li data-xf-list-type="ul">Profile</li>
+<li data-xf-list-type="ul">Projector</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Random-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Random</a></li>
+<li data-xf-list-type="ul">Recording</li>
+<li data-xf-list-type="ul">Replay buffer</li>
+<li data-xf-list-type="ul">Run</li>
+<li data-xf-list-type="ul">Scene collection</li>
+<li data-xf-list-type="ul">Scene item lock</li>
+<li data-xf-list-type="ul">Scene item order</li>
+<li data-xf-list-type="ul">Scene item transform</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Scene-item-visibility#scene-item-visibility-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Scene item visibility</a></li>
+<li data-xf-list-type="ul">Screenshot</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Sequence-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Sequence</a></li>
+<li data-xf-list-type="ul">Source</li>
+<li data-xf-list-type="ul">Streaming</li>
+<li data-xf-list-type="ul">Studio mode</li>
+<li data-xf-list-type="ul">Switch scene</li>
+<li data-xf-list-type="ul">System tray notification</li>
+<li data-xf-list-type="ul">Timer</li>
+<li data-xf-list-type="ul">Transition</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Variables#variable-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Variable</a></li>
+<li data-xf-list-type="ul">Virtual camera</li>
+<li data-xf-list-type="ul">Wait</li>
+<li data-xf-list-type="ul"><a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/Websockets#websocket-action" target="_blank" class="link link--external" rel="nofollow ugc noopener">Websocket</a></li>
+</ul><b><i>Select &quot;<u>Go to download</u>&quot; for download and not &quot;Source Code URL&quot;.</i></b><br />
+<br />
+Please have a quick look at the <a href="https://github.com/WarmUpTill/SceneSwitcher/wiki/FAQ" target="_blank" class="link link--external" rel="nofollow ugc noopener">FAQ</a> in case you are having an issue.<br />
+<br />
+<b>Settings configuration example:</b><br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span>Spoiler: <span class="bbCodeSpoiler-button-title">Video source output example (Macro)</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content">Below is a short description on how to set up an automated scene switch if the output of a video source has not changed for a specified duration.<br />
+<br />
+I assume the plugin is installed so let's open the settings.<br />
+To do so go Tools -&gt; Advanced Scene Switcher.<br />
+                                   
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="OpenPlugin.png"
+		data-src="https://obsproject.com/forum/attachments/openplugin-png.75834/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/openplugin-png.75834/"
+			data-url="https://obsproject.com/forum/attachments/openplugin-png.75834/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="OpenPlugin.png"
+			title="OpenPlugin.png"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+<br />
+You will end up on the &quot;General&quot; tab of the plugin.<br />
+Here we can make sure that the plugin is running by clicking the &quot;Start&quot; button if necessary.<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="StartPlugin.png"
+		data-src="https://obsproject.com/forum/attachments/startplugin-png.75835/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/startplugin-png.75835/"
+			data-url="https://obsproject.com/forum/attachments/startplugin-png.75835/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="StartPlugin.png"
+			title="StartPlugin.png"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+<br />
+Next we switch to the Macro tab to set up our automated scene switch. (1)<br />
+Here we add a new macro by clicking the plus symbol on the lower left (2) and enter a name for our new macro.<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="MacroTab.png"
+		data-src="https://obsproject.com/forum/attachments/macrotab-png.75836/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/macrotab-png.75836/"
+			data-url="https://obsproject.com/forum/attachments/macrotab-png.75836/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="MacroTab.png"
+			title="MacroTab.png"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+<br />
+Now we have to add the condition we want to trigger the automated scene switch by clicking the corresponding plus symbol (1) and selecting the type of the condition we want to use (2).<br />
+As we want use video based scene switching we select the type &quot;Video&quot;.<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="VideoCondition.png"
+		data-src="https://obsproject.com/forum/attachments/videocondition-png.75837/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/videocondition-png.75837/"
+			data-url="https://obsproject.com/forum/attachments/videocondition-png.75837/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="VideoCondition.png"
+			title="VideoCondition.png"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+<br />
+The next step is to configure the settings of this condition.<br />
+We select the video source we want to monitor (1) and the type of monitoring we want to take place (2).<br />
+For this particular use case we choose &quot;hos not changed&quot;.<br />
+Finally we add the time constraint by pressing the small clock icon (3).<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="VideoConditionSettings.png"
+		data-src="https://obsproject.com/forum/attachments/videoconditionsettings-png.75838/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/videoconditionsettings-png.75838/"
+			data-url="https://obsproject.com/forum/attachments/videoconditionsettings-png.75838/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="VideoConditionSettings.png"
+			title="VideoConditionSettings.png"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+For the time constraint we specify the type of constraint (1) we want to choose and specify the duration (2).<br />
+In this case we select &quot;For at least&quot; and &quot;3 seconds&quot;.<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="TimeConstraint.png"
+		data-src="https://obsproject.com/forum/attachments/timeconstraint-png.75839/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/timeconstraint-png.75839/"
+			data-url="https://obsproject.com/forum/attachments/timeconstraint-png.75839/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="TimeConstraint.png"
+			title="TimeConstraint.png"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+As a last step we have to specify the action that has to be performed if the condition we specified above is true.<br />
+To do this we have to add a new action to our macro by pressing the plus button in the lower middle of the macro tab.<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="AddAction.PNG"
+		data-src="https://obsproject.com/forum/attachments/addaction-png.75840/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/addaction-png.75840/"
+			data-url="https://obsproject.com/forum/attachments/addaction-png.75840/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="AddAction.PNG"
+			title="AddAction.PNG"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+<br />
+The default action that is chose is already our desired one -  &quot;Switch scene&quot; - so we do not have to adjust the type of the action.<br />
+However we have to select the scene we want to switch to (1) the transition type we want to use (2) and the duration of the transition (3).<br />
+(The duration can be left at &quot;0&quot; to use whatever is configured as the current transition duration)<br />
+<br />
+<br />
+
+	
+
+	
+	
+		
+		
+
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="SwitchSceneSettings.PNG"
+		data-src="https://obsproject.com/forum/attachments/switchscenesettings-png.75841/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/switchscenesettings-png.75841/"
+			data-url="https://obsproject.com/forum/attachments/switchscenesettings-png.75841/"
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="SwitchSceneSettings.PNG"
+			title="SwitchSceneSettings.PNG"
+			width="" height="" loading="lazy" />
+	</div>
+
+
+<br />
+<br />
+Now everything should be set up and the scene should be switch accordingly.</div>
+		</div>
+	</div>
+</div><br />
+<b>Installing the plugin:</b><br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span>Spoiler: <span class="bbCodeSpoiler-button-title">Windows</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content"><b>Recommended</b>: Run the provided installer. (You might have to click 'More info' and select 'Run anyway' if it is blocked by Windows)<br />
+<br />
+Alternatively manually copy the '<code class="bbCodeInline">obs-plugins</code>' and 'data' folders in the respective OBS Studio installation directory.<br />
+It is usually located at '<code class="bbCodeInline">C:\Program Files\obs-studio</code>'.<br />
+Install the Visual C++ Redistributable for Visual Studio 2019, if you have not done so already.<br />
+<a href="https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads" target="_blank" class="link link--external" rel="nofollow ugc noopener">https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads</a><br />
+64bit: <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe" target="_blank" class="link link--external" rel="nofollow ugc noopener">vc_redist.x64.exe</a><br />
+32:bit: <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe" target="_blank" class="link link--external" rel="nofollow ugc noopener">vc_redist.x86.exe</a></div>
+		</div>
+	</div>
+</div>
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span>Spoiler: <span class="bbCodeSpoiler-button-title">MacOS</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content"><b>Recommended:</b> Run the provided installer. (You might have to right click and select 'open' if it is blocked)<br />
+<br />
+Alternatively manually install the the plugin files to <code class="bbCodeInline">~/Library/Application\ Support/obs-studio/plugins/advanced-scene-switcher.plugin</code>.<br />
+<br />
+It might also be necessary (if MacOS decided to be annoying) to remove the plugin from the quarantine.<br />
+To do this follow these steps:<br />
+<ol>
+<li data-xf-list-type="ol">Open the Terminal application</li>
+<li data-xf-list-type="ol">Run the command: <code class="bbCodeInline">xattr -r -d com.apple.quarantine ~/Library/Application\ Support/obs-studio/plugins/advanced-scene-switcher.plugin</code></li>
+</ol>Thanks <a href="https://github.com/djSmileyMike" target="_blank" class="link link--external" rel="nofollow ugc noopener">djSmileyMike</a> for your help!</div>
+		</div>
+	</div>
+</div>
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="bbCodeSpoiler-button button--longText button" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span>Spoiler: <span class="bbCodeSpoiler-button-title">Linux</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content">Note that the plugin has dependencies to:<br />
+* <code class="bbCodeInline">libXss</code><br />
+Optional:<br />
+* <code class="bbCodeInline">libXtst</code><br />
+* <code class="bbCodeInline">libcurl</code><br />
+* <code class="bbCodeInline">libopencv-imgproc</code><br />
+* <code class="bbCodeInline">libopencv-objdetect</code><br />
+<br />
+If you are using snap you can install the following package for an OBS installation which comes bundled with the plugin:<br />
+<code class="bbCodeInline">sudo snap install obs-studio</code><br />
+<br />
+The plugin is also available via the Flatpak package manager for users who installed OBS via Flatpak:<br />
+<code class="bbCodeInline">flatpak install com.obsproject.Studio.Plugin.SceneSwitcher</code><br />
+<br />
+If you have installed OBS via other means, it is most likely necessary to install the plugin manually.<br />
+To do so copy the advanced-scene-switcher.so file and into the OBS Studio plugin folder.<br />
+The location of this folder can vary, so you might have to look around a bit.<br />
+<br />
+Examples are ...<br />
+<code class="bbCodeInline">/usr/lib/obs-plugins/</code><br />
+<code class="bbCodeInline">/usr/lib/x86_64-linux-gnu/obs-plugins/</code><br />
+<code class="bbCodeInline">/usr/share/obs/obs-plugins/</code><br />
+<code class="bbCodeInline">~/.config/obs-studio/plugins/advanced-scene-switcher/bin/64bit/</code><br />
+<code class="bbCodeInline">~/.local/share/flatpak/app/com.obsproject.Studio/x86_64/stable/active/files/lib/obs-plugins/</code><br />
+<code class="bbCodeInline">/var/lib/flatpak/app/com.obsproject.Studio/x86_64/stable/active/files/lib/obs-plugins/</code><br />
+<br />
+Unfortunately the expected location of the locale, which can be found in the data folder, can vary also.<br />
+The data folder, usually should be copied to:<br />
+<code class="bbCodeInline">~/.config/obs-studio/plugins/advanced-scene-switcher/</code><br />
+<br />
+If this does not work you can try to copy the &quot;locale&quot; folder found inside the data folder to:<br />
+<code class="bbCodeInline">/usr/share/obs/obs-plugins/advanced-scene-switcher/locale</code><br />
+<code class="bbCodeInline">~/.local/share/flatpak/app/com.obsproject.Studio/x86_64/stable/active/files/share/obs/obs-plugins/advanced-scene-switcher/locale</code><br />
+<code class="bbCodeInline">/var/lib/flatpak/app/com.obsproject.Studio/x86_64/stable/active/files/share/obs/obs-plugins/advanced-scene-switcher/locale</code><br />
+<br />
+In doubt, please check where other &quot;en-US.ini&quot; files are located on your system.<br />
+<br />
+When manually installing the prebuilt artifacts from GitHub please keep in mind that they are built for Qt6.<br />
+If your OBS installation is still linking against Qt5 and you install a plugin depending on Qt6 OBS might crash.<br />
+Manually compiling the plugin for Qt5 is possible still if it should be required.</div>
+		</div>
+	</div>
+</div><br />
+<b>Additional Information and Notes:</b><br />
+If you want to build the plug-in yourself the source is available <a href="https://github.com/WarmUpTill/SceneSwitcher/blob/master/BUILDING.md" target="_blank" class="link link--external" rel="nofollow ugc noopener">here</a>.<br />
+<br />
+<b>Please report any problems</b> you experience using this plug-in here, on GitHub or send me a direct message.</div>
+					
+
+					
+
+	
+
+
+					
+						
+					
+
+					
+
+					<div class="reactionsBar js-reactionsList is-active">
+						
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" /></span></li><li><span class="reaction reaction--small reaction--2" data-reaction-id="2"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Love" title="Love" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Reactions:</span>
+<a class="reactionsBar-link" href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/update/930/reactions" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>Destroy666</bdi>, <bdi>NAZARUIZ</bdi>, <bdi>LexXxusTV</bdi> and 22 others</a>
+					</div>
+
+					
+				</article>
+
+				<div class="resourceBody-sidebar">
+					<div class="resourceSidebarGroup">
+						<dl class="pairs pairs--justified">
+							<dt>Author</dt>
+							<dd><a href="https://obsproject.com/forum/members/warmuptill.64711/" class="username " dir="auto" data-user-id="64711" data-xf-init="member-tooltip">Warmuptill</a></dd>
+						</dl>
+						
+							<dl class="pairs pairs--justified">
+								<dt>Downloads</dt>
+								<dd>470,193</dd>
+							</dl>
+						
+						<dl class="pairs pairs--justified">
+							<dt>Views</dt>
+							<dd>1,036,944</dd>
+						</dl>
+						<dl class="pairs pairs--justified">
+							<dt>First release</dt>
+							<dd><time  class="u-dt" dir="auto" datetime="2016-05-19T20:34:20+0100" data-time="1463686460" data-date-string="May 19, 2016" data-time-string="8:34 PM" title="May 19, 2016 at 8:34 PM">May 19, 2016</time></dd>
+						</dl>
+						<dl class="pairs pairs--justified">
+							<dt>Last update</dt>
+							<dd><time  class="u-dt" dir="auto" datetime="2023-12-17T10:55:45+0000" data-time="1702810545" data-date-string="Dec 17, 2023" data-time-string="10:55 AM" title="Dec 17, 2023 at 10:55 AM">Dec 17, 2023</time></dd>
+						</dl>
+						<dl class="pairs pairs--justified">
+							<dt>Rating</dt>
+							<dd>
+								
+	<span class="ratingStarsRow ratingStarsRow--textBlock">
+		
+	
+
+	<span class="ratingStars " title="4.62 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--half"></span>
+		<span class="u-srOnly">4.62 star(s)</span>
+	</span>
+
+		<span class="ratingStarsRow-text">
+			73 ratings
+		</span>
+	</span>
+
+							</dd>
+						</dl>
+					</div>
+
+					
+						<div class="resourceSidebarGroup resourceSidebarGroup--buttons">
+							
+								
+									<a href="https://obsproject.com/forum/threads/advanced-scene-switcher.48264/" class="button--fullWidth button"><span class="button-text">Join the discussion</span></a>
+								
+
+								
+
+								
+							
+						</div>
+					
+
+
+					
+
+					
+						<div class="resourceSidebarGroup">
+							<h4 class="resourceSidebarGroup-title">
+								<a href="https://obsproject.com/forum/resources/authors/warmuptill.64711/">More resources from Warmuptill</a>
+							</h4>
+							<ul class="resourceSidebarList">
+							
+								<li>
+									
+	<div class="contentRow">
+		<div class="contentRow-figure">
+			
+				<a href="https://obsproject.com/forum/resources/video-transition-stinger-transition.498/" class="avatar avatar--xxs avatar--resourceIconDefault"><span></span><span class="u-srOnly">Resource icon</span></a>
+			
+		</div>
+		<div class="contentRow-main contentRow-main--close">
+			<a href="https://obsproject.com/forum/resources/video-transition-stinger-transition.498/">Video Transition / Stinger Transition</a>
+			<div class="contentRow-lesser">Use a video to transition from one scene to the next.</div>
+			
+		</div>
+	</div>
+
+								</li>
+							
+							</ul>
+						</div>
+					
+
+					
+						<div class="resourceSidebarGroup">
+							<h4 class="resourceSidebarGroup-title">Share this resource</h4>
+							
+								
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--reddit" data-href="https://reddit.com/submit?url={url}&amp;title={title}">
+							<i aria-hidden="true"></i>
+							<span>Reddit</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--pinterest" data-href="https://pinterest.com/pin/create/bookmarklet/?url={url}&amp;description={title}&amp;media={image}">
+							<i aria-hidden="true"></i>
+							<span>Pinterest</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--tumblr" data-href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&amp;title={title}">
+							<i aria-hidden="true"></i>
+							<span>Tumblr</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--whatsApp" data-href="https://api.whatsapp.com/send?text={title}%20{url}">
+							<i aria-hidden="true"></i>
+							<span>WhatsApp</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" data-href="mailto:?subject={title}&amp;body={url}">
+							<i aria-hidden="true"></i>
+							<span>Email</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i aria-hidden="true"></i>
+							<span>Share</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" data-clipboard="{url}">
+							<i aria-hidden="true"></i>
+							<span>Link</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+							
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-header">Latest updates</h3>
+			<ol class="block-body">
+			
+				<li class="block-row block-row--separated">
+					<h3 class="block-textHeader">
+						<a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/update/5933/">Advanced scene switcher 1.24.2</a>
+					</h3>
+					<div>Important notes:
+Please make sure to back up your settings!
+If you run into any issues, please...</div>
+			
+				<li class="block-row block-row--separated">
+					<h3 class="block-textHeader">
+						<a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/update/5918/">Advanced Scene Switcher 1.24.1</a>
+					</h3>
+					<div>Important notes:
+Please make sure to back up your settings!
+If you run into any issues, please...</div>
+			
+				<li class="block-row block-row--separated">
+					<h3 class="block-textHeader">
+						<a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/update/5882/">Advanced Scene Switcher 1.24.0</a>
+					</h3>
+					<div>Important notes:
+Please make sure to back up your settings!
+If you run into any issues, please...</div>
+			
+			</ol>
+			<div class="block-footer">
+				<span class="block-footer-controls"><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/updates" class="button--link button"><span class="button-text">Read more…</span></a></span>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="block">
+		<div class="block-container">
+			<h3 class="block-header">Latest reviews</h3>
+			<div class="block-body">
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4362"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="ATs_fm">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/ats_fm.320157/" class="avatar avatar--s" data-user-id="320157" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/320/320157.jpg?1618605306" srcset="/forum/data/avatars/m/320/320157.jpg?1618605306 2x" alt="ATs_fm" class="avatar-u320157-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/ats_fm.320157/" class="username " dir="auto" data-user-id="320157" data-xf-init="member-tooltip">ATs_fm</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4362/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-11-30T17:29:11+0000" data-time="1701365351" data-date-string="Nov 30, 2023" data-time-string="5:29 PM" title="Nov 30, 2023 at 5:29 PM">Nov 30, 2023</time></a></li>
+							
+								<li>Version: 1.24.0</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						one of the best plugins out there! complete automation possible, if then conditions/actions, twitch integration, MIDI support and an extremely helpful and supportive dev! kann man nicht meckern &lt;3
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4362">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score   js-voteCount"
+			data-score="0">0</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4352"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="cah-renan-ferreira">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/cah-renan-ferreira.463218/" class="avatar avatar--s" data-user-id="463218" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/463/463218.jpg?1701102981" srcset="/forum/data/avatars/m/463/463218.jpg?1701102981 2x" alt="cah-renan-ferreira" class="avatar-u463218-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/cah-renan-ferreira.463218/" class="username " dir="auto" data-user-id="463218" data-xf-init="member-tooltip">cah-renan-ferreira</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4352/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-11-27T17:19:46+0000" data-time="1701105586" data-date-string="Nov 27, 2023" data-time-string="5:19 PM" title="Nov 27, 2023 at 5:19 PM">Nov 27, 2023</time></a></li>
+							
+								<li>Version: 1.24.0</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						Very flexible! Nice plugin!
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4352">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score   js-voteCount"
+			data-score="0">0</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4285"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="IAMprodigi">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/iamprodigi.455966/" class="avatar avatar--s" data-user-id="455966" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/455/455966.jpg?1694820420" srcset="/forum/data/avatars/m/455/455966.jpg?1694820420 2x" alt="IAMprodigi" class="avatar-u455966-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/iamprodigi.455966/" class="username " dir="auto" data-user-id="455966" data-xf-init="member-tooltip">IAMprodigi</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4285/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-10-20T22:42:55+0100" data-time="1697838175" data-date-string="Oct 20, 2023" data-time-string="10:42 PM" title="Oct 20, 2023 at 10:42 PM">Oct 20, 2023</time></a></li>
+							
+								<li>Version: 1.23.1</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						Love this plugin, such a vast array of functionality and I have barely scratched the surface. Is there a WIKI or FAQ somewhere? I have an issue I&#039;&#039;m not sure how to break out of a looping set of scenes when I manually change to a new scene the macro keeps running... I know it&#039;s probably a simple thing I need to change but I haven&#039;t figured it out as of yet. :)
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+					<div class="message-responses js-messageResponses">
+					
+
+						
+							
+	<div class="message-responseRow">
+		<div class="comment">
+			<div class="comment-inner">
+				<span class="comment-avatar">
+					<a href="https://obsproject.com/forum/members/warmuptill.64711/" class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="64711" data-xf-init="member-tooltip" style="background-color: #d4c4c4; color: #846262">
+			<span class="avatar-u64711-s" role="img" aria-label="Warmuptill">W</span> 
+		</a>
+				</span>
+				<div class="comment-main">
+					<div class="comment-content">
+						<div class="comment-contentWrapper">
+							<a href="https://obsproject.com/forum/members/warmuptill.64711/" class="username  comment-user" dir="auto" data-user-id="64711" data-xf-init="member-tooltip">Warmuptill</a>
+							<div class="comment-body">Glad you are enjoying the plugin!<br />
+<br />
+There is a wiki:<br />
+<a href="https://github.com/WarmUpTill/SceneSwitcher/wiki" class="link link--external" rel="nofollow" target="_blank">https://github.com/WarmUpTill/SceneSwitcher/wiki</a><br />
+<br />
+But as it mostly covers the basics and a few examples it is usually best to simply ask in the discussion thread if you have questions :)</div>
+							
+						</div>
+					</div>
+
+					<div class="comment-actionBar actionBar">
+						<div class="actionBar-set actionBar-set--internal">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+						
+
+						
+
+					
+					</div>
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4285">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score   js-voteCount"
+			data-score="0">0</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4164"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="peejaygee">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/peejaygee.17928/" class="avatar avatar--s" data-user-id="17928" data-xf-init="member-tooltip">
+			<img src="https://secure.gravatar.com/avatar/bf8854ad6e1383a9587022166716e148?s=48" srcset="https://secure.gravatar.com/avatar/bf8854ad6e1383a9587022166716e148?s=96 2x" alt="peejaygee" class="avatar-u17928-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/peejaygee.17928/" class="username " dir="auto" data-user-id="17928" data-xf-init="member-tooltip">peejaygee</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4164/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-08-25T16:00:34+0100" data-time="1692975634" data-date-string="Aug 25, 2023" data-time-string="4:00 PM" title="Aug 25, 2023 at 4:00 PM">Aug 25, 2023</time></a></li>
+							
+								<li>Version: 1.23.1</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						Loved the plugin as it was before I needed a tweak. I asked.. at first, the tweak wasn&#039;t an option, but just like magic he implemented what I needed and I updated, setup and it worked first time.<br />
+<br />
+Thank you for your great plugin.
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4164">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score   js-voteCount"
+			data-score="0">0</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4153"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="PNO">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/pno.353152/" class="avatar avatar--s" data-user-id="353152" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/353/353152.jpg?1632916333" srcset="/forum/data/avatars/m/353/353152.jpg?1632916333 2x" alt="PNO" class="avatar-u353152-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/pno.353152/" class="username " dir="auto" data-user-id="353152" data-xf-init="member-tooltip">PNO</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4153/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-08-19T01:29:25+0100" data-time="1692404965" data-date-string="Aug 19, 2023" data-time-string="1:29 AM" title="Aug 19, 2023 at 1:29 AM">Aug 19, 2023</time></a></li>
+							
+								<li>Version: 1.23.1</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						@Warmuptill, I can&#039;t live without this plugin! You&#039;re updates just keep improving! For that I am grateful! Thank you!<br />
+<br />
+Question: <br />
+Has there been consideration with Macro&#039;s to be able to setup a case select or an IF, Than, Else scenario? I keep finding myself wanting 1 macro with multiple conditions and associated actions for a  condition. This would cut down on the need for multiple macros to accomplish the same. <br />
+<br />
+Thanks again!
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+					<div class="message-responses js-messageResponses">
+					
+
+						
+							
+	<div class="message-responseRow">
+		<div class="comment">
+			<div class="comment-inner">
+				<span class="comment-avatar">
+					<a href="https://obsproject.com/forum/members/warmuptill.64711/" class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="64711" data-xf-init="member-tooltip" style="background-color: #d4c4c4; color: #846262">
+			<span class="avatar-u64711-s" role="img" aria-label="Warmuptill">W</span> 
+		</a>
+				</span>
+				<div class="comment-main">
+					<div class="comment-content">
+						<div class="comment-contentWrapper">
+							<a href="https://obsproject.com/forum/members/warmuptill.64711/" class="username  comment-user" dir="auto" data-user-id="64711" data-xf-init="member-tooltip">Warmuptill</a>
+							<div class="comment-body">Glad to hear you enjoy the plugin! :)<br />
+<br />
+&gt;Has there been consideration with Macro&#039;s to be able to setup a case select or an IF, Than, Else scenario? <br />
+It was requested a few times, but I simply did not get around to it yet.<br />
+When I find the time, I will to look into it, but I can&#039;t give you any promises / timelines.</div>
+							
+						</div>
+					</div>
+
+					<div class="comment-actionBar actionBar">
+						<div class="actionBar-set actionBar-set--internal">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+						
+
+						
+
+					
+					</div>
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4153">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score   js-voteCount"
+			data-score="0">0</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4132"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="azamet">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/azamet.396375/" class="avatar avatar--s avatar--default avatar--default--dynamic" data-user-id="396375" data-xf-init="member-tooltip" style="background-color: #a329a3; color: #e699e6">
+			<span class="avatar-u396375-s" role="img" aria-label="azamet">A</span> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/azamet.396375/" class="username " dir="auto" data-user-id="396375" data-xf-init="member-tooltip">azamet</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4132/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-08-05T23:54:43+0100" data-time="1691276083" data-date-string="Aug 5, 2023" data-time-string="11:54 PM" title="Aug 5, 2023 at 11:54 PM">Aug 5, 2023</time></a></li>
+							
+								<li>Version: 1.23.0</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						without this plugin, obs is a nothing.
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4132">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score is-positive  js-voteCount"
+			data-score="1">1</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4131"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="Destroy666">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/destroy666.359681/" class="avatar avatar--s" data-user-id="359681" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/359/359681.jpg?1691692836" srcset="/forum/data/avatars/m/359/359681.jpg?1691692836 2x" alt="Destroy666" class="avatar-u359681-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/destroy666.359681/" class="username " dir="auto" data-user-id="359681" data-xf-init="member-tooltip">Destroy666</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4131/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-08-05T21:14:52+0100" data-time="1691266492" data-date-string="Aug 5, 2023" data-time-string="9:14 PM" title="Aug 5, 2023 at 9:14 PM">Aug 5, 2023</time></a></li>
+							
+								<li>Version: 1.23.0</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						Basically Tasker/AHK of OBS. Automation on quite high level.
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4131">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score is-positive  js-voteCount"
+			data-score="1">1</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4106"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="YorVeX">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/yorvex.50742/" class="avatar avatar--s" data-user-id="50742" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/50/50742.jpg?1553272761" srcset="/forum/data/avatars/m/50/50742.jpg?1553272761 2x" alt="YorVeX" class="avatar-u50742-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/yorvex.50742/" class="username " dir="auto" data-user-id="50742" data-xf-init="member-tooltip">YorVeX</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4106/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-07-24T02:07:55+0100" data-time="1690160875" data-date-string="Jul 24, 2023" data-time-string="2:07 AM" title="Jul 24, 2023 at 2:07 AM">Jul 24, 2023</time></a></li>
+							
+								<li>Version: 1.22.1</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						The swiss army knife of automatic/logic flows in OBS, every second time someone wants to solve a specific problem and asks for a solution on the OBS Discord, it&#039;s this plugin which is suggested to them. A real must-have.
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4106">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score is-positive  js-voteCount"
+			data-score="2">2</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-4024"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="Bairespm">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/bairespm.276788/" class="avatar avatar--s avatar--default avatar--default--dynamic" data-user-id="276788" data-xf-init="member-tooltip" style="background-color: #6633cc; color: #d1c2f0">
+			<span class="avatar-u276788-s" role="img" aria-label="Bairespm">B</span> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/bairespm.276788/" class="username " dir="auto" data-user-id="276788" data-xf-init="member-tooltip">Bairespm</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/4024/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-05-30T00:00:28+0100" data-time="1685401228" data-date-string="May 30, 2023" data-time-string="12:00 AM" title="May 30, 2023 at 12:00 AM">May 30, 2023</time></a></li>
+							
+								<li>Version: 1.22.1</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						Es el mejor complemento de obs, no imagino obs sin este complemento sinceramente te hace la vida muchísimo más fácil y por otra parte es super adictivo. El programador siempre predispuesto a ayudarte lo que lo hace aún mejor todavía. Felicitaciones. Un trabajo asombroso
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-4024">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score   js-voteCount"
+			data-score="0">0</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+				
+
+	
+	
+
+	<div class="message message--simple">
+		<span class="u-anchorTarget" id="resource-review-3962"></span>
+		<div class="message-inner">
+			<span class="message-cell message-cell--user">
+				
+					
+	<header itemscope itemtype="https://schema.org/Person" class="message-user">
+		<meta itemprop="name" content="KattPhloxworthy">
+		<div class="message-avatar">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/kattphloxworthy.308253/" class="avatar avatar--s" data-user-id="308253" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/s/308/308253.jpg?1613441505" srcset="/forum/data/avatars/m/308/308253.jpg?1613441505 2x" alt="KattPhloxworthy" class="avatar-u308253-s" width="48" height="48" loading="lazy" itemprop="image" /> 
+		</a>
+			</div>
+		</div>
+		<span class="message-userArrow"></span>
+	</header>
+
+				
+			</span>
+			<div class="message-cell message-cell--main">
+				<div class="message-content js-messageContent">
+					<div class="message-attribution message-attribution--plain">
+						
+
+						<ul class="listInline listInline--bullet">
+							<li class="message-attribution-user">
+								
+									<a href="https://obsproject.com/forum/members/kattphloxworthy.308253/" class="username " dir="auto" data-user-id="308253" data-xf-init="member-tooltip">KattPhloxworthy</a>
+								
+							</li>
+							<li>
+								
+	
+
+	<span class="ratingStars ratingStars--smaller" title="5.00 star(s)">
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="ratingStars-star ratingStars-star--full"></span>
+		<span class="u-srOnly">5.00 star(s)</span>
+	</span>
+
+							</li>
+							<li><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/review/3962/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2023-04-24T05:18:44+0100" data-time="1682309924" data-date-string="Apr 24, 2023" data-time-string="5:18 AM" title="Apr 24, 2023 at 5:18 AM">Apr 24, 2023</time></a></li>
+							
+								<li>Version: 1.21.1</li>
+							
+						</ul>
+					</div>
+
+					
+
+					
+
+	
+
+
+					<div class="message-body">
+						To simply call this plugin by its name, &quot;Advanced Scene Switcher&quot;, doesn&#039;t do this piece of software nearly the justice it seriously deserves.  It isn&#039;t JUST about changing scenes.  It&#039;s about automation taken to the next level.  The addition of Websockets support takes it to the next level, whether controlling it with a device like an Elgato Stream Deck or SAMMI or even from another OBS Studio instance on the same or even completely different computer, even from THAT OBS Studio&#039;s installation of Advanced Scene Switcher!<br />
+<br />
+I don&#039;t think I use even the merest fraction of this software&#039;s capabilities, but I feel this plugin is a serious &quot;must-have&quot; if the user wants or needs any manner of automation, whether confined to the same computer or, in my case, a highly-distributed model.
+					</div>
+
+					
+
+	
+
+				</div>
+
+				
+
+				
+			</div>
+
+			
+				<div class="message-cell message-cell--vote">
+					<div class="message-column">
+						
+							
+								
+
+	
+	
+	<div class="contentVote  js-contentVote " data-xf-init="content-vote" data-content-id="resource_rating-3962">
+		<a href="javascript:"
+			class="contentVote-vote is-disabled contentVote-vote--up "
+			data-vote="up"><span class="u-srOnly">Upvote</span></a>
+
+		<span class="contentVote-score is-positive  js-voteCount"
+			data-score="3">3</span>
+
+		
+			<a href="javascript:"
+				class="contentVote-vote is-disabled contentVote-vote--down "
+				data-vote="down"><span class="u-srOnly">Downvote</span></a>
+		
+	</div>
+
+
+							
+						
+					</div>
+				</div>
+			
+		</div>
+	</div>
+
+			
+			</div>
+			<div class="block-footer">
+				<span class="block-footer-controls"><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/reviews" class="button--link button"><span class="button-text">Read more…</span></a></span>
+			</div>
+		</div>
+	</div>
+</div>
+				
+			</div>
+
+			
+		</div>
+
+		
+		
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+		
+			
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/" itemprop="item">
+			<span itemprop="name">Home</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+			
+
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/resources/" itemprop="item">
+			<span itemprop="name">Resources</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/plugins/" itemprop="item">
+			<span itemprop="name">OBS Studio Plugins</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+			
+
+		
+		</ul>
+	
+
+		
+	</div>
+</div>
+
+<footer class="p-footer" id="footer">
+	<div class="p-footer-inner">
+
+		<div class="p-footer-row">
+			
+				<div class="p-footer-row-main">
+					<ul class="p-footer-linkList">
+					
+						
+							<li><a href="https://obsproject.com/forum/misc/style" data-xf-click="overlay"
+								data-xf-init="tooltip" title="Style chooser" rel="nofollow">
+								<i class="fa--xf far fa-paint-brush" aria-hidden="true"></i> OBS Bright
+							</a></li>
+						
+						
+					
+					</ul>
+				</div>
+			
+			<div class="p-footer-row-opposite">
+				<ul class="p-footer-linkList">
+					
+						
+							<li><a href="https://obsproject.com/help" data-xf-click="">Contact us</a></li>
+						
+					
+
+					
+						<li><a href="https://obsproject.com/forum/help/terms/">Terms and rules</a></li>
+					
+
+					
+						<li><a href="https://obsproject.com/forum/help/privacy-policy/">Privacy policy</a></li>
+					
+
+					
+						<li><a href="https://obsproject.com/forum/help/">Help</a></li>
+					
+
+					
+						<li><a href="https://obsproject.com/">Home</a></li>
+					
+
+					<li><a href="https://obsproject.com/forum/list/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss" aria-hidden="true"></i><span class="u-srOnly">RSS</span></span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		
+			<div class="p-footer-copyright">
+			
+				<a href="https://xenforo.com/" class="u-concealed" dir="ltr" target="_blank" rel="sponsored noopener">Community platform by XenForo<sup>&reg;</sup> <span class="copyright">&copy; 2010-2021 XenForo Ltd.</span></a>
+				We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to  amazon.com.
+			
+			</div>
+		
+
+		
+	</div>
+</footer>
+
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+		
+	
+		
+		
+		
+
+		<ul class="notices notices--bottom_fixer  js-notices"
+			data-xf-init="notices"
+			data-type="bottom_fixer"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--cookie"
+		data-notice-id="-1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss="0"
+		data-visibility="">
+
+		
+		<div class="notice-content">
+			
+			<div class="u-alignCenter">
+	This site uses cookies to help personalise content, tailor your experience and to keep you logged in if you register.<br />
+By continuing to use this site, you are consenting to our use of cookies.
+</div>
+
+<div class="u-inputSpacer u-alignCenter">
+	<a href="https://obsproject.com/forum/account/dismiss-notice" class="js-noticeDismiss button--notice button button--icon button--icon--confirm"><span class="button-text">Accept</span></a>
+	<a href="https://obsproject.com/forum/help/cookies" class="button--notice button"><span class="button-text">Learn more…</span></a>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+	
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="up">
+		<a href="#top" class="button--scroll button" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up" aria-hidden="true"></i><span class="u-srOnly">Top</span></span></a>
+		
+	</div>
+
+
+
+	<script src="https://obsproject.com/forum/js/vendor/jquery/jquery-3.5.1.min.js?_v=fdedd7e7"></script>
+	<script src="https://obsproject.com/forum/js/vendor/vendor-compiled.js?_v=fdedd7e7"></script>
+	<script src="https://obsproject.com/forum/js/xf/core-compiled.js?_v=fdedd7e7"></script>
+	<script src="https://obsproject.com/forum/js/xf/lightbox-compiled.js?_v=fdedd7e7"></script>
+<script src="https://obsproject.com/forum/js/xf/comment.min.js?_v=fdedd7e7"></script>
+<script src="https://obsproject.com/forum/js/xf/notice.min.js?_v=fdedd7e7"></script>
+
+	<script>
+		jQuery.extend(true, XF.config, {
+			// 
+			userId: 0,
+			enablePush: false,
+			pushAppServerKey: '',
+			url: {
+				fullBase: 'https://obsproject.com/forum/',
+				basePath: '/forum/',
+				css: '/forum/css.php?css=__SENTINEL__&s=11&l=1&d=1684574114',
+				keepAlive: '/forum/login/keep-alive'
+			},
+			cookie: {
+				path: '/',
+				domain: '',
+				prefix: 'xf_',
+				secure: true
+			},
+			cacheKey: 'b3e97f20d1b127417d0a032406bae1fc',
+			csrf: '1703993799,9e9b71b7ab2069b053d67efe91cebd7f',
+			js: {"\/forum\/js\/xf\/lightbox-compiled.js?_v=fdedd7e7":true,"\/forum\/js\/xf\/comment.min.js?_v=fdedd7e7":true,"\/forum\/js\/xf\/notice.min.js?_v=fdedd7e7":true},
+			css: {"public:bb_code.less":true,"public:lightbox.less":true,"public:message.less":true,"public:notices.less":true,"public:rating_stars.less":true,"public:share_controls.less":true,"public:xfrm.less":true,"public:extra.less":true},
+			time: {
+				now: 1703993799,
+				today: 1703980800,
+				todayDow: 0,
+				tomorrow: 1704067200,
+				yesterday: 1703894400,
+				week: 1703462400
+			},
+			borderSizeFeature: '3px',
+			fontAwesomeWeight: 'r',
+			enableRtnProtect: true,
+			
+			enableFormSubmitSticky: true,
+			uploadMaxFilesize: 8388608,
+			allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+			allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+			shortcodeToEmoji: true,
+			visitorCounts: {
+				conversations_unread: '0',
+				alerts_unviewed: '0',
+				total_unread: '0',
+				title_count: true,
+				icon_indicator: true
+			},
+			jsState: {},
+			publicMetadataLogoUrl: '',
+			publicPushBadgeUrl: 'https://obsproject.com/forum/styles/default/xenforo/bell.png'
+		});
+
+		jQuery.extend(XF.phrases, {
+			// 
+			date_x_at_time_y: "{date} at {time}",
+			day_x_at_time_y:  "{day} at {time}",
+			yesterday_at_x:   "Yesterday at {time}",
+			x_minutes_ago:    "{minutes} minutes ago",
+			one_minute_ago:   "1 minute ago",
+			a_moment_ago:     "A moment ago",
+			today_at_x:       "Today at {time}",
+			in_a_moment:      "In a moment",
+			in_a_minute:      "In a minute",
+			in_x_minutes:     "In {minutes} minutes",
+			later_today_at_x: "Later today at {time}",
+			tomorrow_at_x:    "Tomorrow at {time}",
+
+			day0: "Sunday",
+			day1: "Monday",
+			day2: "Tuesday",
+			day3: "Wednesday",
+			day4: "Thursday",
+			day5: "Friday",
+			day6: "Saturday",
+
+			dayShort0: "Sun",
+			dayShort1: "Mon",
+			dayShort2: "Tue",
+			dayShort3: "Wed",
+			dayShort4: "Thu",
+			dayShort5: "Fri",
+			dayShort6: "Sat",
+
+			month0: "January",
+			month1: "February",
+			month2: "March",
+			month3: "April",
+			month4: "May",
+			month5: "June",
+			month6: "July",
+			month7: "August",
+			month8: "September",
+			month9: "October",
+			month10: "November",
+			month11: "December",
+
+			active_user_changed_reload_page: "The active user has changed. Reload the page for the latest version.",
+			server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+			oops_we_ran_into_some_problems: "Oops! We ran into some problems.",
+			oops_we_ran_into_some_problems_more_details_console: "Oops! We ran into some problems. Please try again later. More error details may be in the browser console.",
+			file_too_large_to_upload: "The file is too large to be uploaded.",
+			uploaded_file_is_too_large_for_server_to_process: "The uploaded file is too large for the server to process.",
+			files_being_uploaded_are_you_sure: "Files are still being uploaded. Are you sure you want to submit this form?",
+			attach: "Attach files",
+			rich_text_box: "Rich text box",
+			close: "Close",
+			link_copied_to_clipboard: "Link copied to clipboard.",
+			text_copied_to_clipboard: "Text copied to clipboard.",
+			loading: "Loading…",
+			you_have_exceeded_maximum_number_of_selectable_items: "You have exceeded the maximum number of selectable items.",
+
+			processing: "Processing",
+			'processing...': "Processing…",
+
+			showing_x_of_y_items: "Showing {count} of {total} items",
+			showing_all_items: "Showing all items",
+			no_items_to_display: "No items to display",
+
+			number_button_up: "Increase",
+			number_button_down: "Decrease",
+
+			push_enable_notification_title: "Push notifications enabled successfully at OBS Forums",
+			push_enable_notification_body: "Thank you for enabling push notifications!"
+		});
+	</script>
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+	<script type="text/template" id="xfReactTooltipTemplate">
+		<div class="tooltip-content-inner">
+			<div class="reactTooltip">
+				
+					<a href="#" class="reaction reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--2" data-reaction-id="2"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Love" title="Love" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--3" data-reaction-id="3"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Haha" title="Haha" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--4" data-reaction-id="4"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Wow" title="Wow" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--5" data-reaction-id="5"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Sad" title="Sad" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--6" data-reaction-id="6"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Angry" title="Angry" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+			</div>
+		</div>
+	</script>
+
+
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "CreativeWork",
+		"@id": "https:\/\/obsproject.com\/forum\/resources\/advanced-scene-switcher.395\/",
+		"name": "Advanced Scene Switcher",
+		"headline": "Advanced Scene Switcher",
+		"alternativeHeadline": "Can automate various tasks",
+		"description": "This plugin will allow you to automate various tasks using \"Macros\".\nMacros consist of a list of conditions under which a list of actions will be performed.\n\n\n\nExamples and guides can be found in the wiki.\nFeel free to contribute!\n\nCurrently...",
+		
+			"version": "1.24.2",
+		
+		
+		"dateCreated": "2016-05-19T20:34:20+01:00",
+		"dateModified": "2023-12-17T10:55:45+00:00",
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingCount": "73",
+			"ratingValue": "4.61644"
+		},
+		
+			"discussionUrl": "https:\/\/obsproject.com\/forum\/threads\/advanced-scene-switcher.48264\/",
+		
+		"author": {
+			"@type": "Person",
+			"name": "Warmuptill"
+		}
+	}
+	</script>
+
+
+<script>
+$(document).ready(function(){
+	$('a').each (function() {
+		var dest_url = $(this).attr ('href');
+		if (!dest_url)
+			return;
+		if (dest_url.indexOf ('amazon.com') != -1 && dest_url.indexOf ('tag=obsprojectcom-20') == -1) {
+			if (dest_url.indexOf ('?') != -1) {
+				dest_url += "&tag=obsprojectcom-20";
+			} else {
+				dest_url += "?tag=obsprojectcom-20";
+			}
+			$(this).attr ('href', dest_url);
+		} else if (dest_url.indexOf ('amazon.de') != -1 && dest_url.indexOf ('tag=obsproject0a-21') == -1) {
+			if (dest_url.indexOf ('?') != -1) {
+				dest_url += "&tag=obsproject0a-21";
+			} else {
+				dest_url += "?tag=obsproject0a-21";
+			}
+			$(this).attr ('href', dest_url);
+		}
+	});
+});
+</script>
+	
+</body>
+
+<!-- Mirrored from obsproject.com/forum/resources/advanced-scene-switcher.395/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

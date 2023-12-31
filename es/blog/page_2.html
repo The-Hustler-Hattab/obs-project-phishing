@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/es/blog/page:2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>News | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="OBS (Open Broadcaster Software) is free and open source software for video recording and live streaming. Stream to Twitch, YouTube and many other providers or record your own videos with high quality H264 / AAC encoding.">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+                    <link rel="alternate" hreflang="cs" href="https://obsproject.com/cs/blog">
+                        <link rel="alternate" hreflang="da" href="https://obsproject.com/da/blog">
+                        <link rel="alternate" hreflang="de" href="https://obsproject.com/de/blog">
+                        <link rel="alternate" hreflang="en" href="https://obsproject.com/blog">
+                        <link rel="alternate" hreflang="es" href="https://obsproject.com/es/blog">
+                        <link rel="alternate" hreflang="eu" href="https://obsproject.com/eu/blog">
+                        <link rel="alternate" hreflang="fi" href="https://obsproject.com/fi/blog">
+                        <link rel="alternate" hreflang="fr" href="https://obsproject.com/fr/blog">
+                        <link rel="alternate" hreflang="hu" href="https://obsproject.com/hu/blog">
+                        <link rel="alternate" hreflang="ja" href="https://obsproject.com/ja/blog">
+                        <link rel="alternate" hreflang="ko" href="https://obsproject.com/ko/blog">
+                        <link rel="alternate" hreflang="pt-br" href="https://obsproject.com/pt-br/blog">
+                        <link rel="alternate" hreflang="ru" href="https://obsproject.com/ru/blog">
+                        <link rel="alternate" hreflang="sv" href="https://obsproject.com/sv/blog">
+                        <link rel="alternate" hreflang="tr" href="https://obsproject.com/tr/blog">
+                        <link rel="alternate" hreflang="uk" href="https://obsproject.com/uk/blog">
+                        <link rel="alternate" hreflang="zh-cn" href="https://obsproject.com/zh-cn/blog">
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/es">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Chat de Comunidad</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Donar</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/es">Inicio</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/es/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  class="active" href="https://obsproject.com/es/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/es/help">Ayuda</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Foro</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header>
+<div class="pagewidth blog_list">
+
+  <div class="headerpusher"></div>
+
+  <div class="med_width">
+
+    
+    <div class="bpheader">
+              <h1>OBS Latest News</h1>
+      
+      <p>Sorry, this page is only available in English</p>    </div>
+
+    
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/nvidias-diamond-sponsorship-enables-obs-presence-at-twitchcon">
+                NVIDIA&rsquo;s Diamond Sponsorship Enables OBS Presence at TwitchCon              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-09-26 16:00:00">
+      September 26th, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p><a href="https://nvidia.com/broadcasting"><figure class="floatRight"><img alt="NVIDIA RTX Logo" src="https://obsproject.com/media/pages/blog/nvidias-diamond-sponsorship-enables-obs-presence-at-twitchcon/f35def630c-1618091058/nvidia-rtx-small.png"></figure></a> We’re excited to announce that <a href="https://nvidia.com/broadcasting">NVIDIA</a> is sponsoring the OBS Project as our second Diamond-level sponsor! NVIDIA and OBS have worked alongside each other for some time now, in particular with the development of the optimized NVIDIA Encoder (NVENC), first released in OBS Studio v23, which makes it easier than ever to encode at high quality with minimal impact to system resources. </p>
+<p>“The passionate team at OBS plays a central role in the world of game broadcasting as the most popular recording and live streaming software,” said Gerardo Delgado, Senior Product Manager for Broadcasting at NVIDIA. “NVIDIA is committed to empowering gamers, streamers and creators, and we look forward to further contributing to OBS’ long term success. Together with our ongoing technical collaboration, we hope that this sponsorship allows OBS to continue expanding this amazing project.”</p>
+<p>NVIDIA has demonstrated a genuine desire to help make livestreaming and recording easier and more accessible, and we’re happy that they’ve chosen to support the project.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/nvidias-diamond-sponsorship-enables-obs-presence-at-twitchcon">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/progress-report-september-2019">
+                OBS Project Progress Report, September 2019              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-09-23 18:30:00">
+      September 23rd, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>Welcome to another edition of the OBS Project Progress Report.  This time we're going to go over all the big news and updates that have happened leading up to version 24.</p>
+<p>Let's start with the big announcement:</p>
+<h2>Twitch sponsorship</h2>
+<p>We're excited to announce that Twitch is officially sponsoring the OBS Project!  Twitch and OBS have always worked close together, and now we're making it official.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/progress-report-september-2019">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/twitch-becomes-premiere-sponsor-of-the-obs-project">
+                Twitch Becomes Premiere Sponsor of the OBS Project              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+      <div class="bpinfo bpauthor">
+              <a href="https://obsproject.com/es/blog/author/Lain">
+          by Lain        </a>
+          </div>
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-09-23 18:30:00">
+      September 23rd, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          We are excited to announce that Twitch is now officially sponsoring my work on the OBS Project! Since 2012 we've maintained a great relationship with Twitch and their engineers. They've always been good to us, and we've always helped each other whenever needed. Twitch has always been one of the biggest supporters of our project, and now it's official. When I first started the project back in 2012, I was a jobless idiot who watched a lot of Starcraft 2 streams, and wanted to stream it myself for fun. When I saw that there were no real serious open source projects out there for capturing, streaming, and recording, I decided to make my own tool, and make the tool the way I liked. I grew up programming along with my brother, and I always liked to write my own tools for fun and the challenge. Except this time, I decided to open source it, and that led me down the crazy path that we reached today. For the first time in my life, I've made something for myself, something I worked hard to …            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/twitch-becomes-premiere-sponsor-of-the-obs-project">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/logitech-becomes-open-broadcaster-softwares-first-diamond-sponsor-on-open-collective">
+                Logitech Becomes Open Broadcaster Software&rsquo;s First Diamond Sponsor on Open Collective              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-05-28 15:00:00">
+      May 28th, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>We are delighted to announce that Logitech has become the OBS Project’s first Diamond sponsor on <a href="https://opencollective.com/obsproject">Open Collective</a>, demonstrating a huge commitment to OBS development.</p>
+<p>More than 35 years ago, Logitech started connecting people through computers, and now it’s a multi-brand company designing products that bring people together through music, gaming, video, and digital content creation. In the broadcasting space, Logitech  webcams solutions combined with Blue Microphones and Logitech G products have helped consumers share their passion, connect and engage with their community and create a unique identity. In fact, with the Logitech Capture app, users can save and restore their favorite settings for streaming through OBS. Thus, sponsoring OBS development only makes sense for a company that produces tools so widely enjoyed by streamers &amp; broadcasters.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/logitech-becomes-open-broadcaster-softwares-first-diamond-sponsor-on-open-collective">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/progress-report-february-2019">
+                OBS Studio Progress Report, February 2019              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-02-28 12:30:00">
+      February 28th, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>A new update is released and therefore a new progress report. The story of version 23 involves a whole lot of research and a whole lot of development.</p>
+<h2>Crowdfunding</h2>
+<p>Crowdfunding is something I now realize we should have done a long time ago. There's no reason why we shouldn't be pursuing this. As the project grows, and as more contributors come on board, I want to make sure that we can guarantee a future not just for myself but for the project and as many contributors as we possibly can.</p>
+<p>After much discussion and looking at existing open source projects, we decided to create both a <a href="https://patreon.com/obsproject">Patreon</a> and <a href="https://opencollective.com/obsproject">Open Collective</a>. Our goal is so we can ensure that not only can the project continue operating, but also have the ability to grow. Personally speaking, I want to ensure that not only can I work for the users, but that I can delegate important tasks to other contributors with experience working on core code and actually be able to pay them for doing so.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/progress-report-february-2019">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/new-ways-to-support-obs-development">
+                New Ways to Support OBS Development              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-02-25 11:30:00">
+      February 25th, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>It’s amazing to think that the first version of OBS was publicly released over six years ago. What started out as a small side project by Lain Bailey to make a free and open source program to stream StarCraft 2 has grown into a powerful force in the streaming and video production industry. Hundreds of thousands of people use OBS Studio every day not just for video gaming, but also for broadcasting everything from conferences to sports competitions to school announcements. It’s a tool that can be used freely by anyone, from large studios with big budget productions to individuals who just want to engage with a community online.</p>
+<p>From the beginning, OBS has been a labor of love created by Lain and a group of volunteers dedicated to the ideal of free and open access to streaming and recording software. We’ve seen great growth in our developer and support volunteer community over the last several years, and it’s inspiring to see people spend their free time improving OBS and helping others use the program.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/new-ways-to-support-obs-development">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/obs-progress-report-august-2018">
+                OBS Studio Progress Report, August 2018              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2018-08-22 02:30:00">
+      August 22nd, 2018    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>Welcome to the first OBS Studio Progress Report.  My name is Lain, the normally-silent author of OBS.  Version 22.0 has finally come out, and I had a really great time writing it.</p>
+<p>This is going to be a long post because I almost never normally speak, so get ready.</p>
+<h2>First, I want to say thank you</h2>
+<p>This month marks the sixth anniversary of the very first release of OBS back in August 2012.  Back during those times I was able to answer every single post on the forum, interacted with almost every single person who came around the chat, and answered every email.  Some time around 2014-2015, forum posts, emails, and chat became so active that it would take me 10 hours per day to answer everything.  Eventually, I had to stop, delegate that task to others, and focus exclusively on working on the program.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/obs-progress-report-august-2018">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/how-to-contribute-to-open-source">
+                A maintainer's guide on how to contribute to an open source project on GitHub              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2018-08-10 16:30:00">
+      August 10th, 2018    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>This guide is written by the maintainer of the <a href="https://obsproject.com/">OBS Project</a>, a relatively large open source project which receives about 30-50 pull requests per month.  This is meant to be a very concise and to-the-point guide on how to contribute to this (or any) open source project based upon my experience over the years; how to maximize both your contribution efficiency, and how to maximize the efficiency of the maintainers and your fellow contributors.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/how-to-contribute-to-open-source">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/obs-community-feedback-fider-launched">
+                OBS Community Ideas and Suggestions - Fider Launched!              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2018-03-29 23:30:00">
+      March 29th, 2018    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <p>Ever wanted to make suggestions to the developers for cool new features and updates that you want to see in OBS Studio? How about check if other people have had the same idea as you? Now's your chance! In addition to our newly launched <a href="https://obsproject.com/discord/">Discord server</a>, we're excited to announce a brand new community feedback portal - <a href="https://ideas.obsproject.com/">Fider</a>. </p>
+<p>Your feedback has always been heard, even if we haven't been able to respond to each individual request.  Fider will allow us to be much more organized and transparent with our community. We can show the things we're working on, features that are commonly requested, and even ideas that we know you want, but are either not possible to include in OBS or have been low priority. Fider will allow a much more public way for us to respond, and let you know that your voice has been heard.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/obs-community-feedback-fider-launched">Read More...</a>
+
+        </article>
+
+              <article class="blogpost">
+          <header>
+            <h2>
+              <a href="https://obsproject.com/es/blog/streaming-with-x264">
+                Streaming with x264              </a>
+            </h2>
+          </header>
+
+          
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2017-10-13 20:30:00">
+      October 13th, 2017    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+          <div class="bp_content" style="max-height: 340px; overflow: hidden;">
+                          <h2>Preamble</h2>
+<p>So, you want to learn more about video encoding? How to set up your stream for the best quality given your computer's hardware and connection limitations? Let's start with this video by Tom Scott.</p>
+<p>He does a great job of giving a quick primer on how video encoding works, and you will hopefully have a better understanding of the topics and terminology that we'll be going over. All done? Great! Let's get started.</p>            
+          </div>
+
+          <a class="bpjump" href="https://obsproject.com/es/blog/streaming-with-x264">Read More...</a>
+
+        </article>
+
+      
+
+              <nav id="pager">
+
+                      <div class="previous-post">
+              <a class="prev" href="https://obsproject.com/es/blog">&lsaquo; Newer Posts</a>
+            </div>
+          
+                      <div class="next-post">
+              <a class="next" href="https://obsproject.com/es/blog/page:3">Older Posts &rsaquo;</a>
+            </div>
+          
+        </nav>
+
+          
+  </div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/blog">Čeština</a> 
+                                  <a href="https://obsproject.com/da/blog">Dansk</a> 
+                                  <a href="https://obsproject.com/de/blog">Deutsch</a> 
+                                  <a href="https://obsproject.com/blog">English</a> 
+                                                <a href="https://obsproject.com/eu/blog">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/blog">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/blog">Français</a> 
+                                  <a href="https://obsproject.com/hu/blog">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/blog">日本語</a> 
+                                  <a href="https://obsproject.com/ko/blog">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/blog">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/blog">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/blog">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/blog">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/blog">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/blog">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/es/blog/page:2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

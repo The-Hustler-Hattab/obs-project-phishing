@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/wiki/Build-Instructions-For-FreeBSD by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki - Build Instructions For FreeBSD | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="# Option A: Automatic FreeBSD builds Automatic FreeBSD builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header><!-- Debug2 -->
+<div class="pagewidth wiki_container">
+
+	<div class="headerpusher"></div>
+
+	<div class="full_width wiki_header">
+		<h1>Build Instructions For FreeBSD</h1>
+	</div>
+
+	<div class="wiki_content">
+		<h1>Option A: Automatic FreeBSD builds</h1>
+<p>Automatic FreeBSD builds allow building OBS with minimal input and setup - necessary dependencies are installed automatically, build flags use a sane default and the generated OBS build uses the application's full feature set.</p>
+<p><a id='prerequisites' class='anchor' aria-hidden='true'></a></p>
+<h2>Prerequisites</h2>
+<ul>
+<li>FreeBSD 13</li>
+<li>Git</li>
+<li>Pkg</li>
+</ul>
+<p><a id='build-procedure' class='anchor' aria-hidden='true'></a></p>
+<h2>Build procedure</h2>
+<ul>
+<li>
+<p>Clone the repository including <strong>submodules</strong>:</p>
+<p><code>git clone --recursive https://github.com/obsproject/obs-studio.git</code></p>
+</li>
+<li>
+<p>To do a <strong>fully automated</strong> build, open Terminal, switch to the checkout directory then run one of the following commands:</p>
+</li>
+</ul>
+<pre><code>    # Download and set up dependencies, then build OBS for local host 
+    # architecture with common feature set
+    CI/build-freebsd.sh
+
+    # Skip download and setup of dendencies
+    CI/build-freebsd.sh --skip-dependency-checks
+
+    # Show all available options
+    CI/build-freebsd.sh --help
+
+    # Use `my_build_dir` prefix as build directory
+    CI/build-freebsd.sh --build-dir my_build_dir</code></pre>
+<p><a id='option-b-custom-freebsd-builds' class='anchor' aria-hidden='true'></a></p>
+<h1>Option B: Custom FreeBSD builds</h1>
+<p>Custom FreeBSD builds allow full customization of the desired build configuration but also require manual setup and preparation. Available CMake configuration variables can be found in the <a href="https://obsproject.com/wiki/building-obs-studio#cmake">CMake build system documentation</a>.</p>
+<p><strong>NOTE:</strong> FreeBSD is not officially supported by the OBS team and is provided as-is.</p>
+<p><a id='prerequisites' class='anchor' aria-hidden='true'></a></p>
+<h2>Prerequisites</h2>
+<ul>
+<li>FreeBSD 13 or newer</li>
+<li>CMake 3.16 or newer</li>
+<li>Git</li>
+<li>Ninja</li>
+<li><em>Optional:</em> CCache to improve compilation speeds on consecutive builds</li>
+<li>Several additional dependencies (see step 2 below)</li>
+</ul>
+<p><a id='build-procedure' class='anchor' aria-hidden='true'></a></p>
+<h2>Build Procedure</h2>
+<p><a id='1-get-the-source-code' class='anchor' aria-hidden='true'></a></p>
+<h3>1. Get the source code</h3>
+<ol>
+<li>Open a Terminal window, create and switch to a directory you want to have OBS checked out</li>
+<li>Clone the repository including <strong>submodules</strong>: <code>git clone --recursive https://github.com/obsproject/obs-studio.git</code></li>
+</ol>
+<p>(If you do not know what submodules are, or you are not using Git from the command line, <strong>PLEASE make sure to fetch the submodules too</strong>.)</p>
+<p><a id='2-get-the-dependencies' class='anchor' aria-hidden='true'></a></p>
+<h3>2. Get the dependencies</h3>
+<ul>
+<li>To download and set up most preconditions mentioned above, you can also run the script <code>CI/freebsd/01_install_dependencies.sh</code> from the checkout directory (run it with the <code>--help</code> switch to see all available options). </li>
+</ul>
+<p><strong>NOTE:</strong> The directory where the script will download and setup the dependencies in cannot be changed.</p>
+<ul>
+<li>
+<p>Alternatively the required dependencies can be installed using <code>apt</code>:</p>
+<ul>
+<li>
+<p>Build system dependencies</p>
+<pre><code>sudo pkg install cmake ninja pkgconf curl ccache</code></pre>
+</li>
+<li>
+<p>OBS dependencies (core):</p>
+<pre><code>sudo pkg install ffmpeg libx264 mbedtls mesa-libs jansson lua52 luajit python37 libX11 xorgproto libxcb libXcomposite libXext libXfixes libXinerama libXrandr swig dbus jansson libICE libSM libsysinfo</code></pre>
+</li>
+<li>
+<p>OBS dependencies (UI):</p>
+<pre><code>sudo pkg install qt5-buildtools qt5-qmake qt5-imageformats qt5-core qt5-gui qt5-svg qt5-widgets qt5-xml</code></pre>
+</li>
+<li>
+<p>Plugin dependencies:</p>
+<pre><code>sudo pkg install v4l_compat fdk-aac fontconfig freetype2 speexdsp libudev-devd libv4l vlc audio/jack pulseaudio sndio</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p><a id='3-set-up-the-build-project' class='anchor' aria-hidden='true'></a></p>
+<h3>3. Set up the build project</h3>
+<ol>
+<li>Run CMake to generate a build environment</li>
+</ol>
+<pre><code>cmake -S . -B  -G Ninja \
+    -DLINUX_PORTABLE=ON \
+    -DENABLE_PIPEWIRE=OFF</code></pre>
+<p><strong>Optional Settings:</strong></p>
+<ol start="2">
+<li>To change the build type, pass either <code>Debug</code>, <code>Release</code>, <code>RelWithDebInfo</code>, or <code>MinSizeRel</code> as <code>-DCMAKE_BUILD_TYPE</code></li>
+</ol>
+<p><strong>NOTE:</strong> When building OBS with <code>LINUX_PORTABLE</code> disabled, OBS expects GNU-based install paths (e.g. <code>/usr/local/[bin,lib,share]</code>) and is built for a single architecture only. To create separate builds for 32-bit and 64-bit architectures, always enable portable builds.</p>
+<p><a id='4-build-the-project' class='anchor' aria-hidden='true'></a></p>
+<h3>4. Build the project</h3>
+<ol>
+<li>Run <code>cmake --build</code> to build the entire OBS project</li>
+<li>Run <code>cmake --build  -t libobs</code> to build only libobs or any other valid target</li>
+<li>Run <code>cmake --build  -t clean</code> to clean your current build directory</li>
+</ol>
+<p><a id='6-install-the-project' class='anchor' aria-hidden='true'></a></p>
+<h3>6. Install the project</h3>
+<p>Installation will use the directory specified via <code>-DCMAKE_INSTALL_PREFIX</code> or can be customised with the <code>--prefix</code> switch:</p>
+<ol>
+<li>Run <code>cmake --install</code> to install OBS to the prefix the project was configured with</li>
+<li>Run <code>cmake --install  --prefix</code> to install OBS to a custom location</li>
+</ol>
+<p><a id='7-create-installer-package' class='anchor' aria-hidden='true'></a></p>
+<h3>7. Create installer package</h3>
+<ol>
+<li>Run <code>cmake --package</code> - CMake will handle all operations necessary to create a installer package (compressed archive as well as shell script with embedded binary)</li>
+</ol>
+		&nbsp;
+
+	</div>
+
+	<div class="wiki_sidebar">
+
+		<h1><a href="https://obsproject.com/wiki/Home">Home</a></h1>
+<h1><a href="https://obsproject.com/wiki/install-instructions">Install instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/install-instructions#windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#macos">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#freebsd">FreeBSD</a></li>
+</ul>
+<h1><a href="https://obsproject.com/wiki/Building-OBS-Studio">Build instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Mac">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-FreeBSD">FreeBSD</a></li>
+</ul>
+<h1>Development &amp; Scripting</h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development">Getting Started with OBS Studio Development</a></li>
+<li><a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">Getting Started With OBS Scripting</a><ul>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake">Scripting Tutorial: Source Shake</a></li>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter">Scripting Tutorial: Halftone Filter</a></li>
+</ul>
+</li>
+<li><a href="https://obsproject.com/wiki/Service-Submission-Guidelines">Service Submission Guidelines</a></li>
+</ul>
+	</div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/wiki">Čeština</a> 
+                                  <a href="https://obsproject.com/da/wiki">Dansk</a> 
+                                  <a href="https://obsproject.com/de/wiki">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/wiki">Español</a> 
+                                  <a href="https://obsproject.com/eu/wiki">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/wiki">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/wiki">Français</a> 
+                                  <a href="https://obsproject.com/hu/wiki">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/wiki">日本語</a> 
+                                  <a href="https://obsproject.com/ko/wiki">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/wiki">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/wiki">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/wiki">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/wiki">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/wiki">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/wiki">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/wiki/Build-Instructions-For-FreeBSD by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

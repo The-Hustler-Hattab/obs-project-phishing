@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <title>Guides</title>
+    <description>Guides for OBS itself, or other various streaming related activities.</description>
+    <pubDate>Sun, 31 Dec 2023 03:56:40 +0000</pubDate>
+    <lastBuildDate>Sun, 31 Dec 2023 03:56:40 +0000</lastBuildDate>
+    <generator>OBS Forums</generator>
+    <link>https://obsproject.com/forum/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://obsproject.com/forum/list/guides.25/index.rss"/>
+    <item>
+      <title>Time and Date Overlay updated</title>
+      <pubDate>Sun, 24 Dec 2023 17:42:48 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/time-and-date-overlay-updated.152693/</link>
+      <guid isPermaLink="false">152693</guid>
+      <author>invalid@example.com (Chessset5)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>Chessset5</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Chessset5 submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/time-and-date-overlay-updated.1461/" class="link link--internal">Time and Date Overlay updated</a> - Local Clock HTML file<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<a href="https://obsproject.com/forum/attachments/79491/" target="_blank">View attachment 79491</a><br />
+<br />
+<a href="https://gist.github.com/kirinelf/932d7704e623fd42970801597ddcccc4" target="_blank" class="link link--external" rel="nofollow ugc noopener">Clock.html GitHub File</a><br />
+<ol>
+<li data-xf-list-type="ol">Download the HTML File</li>
+<li data-xf-list-type="ol">In OBS add a Browser Source</li>
+<li data-xf-list-type="ol">Select local file</li>
+<li data-xf-list-type="ol">Browse to the clock.html file</li>
+<li data-xf-list-type="ol">adjust the height and width accordingly</li>
+</ol>You can edit the clock.html in the notepad app on windows, any other text editor on any other OS.<br />
+<br />
+Lines 13 through 20 is where you can change the visual options like font type...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/time-and-date-overlay-updated.152693/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>How to setup instant replay in OBS Studio</title>
+      <pubDate>Mon, 27 Nov 2023 07:29:51 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/</link>
+      <guid isPermaLink="false">80120</guid>
+      <author>invalid@example.com (Videophile)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>Videophile</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">LtRoyalShrimp submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/" class="link link--internal">How to setup instant replay in OBS Studio</a> - This guide will show you how to create an instant replay feature.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Thanks to the hard work of volunteers on OBS Studio, it now includes the powerful functionality of scripting. More on that <a href="https://obsproject.com/docs/scripting.html" class="link link--internal">here</a>.<br />
+<br />
+This has enabled a very cool feature: Instant Replays.<br />
+<br />
+This guide will go over how to setup an instant replay and get it working with your Stream Deck.<br />
+<br />
+<br />
+<b>Requirements:</b><br />
+OBS Studio...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>27</slash:comments>
+    </item>
+    <item>
+      <title>How to set up your own private RTMFP server using MonaServer</title>
+      <pubDate>Sat, 25 Nov 2023 18:26:41 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-to-set-up-your-own-private-rtmfp-server-using-monaserver.23881/</link>
+      <guid isPermaLink="false">23881</guid>
+      <author>invalid@example.com (thomasJ)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>thomasJ</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">thomasJ submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmfp-server-using-monaserver.153/" class="link link--internal">How to set up your own private RTMFP server using MonaServer</a> - tutorial RTMFP MonaServer broadcast<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			This article is inspired of the great guide of <a href="https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/" class="link link--internal">How to set up your own private RTMP server using nginx.</a><br />
+<br />
+MonaServer is a tiny and scalable open source server which provide protocols RTMFP, RTMP, RTMPE, WebSocket and HTTP. Server applications are written in <a href="http://www.lua.org/" target="_blank" class="link link--external" rel="nofollow ugc noopener">lua</a> and clients just need to support one of these protocols.<br />
+<br />
+The...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/how-to-set-up-your-own-private-rtmfp-server-using-monaserver.23881/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>109</slash:comments>
+    </item>
+    <item>
+      <title>How to MultiStream with your own server (open source Restream alternative)</title>
+      <pubDate>Thu, 09 Nov 2023 12:38:08 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-to-multistream-with-your-own-server-open-source-restream-alternative.170869/</link>
+      <guid isPermaLink="false">170869</guid>
+      <author>invalid@example.com (MorrowShore)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>MorrowShore</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">MorrowShore submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-multistream-through-a-private-server-using-an-open-source-and-free-tool.1830/" class="link link--internal">How to MultiStream through a private server (using an open source and free tool)</a> - An easy step by step guide to set up MultiStreaming / SimulStreaming with a Linux VPS<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>In this <u>concise</u> guide we'll show how to stream to multiple platforms at the same time using a Linux VPS.<br />
+<br />
+<a href="https://obsproject.com/forum/attachments/99091/" target="_blank">View attachment 99091</a></b><br />
+<hr /><br />
+<h2>Step 1: SSH to your VPS&#8203;</h2>Open your CMD, edit the following prompt with your server's IP address, then paste it in...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/how-to-multistream-with-your-own-server-open-source-restream-alternative.170869/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Using OpenLP Interface for Lyrics</title>
+      <pubDate>Wed, 01 Nov 2023 11:55:20 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/using-openlp-interface-for-lyrics.124388/</link>
+      <guid isPermaLink="false">124388</guid>
+      <author>invalid@example.com (amirchev)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>amirchev</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">amirchev submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/using-openlp-interface-for-lyrics.1009/" class="link link--internal">Using OpenLP Interface for Lyrics</a> - Display text from OpenLP slides as subtitles in your stream.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Hello, in this guide I'll explain how to use the OBS-OpenLP Interface tool to display text from songs that you are presenting on OpenLP as subtitles in your stream. <br />
+<br />
+<span style="font-size: 22px"><b>Setting up OpenLP</b></span><br />
+<span style="font-size: 18px"><b>Set up the tool</b></span><br />
+First, in OpenLP, go to <code class="bbCodeInline">Settings -&gt; Manage Plugins</code> and make sure to enable the Remote plugin. Next...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/using-openlp-interface-for-lyrics.124388/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>46</slash:comments>
+    </item>
+    <item>
+      <title>How to set up your own private RTMP server using nginx</title>
+      <pubDate>Wed, 01 Nov 2023 01:01:11 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-to-set-up-your-own-private-rtmp-server-using-nginx.12891/</link>
+      <guid isPermaLink="false">12891</guid>
+      <author>invalid@example.com (dodgepong)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>dodgepong</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">dodgepong submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/" class="link link--internal">How to set up your own private RTMP server using nginx</a> - A somewhat advanced guide for Linux-based servers<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Most people who stream enjoy using services such as Twitch.tv or Ustream to deliver video to viewers, and that works well enough. But sometimes you want some more control over your stream, or you want other people to be able to stream to you, or you want to stream to multiple places, or any number of things that requires you to...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/how-to-set-up-your-own-private-rtmp-server-using-nginx.12891/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>842</slash:comments>
+    </item>
+    <item>
+      <title>Mac Desktop-Audio using BlackHole</title>
+      <pubDate>Sun, 29 Oct 2023 20:04:48 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/mac-desktop-audio-using-blackhole.137985/</link>
+      <guid isPermaLink="false">137985</guid>
+      <author>invalid@example.com (asher_the_thrasher)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>asher_the_thrasher</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">asher_the_thrasher submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/mac-desktop-audio-using-blackhole.1191/" class="link link--internal">Mac Desktop-Audio using BlackHole</a> - An updated, easy way to set up mac audio on all macs running macOS Mavericks (10.9) to macOS Big Sur<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			1. <a href="https://existential.audio/blackhole/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Download here</a> (note, you will have to put in your email but that is to get the download link)<br />
+<a href="https://obsproject.com/forum/attachments/66475/" target="_blank">View attachment 66475</a><br />
+<br />
+2. Once you get an email from BlackHole audio, open the link. It will take you to the download page. Download the 16 ch version and install. <br />
+ <a href="https://obsproject.com/forum/attachments/66476/" target="_blank">View attachment 66476</a><br />
+If, when you open...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/mac-desktop-audio-using-blackhole.137985/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>9</slash:comments>
+    </item>
+    <item>
+      <title>How to switch Zoom view and active sources simultaneously (on Windows)</title>
+      <pubDate>Mon, 02 Oct 2023 13:13:38 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-to-switch-zoom-view-and-active-sources-simultaneously-on-windows.170036/</link>
+      <guid isPermaLink="false">170036</guid>
+      <author>invalid@example.com (Spinball)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>Spinball</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Spinball submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-switch-zoom-view-and-active-sources-simultaneously-on-windows.1798/" class="link link--internal">How to switch Zoom view and active sources simultaneously (on Windows)</a> - Changing the Zoom view live to create an instantaneous switch between Gallery and Speaker views<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			This method on Windows 10.  I can't say whether it works on any other operating systems.<br />
+<br />
+We stream using Zoom by capturing the Zoom window and positioning it within our layout<br />
+and have historically used Zoom's Gallery View.<br />
+<br />
+<a href="https://obsproject.com/forum/attachments/98200/" target="_blank">View attachment 98200</a><br />
+<br />
+However, I want to...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/how-to-switch-zoom-view-and-active-sources-simultaneously-on-windows.170036/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Display text if you are muted</title>
+      <pubDate>Wed, 13 Sep 2023 22:55:25 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/display-text-if-you-are-muted.169598/</link>
+      <guid isPermaLink="false">169598</guid>
+      <author>invalid@example.com (pdpt)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>pdpt</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">pdpt submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/display-text-if-you-are-muted.1787/" class="link link--internal">Display text if you are muted</a> - Ever forget your mic is on mute? Put some reminder text to let chat know!<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<b>What you need:</b><br />
+<ul>
+<li data-xf-list-type="ul">OBS Studio 29.1.3 or greater</li>
+<li data-xf-list-type="ul"><a href="https://obsproject.com/forum/resources/advanced-scene-switcher.395/" class="link link--internal">Advanced Scene Switcher</a> 1.23.1 or greater</li>
+</ul><b>Result:</b><br />
+If your microphone is <b>muted</b><br />
+<a href="https://obsproject.com/forum/attachments/97646/" target="_blank">View attachment 97646</a><br />
+<b>display this text</b><br />
+<a href="https://obsproject.com/forum/attachments/97647/" target="_blank">View attachment 97647</a><br />
+<br />
+<b>Setup:</b><br />
+There will be two macros in Advanced Scene Switcher, one for showing the text &amp; another for hiding...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/display-text-if-you-are-muted.169598/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>OBS face tracking with P5 js</title>
+      <pubDate>Wed, 13 Sep 2023 11:38:49 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-face-tracking-with-p5-js.169585/</link>
+      <guid isPermaLink="false">169585</guid>
+      <author>invalid@example.com (uuoocl)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>uuoocl</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">OldFriends submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/obs-face-tracking-with-p5js.1786/" class="link link--internal">OBS-face-tracking-with-P5js</a> - A JavaScript to add face tracking to OBS.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<a href="https://github.com/UUoocl/OBS-face-tracking-with-P5js" target="_blank" class="link link--external" rel="nofollow ugc noopener">GitHub Repository</a><br />
+<br />
+<h2>OBS-face-tracking-with-P5js&#8203;</h2>Do you want to track a face in a video to produce some creative effect? This could be easliy done with the latest [Nvidia RTX graphics cards](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/). <br />
+<br />
+If you don't have an RTX card, then try this javaScript to add face tracking to OBS.<br />
+<br />
+This...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/obs-face-tracking-with-p5-js.169585/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>[OS X]Capture audio with iShowU Audio Capture</title>
+      <pubDate>Sat, 09 Sep 2023 23:41:03 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/os-x-capture-audio-with-ishowu-audio-capture.65447/</link>
+      <guid isPermaLink="false">65447</guid>
+      <author>invalid@example.com (amsyar ZeRo)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>amsyar ZeRo</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">amsyar ZeRo submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/os-x-capture-audio-with-ishowu-audio-capture.505/" class="link link--internal">[OS X]Capture audio with iShowU Audio Capture</a> - Another easy way to capture crisp audio from your Mac<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Hello!<br />
+<br />
+If you prefer graphics, watch this helpful video by Chupacabra Tutorials:<br />
+<div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/WTOCz8SorkY?wmode=opaque"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+So most of you know, to capture audio from a Mac you need an extension like Soundflower. But what most of you <b>don't know </b>is that you can use another extension to capture audio. I present to you, <b>iShowU Audio Capture!<br />
+</b>...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/os-x-capture-audio-with-ishowu-audio-capture.65447/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>66</slash:comments>
+    </item>
+    <item>
+      <title>Include/Exclude audio sources using PulseAudio(Linux)</title>
+      <pubDate>Thu, 03 Aug 2023 14:24:51 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/include-exclude-audio-sources-using-pulseaudio-linux.18525/</link>
+      <guid isPermaLink="false">18525</guid>
+      <author>invalid@example.com (Xandaros)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>Xandaros</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Xandaros submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/include-exclude-audio-sources-using-pulseaudio-linux.95/" class="link link--internal">Include/Exclude audio sources using PulseAudio(Linux)</a> - Basically Virtual Audio Cable for Linux<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Sometimes you want to stream the audio of one application, but not the other. Here is how to do that on Linux using PulseAudio:<br />
+<br />
+First of all, you are probably going to need pavucontrol as a nice user interface to PulseAudio. If you are able to use pactl for everything, you can probably do that, too.<br />
+On Arch Linux and Ubuntu the package is...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/include-exclude-audio-sources-using-pulseaudio-linux.18525/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+    <item>
+      <title>NVIDIA NvEnc Guide</title>
+      <pubDate>Wed, 02 Aug 2023 14:46:08 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/nvidia-nvenc-guide.97465/</link>
+      <guid isPermaLink="false">97465</guid>
+      <author>invalid@example.com (findal)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>findal</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">findal submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/nvidia-nvenc-guide.740/" class="link link--internal">NVIDIA NvEnc Guide</a> - Guide on how to use NvEnc with OBS for the best possible image quality<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<span style="font-size: 15px"><b>ABOUT THIS GUIDE</b><br />
+The objective of this guide is to help you understand how to use the NVIDIA encoder, NvEnc, in OBS. We have tried to simplify some of the concepts to make this accessible to a wider audience. If you think we can improve any part of this guide or find any issues or mistakes, please post below and we will be happy to...</span>
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/nvidia-nvenc-guide.97465/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>29</slash:comments>
+    </item>
+    <item>
+      <title>How Make and Use Motion Graphics Stinger Transitions in OBS</title>
+      <pubDate>Mon, 17 Jul 2023 18:49:50 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-make-and-use-motion-graphics-stinger-transitions-in-obs.74530/</link>
+      <guid isPermaLink="false">74530</guid>
+      <author>invalid@example.com (DirectorGunner)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>DirectorGunner</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">DirectorGunner submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-make-and-use-motion-graphics-stinger-transitions-in-obs.567/" class="link link--internal">How Make and Use Motion Graphics Stinger Transitions in OBS</a> - Shows how to create and setup stinger transitions in OBS in under 6 minutes<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			How Make and Use Motion Graphic Stinger Transitions in OBS <br />
+<div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/WkYLWzr_SpM?wmode=opaque"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+In this video I show how you can both create and use a motion graphics stinger as a transition in OBS with Adobe After Effects, with an additional free WebM plugin for Adobe Media Encoder (listed as for premiere)...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/how-make-and-use-motion-graphics-stinger-transitions-in-obs.74530/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Guia de NVIDIA NVENC para OBS</title>
+      <pubDate>Fri, 30 Jun 2023 12:18:49 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/guia-de-nvidia-nvenc-para-obs.100857/</link>
+      <guid isPermaLink="false">100857</guid>
+      <author>invalid@example.com (findal)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>findal</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">findal submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/guia-de-nvidia-nvenc-para-obs.766/" class="link link--internal">Guia de NVIDIA NVENC para OBS</a> - Guia de configuracion de OBS con NVIDIA NVENC<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			<span style="font-size: 26px"><b>GUIA DE NVIDIA NVENC EN OBS</b></span><br />
+<br />
+<span style="font-size: 26px"><b>ACERCA DE ESTA GUÍA</b></span><br />
+El objetivo de esta guía es ayudarte a entender cómo utilizar el codificador de video de NVIDIA, NvEnc, en OBS. Hemos simplificado algunos conceptos para hacer esta guía accesible a una mayor audiencia. Si crees que podemos mejorar alguna parte de esta guía o encuentras algún...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/guia-de-nvidia-nvenc-para-obs.100857/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>DIY Control Deck and PTZ Camera Joystick</title>
+      <pubDate>Wed, 14 Jun 2023 21:21:57 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/diy-control-deck-and-ptz-camera-joystick.165889/</link>
+      <guid isPermaLink="false">165889</guid>
+      <author>invalid@example.com (Northdiver)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>Northdiver</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Northdiver submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/diy-streamdeck-and-ptz-camera-joystick.1709/" class="link link--internal">DIY StreamDeck and PTZ Camera Joystick</a> - StreamDeck and PTZ Camera Joystick with Pro Micro<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			I designed a DIY StreamDeck for use with OBS Studio for our church.  It uses x-keys to switch scenes and do the transition, but you can map the keys to do whatever you need.  I added a joystick that twists to control zoom.  I installed 'AntiMicroX' on the computer to map the joystick movement to keystrokes...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/diy-control-deck-and-ptz-camera-joystick.165889/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Full vs Partial Color Ranges EXPLAINED for Streaming</title>
+      <pubDate>Sat, 20 May 2023 17:52:19 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/full-vs-partial-color-ranges-explained-for-streaming.125503/</link>
+      <guid isPermaLink="false">125503</guid>
+      <author>invalid@example.com (EposVox)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>EposVox</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">EposVox submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/full-vs-partial-color-ranges-explained-for-streaming.1029/" class="link link--internal">Full vs Partial Color Ranges EXPLAINED for Streaming</a> - Stop streaming washed out/overly-contrasty gameplay!<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			A subject of understandable confusion when it comes to streaming and content creation - especially with game consoles - is RGB Color Range settings. This is one of those things that you may have frustrations with even if you don’t know what I’m talking about. If you’ve had overly-punchy and dark video captures, unsaturated or...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/full-vs-partial-color-ranges-explained-for-streaming.125503/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+    <item>
+      <title>View False Color in OBS...</title>
+      <pubDate>Mon, 15 May 2023 04:46:14 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/view-false-color-in-obs.122022/</link>
+      <guid isPermaLink="false">122022</guid>
+      <author>invalid@example.com (r10k)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>r10k</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">r10k submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/view-false-color-in-obs.960/" class="link link--internal">View False Color in OBS...</a> - Viewing realtime false color in OBS with a connected camera or webcam.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			View false color (colour for non-US people) in OBS, when setting up lighting, using a webcam or connected camera. You will need to feel comfortable with adding a camera to OBS and how to add video filters before proceeding.<br />
+<br />
+<br />
+<b><span style="font-size: 18px">What is false color and why is it helpful?</span></b><br />
+<br />
+Have a look here:<br />
+<br />
+
+	
+
+	<div class="bbCodeBlock bbCodeBlock--unfurl    js-unfurl fauxBlockLink"
+		data-unfurl="true" data-result-id="6701" data-url="https://youtu.be/nncazai0Ei4" data-host="youtu.be" data-pending="false">
+		<div class="contentRow">
+			
+				<div class="contentRow-figure contentRow-figure--fixedSmall js-unfurl-figure">
+					
+						<img src="https://i.ytimg.com/vi/nncazai0Ei4/maxresdefault.jpg" alt="youtu.be" data-onerror="hide-parent"/>
+					
+				</div>
+			
+			<div class="contentRow-main">
+				<h3 class="contentRow-header js-unfurl-title">
+					<a href="https://youtu.be/nncazai0Ei4"
+						class="link link--external fauxBlockLink-blockLink"
+						target="_blank"
+						rel="nofollow ugc noopener"
+						data-proxy-href="">
+						Instantly improve your Lighting with FALSE COLOR!
+					</a>
+				</h3>
+
+				<div class="contentRow-snippet js-unfurl-desc">This video will teach you the basics of using the false color feature found on field monitors for filmmakers. By the end of this video, you will have an unde...</div>
+
+				<div class="contentRow-minor contentRow-minor--hideLinks">
+					<span class="js-unfurl-favicon">
+						
+							<img src="https://www.youtube.com/s/desktop/2a835f78/img/favicon_32x32.png" alt="youtu.be" class="bbCodeBlockUnfurl-icon"
+								data-onerror="hide-parent"/>
+						
+					</span>
+					youtu.be
+				</div>
+			</div>
+		</div>
+	</div>
+<br />
+As...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/view-false-color-in-obs.122022/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>High quality recording with multiple audio tracks in Advanced output mode</title>
+      <pubDate>Thu, 11 May 2023 11:12:11 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/high-quality-recording-with-multiple-audio-tracks-in-advanced-output-mode.150001/</link>
+      <guid isPermaLink="false">150001</guid>
+      <author>invalid@example.com (megpoid0)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>megpoid0</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">megpoid0 submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/high-quality-recording-with-multiple-audio-tracks-in-advanced-output-mode.1388/" class="link link--internal">High quality recording with multiple audio tracks in Advanced output mode</a> - bottom text<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Advanced output mode allows creating a file with multiple audio tracks - for example, you could livestream your game's audio and your microphone, and also record your system sounds, game audio, and microphone into 3 separate tracks for video editing. (Capturing per-application audio will be added to OBS Studio in the future; currently, the...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/high-quality-recording-with-multiple-audio-tracks-in-advanced-output-mode.150001/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>10</slash:comments>
+    </item>
+    <item>
+      <title>Build ffmpeg for NVENC support in debian</title>
+      <pubDate>Sat, 22 Apr 2023 16:44:32 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/build-ffmpeg-for-nvenc-support-in-debian.162778/</link>
+      <guid isPermaLink="false">162778</guid>
+      <author>invalid@example.com (arf20)</author>
+      <category domain="https://obsproject.com/forum/list/guides.25/"><![CDATA[Guides]]></category>
+      <dc:creator>arf20</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">arf20 submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/build-ffmpeg-for-nvenc-support-in-debian.1652/" class="link link--internal">Build ffmpeg for NVENC support in debian</a> - Build ffmpeg for NVENC support in debian<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			hese are the steps to build a ffmpeg deb package with NVENC support to make hardware acceleration available for OBS Required an nVIDIA card with a reasonably updated driver<br />
+Install nv encoder headers matching your driver:<br />
+<code class="bbCodeInline">git clone --branch &lt;version branch&gt; https://github.com/FFmpeg/nv-codec-headers
+cd nv-codec-headers
+sudo make install</code><br />
+<br />
+Uninstall...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/build-ffmpeg-for-nvenc-support-in-debian.162778/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+  </channel>
+</rss>

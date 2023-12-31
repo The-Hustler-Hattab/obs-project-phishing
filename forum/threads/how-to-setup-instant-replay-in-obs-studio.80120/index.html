@@ -1,0 +1,5421 @@
+<!DOCTYPE html>
+<html id="XF" lang="en-US" dir="LTR"
+	data-app="public"
+	data-template="xfrm_thread_view_type_resource"
+	data-container-key="node-25"
+	data-content-key="thread-80120"
+	data-logged-in="false"
+	data-cookie-prefix="xf_"
+	data-csrf="1703995014,0954388619c306550186a1150f18ee46"
+	class="has-no-js template-xfrm_thread_view_type_resource"
+	>
+
+<!-- Mirrored from obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+	
+	
+	
+
+	<title>OBS Studio - How to setup instant replay in OBS Studio | OBS Forums</title>
+
+	
+		
+		<meta name="description" content="LtRoyalShrimp submitted a new resource:
+
+How to setup instant replay in OBS Studio - This guide will show you how to create an instant replay feature..." />
+		<meta property="og:description" content="LtRoyalShrimp submitted a new resource:
+
+How to setup instant replay in OBS Studio - This guide will show you how to create an instant replay feature.
+
+Thanks to the hard work of volunteers on OBS Studio, it now includes the powerful functionality of scripting. More on that here.
+
+This has..." />
+		<meta property="twitter:description" content="LtRoyalShrimp submitted a new resource:
+
+How to setup instant replay in OBS Studio - This guide will show you how to create an instant replay feature.
+
+Thanks to the hard work of volunteers on OBS..." />
+	
+	
+		<meta property="og:url" content="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/" />
+	
+		<link rel="canonical" href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/" />
+	
+		<link rel="next" href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2" />
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="OBS Forums" />
+
+
+	
+	
+		
+	
+	
+	<meta property="og:type" content="website" />
+
+
+	
+	
+		
+	
+	
+	
+		<meta property="og:title" content="OBS Studio - How to setup instant replay in OBS Studio" />
+		<meta property="twitter:title" content="OBS Studio - How to setup instant replay in OBS Studio" />
+	
+
+
+	
+	
+	
+	
+
+	
+		<meta name="theme-color" content="#000000" />
+	
+
+	
+	
+
+	
+
+
+	<link rel="preload" href="https://obsproject.com/forum/styles/fonts/fa/fa-regular-400.woff2?_v=5.15.3" as="font" type="font/woff2" crossorigin="anonymous" />
+
+
+	<link rel="preload" href="https://obsproject.com/forum/styles/fonts/fa/fa-solid-900.woff2?_v=5.15.3" as="font" type="font/woff2" crossorigin="anonymous" />
+
+
+<link rel="preload" href="https://obsproject.com/forum/styles/fonts/fa/fa-brands-400.woff2?_v=5.15.3" as="font" type="font/woff2" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://obsproject.com/forum/css.php?css=public%3Anormalize.css%2Cpublic%3Afa.css%2Cpublic%3Acore.less%2Cpublic%3Aapp.less&amp;s=11&amp;l=1&amp;d=1684574114&amp;k=9c8b648dfe5221457afa24c138c803bcc6cb9ff0" />
+
+	<link rel="stylesheet" href="https://obsproject.com/forum/css.php?css=public%3Aattachments.less%2Cpublic%3Abb_code.less%2Cpublic%3Alightbox.less%2Cpublic%3Amessage.less%2Cpublic%3Anotices.less%2Cpublic%3Ashare_controls.less%2Cpublic%3Aextra.less&amp;s=11&amp;l=1&amp;d=1684574114&amp;k=10808686c855426a15045eb4abc317dcd004449c" />
+
+	
+		<script src="https://obsproject.com/forum/js/xf/preamble.min.js?_v=fdedd7e7"></script>
+	
+
+
+	
+	
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-34644124-1', {
+			// 
+			
+			
+				'anonymize_ip': true,
+			
+		});
+	</script>
+
+</head>
+<body data-template="xfrm_thread_view_type_resource">
+
+<div class="p-pageWrapper" id="top">
+
+
+
+<header class="p-header" id="header">
+	<div class="p-header-inner">
+		<div class="p-header-content">
+
+			<div class="p-header-logo p-header-logo--image">
+				<a href="https://obsproject.com/">
+					<img src="https://obsproject.com/assets/images/new_icon_small-r.png"
+						alt="OBS Forums"
+						 />
+				</a>
+			</div>
+
+			<div class="header_title">
+				<div class="header_title_main">OBS</div>
+				<div class="header_subtitle">Open Broadcaster Software<span class="header_smalltext">®️</span></div>
+			</div>
+
+			<div id="SocialButtons">
+				
+				<div id="DiscordButton">
+					<a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+						<img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+					</a>
+					<span class="tooltip">Discord</span>
+				</div>
+
+				<div id="TwitterButton">
+					<a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+						<i class="icon-twitter"></i>
+					</a>
+					<span class="tooltip">Twitter</span>
+				</div>
+
+				<div id="GitHubButton">
+					<a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+						<i class="icon-github"></i>
+					</a>
+					<span class="tooltip">GitHub</span>
+				</div>
+<!--
+				<div id="BlogButton">
+					<a href="https://obsproject.com/blog">
+						<i class="icon-blog">Blog</i>
+					</a>
+				</div>
+
+				<div id="LivechatButton">
+					<a href="https://obsproject.com/chat" target="_blank">
+						<i class="icon-comment">Community Chat</i>
+					</a>
+				</div>
+-->
+
+				<div id="ContributeButton">
+					<a href="https://obsproject.com/contribute">
+						<i class="icon-heart">Contribute</i>
+					</a>
+				</div>
+
+			</div>
+
+			<nav>
+
+			  <ul class="website-menu cf">
+					<li>
+						<a href="https://obsproject.com/">Home</a>
+					</li>
+					<li>
+						<a href="https://obsproject.com/download">Download</a>
+					</li>
+					<li>
+						<a href="https://obsproject.com/blog">Blog</a>
+					</li>
+					<li>
+						<a href="https://obsproject.com/help">Help</a>
+					</li>
+					<li>
+						<a class="active" href="https://obsproject.com/forum/">Forum</a>
+					</li>
+				  </ul>
+
+			</nav>
+
+		</div>
+	</div>
+</header>
+
+
+
+
+
+	<div class="p-navSticky p-navSticky--primary" data-xf-init="sticky-header">
+		
+	<nav class="p-nav">
+		<div class="p-nav-inner">
+			<a class="p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
+				<i aria-hidden="true"></i>
+				<span class="p-nav-menuText">Menu</span>
+			</a>
+
+			<div class="p-nav-smallLogo">
+				<a href="https://obsproject.com/">
+					<img src="https://obsproject.com/assets/images/new_icon_small-r.png"
+						alt="OBS Forums"
+					 />
+				</a>
+			</div>
+
+			<div class="p-nav-scroller hScroller" data-xf-init="h-scroller" data-auto-scroll=".p-navEl.is-selected">
+				<div class="hScroller-scroll">
+					<ul class="p-nav-list js-offCanvasNavSource">
+					
+						<li>
+							
+	<div class="p-navEl " >
+		
+
+			
+	
+	<a href="https://obsproject.com/"
+		class="p-navEl-link "
+		
+		data-xf-key="1"
+		data-nav-id="home">Home</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl is-selected" data-has-children="true">
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+		
+		
+		data-nav-id="forums">Forums</a>
+
+
+			<a data-xf-key="2"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/whats-new/posts/"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="newPosts">New posts</a>
+
+	
+
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/search/?type=post"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="searchForums">Search forums</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " data-has-children="true">
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/plugins/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+		
+		
+		data-nav-id="obs_plugins">Plugins</a>
+
+
+			<a data-xf-key="3"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/resources/latest-reviews"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="pluginsLatestReviews">Latest reviews</a>
+
+	
+
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/search/?type=resource&amp;c%5Bcategories%5D%5B0%5D=6"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="pluginsSearchResources">Search plugins</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " data-has-children="true">
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/resources/"
+		class="p-navEl-link p-navEl-link--splitMenu "
+		
+		
+		data-nav-id="xfrm">Resources</a>
+
+
+			<a data-xf-key="4"
+				data-xf-click="menu"
+				data-menu-pos-ref="< .p-navEl"
+				class="p-navEl-splitTrigger"
+				role="button"
+				tabindex="0"
+				aria-label="Toggle expanded"
+				aria-expanded="false"
+				aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/resources/latest-reviews"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="xfrmLatestReviews">Latest reviews</a>
+
+	
+
+					
+						
+	
+	
+	<a href="https://obsproject.com/forum/search/?type=resource"
+		class="menu-linkRow u-indentDepth0 js-offCanvasCopy "
+		
+		
+		data-nav-id="xfrmSearchResources">Search resources</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+
+			<div class="p-nav-opposite">
+				<div class="p-navgroup p-account p-navgroup--guest">
+					
+						<a href="https://obsproject.com/forum/login/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn"
+							data-xf-click="overlay" data-follow-redirects="on">
+							<span class="p-navgroup-linkText">Log in</span>
+						</a>
+						
+							<a href="https://obsproject.com/forum/register/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register"
+								data-xf-click="overlay" data-follow-redirects="on">
+								<span class="p-navgroup-linkText">Register</span>
+							</a>
+						
+					
+				</div>
+
+				<div class="p-navgroup p-discovery">
+					<a href="https://obsproject.com/forum/whats-new/"
+						class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew"
+						aria-label="What&#039;s new"
+						title="What&#039;s new">
+						<i aria-hidden="true"></i>
+						<span class="p-navgroup-linkText">What's new</span>
+					</a>
+
+					
+						<a href="https://obsproject.com/forum/search/"
+							class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--search"
+							data-xf-click="menu"
+							data-xf-key="/"
+							aria-label="Search"
+							aria-expanded="false"
+							aria-haspopup="true"
+							title="Search">
+							<i aria-hidden="true"></i>
+							<span class="p-navgroup-linkText">Search</span>
+						</a>
+						<div class="menu menu--structural menu--wide" data-menu="menu" aria-hidden="true">
+							<form action="https://obsproject.com/forum/search/search" method="post"
+								class="menu-content"
+								data-xf-init="quick-search">
+
+								<h3 class="menu-header">Search</h3>
+								
+								<div class="menu-row">
+									
+										<div class="inputGroup inputGroup--joined">
+											<input type="text" class="input" name="keywords" placeholder="Search…" aria-label="Search" data-menu-autofocus="true" />
+											
+			<select name="constraints" class="js-quickSearch-constraint input" aria-label="Search within">
+				<option value="">Everywhere</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;}">Threads</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;nodes&quot;:[25],&quot;child_nodes&quot;:1}}">This forum</option>
+<option value="{&quot;search_type&quot;:&quot;post&quot;,&quot;c&quot;:{&quot;thread&quot;:80120}}">This thread</option>
+
+			</select>
+		
+										</div>
+									
+								</div>
+
+								
+								<div class="menu-row">
+									<label class="iconic"><input type="checkbox"  name="c[title_only]" value="1" /><i aria-hidden="true"></i><span class="iconic-label">Search titles only</span></label>
+
+								</div>
+								
+								<div class="menu-row">
+									<div class="inputGroup">
+										<span class="inputGroup-text" id="ctrl_search_menu_by_member">By:</span>
+										<input type="text" class="input" name="c[users]" data-xf-init="auto-complete" placeholder="Member" aria-labelledby="ctrl_search_menu_by_member" />
+									</div>
+								</div>
+								<div class="menu-footer">
+									<span class="menu-footer-controls">
+										<button type="submit" class="button--primary button button--icon button--icon--search"><span class="button-text">Search</span></button>
+										<a href="https://obsproject.com/forum/search/" class="button"><span class="button-text">Advanced search…</span></a>
+									</span>
+								</div>
+
+								<input type="hidden" name="_xfToken" value="1703995014,0954388619c306550186a1150f18ee46" />
+							</form>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	</div>
+	
+	
+		<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll">
+					<ul class="p-sectionLinks-list">
+					
+						<li>
+							
+	<div class="p-navEl " >
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/whats-new/posts/"
+		class="p-navEl-link "
+		
+		data-xf-key="alt+1"
+		data-nav-id="newPosts">New posts</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " >
+		
+
+			
+	
+	<a href="https://obsproject.com/forum/search/?type=post"
+		class="p-navEl-link "
+		
+		data-xf-key="alt+2"
+		data-nav-id="searchForums">Search forums</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+
+
+
+<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+	<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+	<div class="offCanvasMenu-content">
+		<div class="offCanvasMenu-header">
+			Menu
+			<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Close"></a>
+		</div>
+		
+			<div class="p-offCanvasRegisterLink">
+				<div class="offCanvasMenu-linkHolder">
+					<a href="https://obsproject.com/forum/login/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+						Log in
+					</a>
+				</div>
+				<hr class="offCanvasMenu-separator" />
+				
+					<div class="offCanvasMenu-linkHolder">
+						<a href="https://obsproject.com/forum/register/" class="offCanvasMenu-link" data-xf-click="overlay" data-menu-close="true">
+							Register
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator" />
+				
+			</div>
+		
+		<div class="js-offCanvasNavTarget"></div>
+	</div>
+</div>
+
+<div class="p-body">
+	<div class="p-body-inner">
+		<!--XF:EXTRA_OUTPUT-->
+
+		
+
+		
+
+		
+		
+	
+		<ul class="p-breadcrumbs "
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+		
+			
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/" itemprop="item">
+			<span itemprop="name">Home</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+			
+
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/" itemprop="item">
+			<span itemprop="name">Forums</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/#resources.23" itemprop="item">
+			<span itemprop="name">Resources</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/list/guides.25/" itemprop="item">
+			<span itemprop="name">Guides</span>
+		</a>
+		<meta itemprop="position" content="4" />
+	</li>
+
+			
+
+		
+		</ul>
+	
+
+		
+
+		
+	<noscript><div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly">JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding.</div></noscript>
+
+		
+	<div class="blockMessage blockMessage--important blockMessage--iconic js-browserWarning" style="display: none">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">alternative browser</a>.</div>
+
+
+		
+			<div class="p-body-header">
+				
+		<div class="contentRow contentRow--hideFigureNarrow">
+			<span class="contentRow-figure">
+				
+					<span  class="avatar avatar--s avatar--resourceIconDefault"><span></span><span class="u-srOnly">Resource icon</span></span>
+				
+			</span>
+			<div class="contentRow-main">
+				<div class="p-title">
+					<h1 class="p-title-value">
+						
+							<span class="label label--primary" dir="auto">OBS Studio</span><span class="label-append">&nbsp;</span>How to setup instant replay in OBS Studio
+						
+						
+					</h1>
+					
+				</div>
+				
+					<div class="p-description">
+						
+							
+	<ul class="listInline listInline--bullet">
+		<li>
+			<i class="fa--xf far fa-user" aria-hidden="true" title="Thread starter"></i>
+			<span class="u-srOnly">Thread starter</span>
+
+			<a href="https://obsproject.com/forum/members/videophile.8573/" class="username  u-concealed" dir="auto" data-user-id="8573" data-xf-init="member-tooltip">Videophile</a>
+		</li>
+		<li>
+			<i class="fa--xf far fa-clock" aria-hidden="true" title="Start date"></i>
+			<span class="u-srOnly">Start date</span>
+
+			<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/" class="u-concealed"><time  class="u-dt" dir="auto" datetime="2018-01-23T21:09:36+0000" data-time="1516741776" data-date-string="Jan 23, 2018" data-time-string="9:09 PM" title="Jan 23, 2018 at 9:09 PM">Jan 23, 2018</time></a>
+		</li>
+		
+	</ul>
+
+						
+					</div>
+				
+			</div>
+		</div>
+	
+			</div>
+		
+
+		<div class="p-body-main  ">
+			
+
+			<div class="p-body-content">
+				
+				<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+
+
+	
+		
+		
+
+		
+		
+
+		
+
+	
+
+
+		
+	
+		<div class="tabs tabs--standalone">
+			<div class="hScroller" data-xf-init="h-scroller">
+				<span class="hScroller-scroll">
+					<a class="tabs-tab " href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/">Overview</a>
+					
+						
+						
+						
+						
+							<a class="tabs-tab " href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/reviews">Reviews (9)</a>
+						
+						
+						
+							<a class="tabs-tab is-active" href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/">Discussion</a>
+						
+					
+				</span>
+			</div>
+		</div>
+	
+
+	
+
+
+
+
+
+
+	
+
+
+
+	
+
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block block--messages" data-xf-init="" data-type="post" data-href="/forum/inline-mod/" data-search-target="*">
+
+	<span class="u-anchorTarget" id="posts"></span>
+
+	
+		
+	
+
+	
+
+	<div class="block-outer"><div class="block-outer-main"><nav class="pageNavWrapper pageNavWrapper--mixed ">
+
+
+
+<div class="pageNav  ">
+	
+
+	<ul class="pageNav-main">
+		
+
+	
+		<li class="pageNav-page pageNav-page--current "><a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/">1</a></li>
+	
+
+
+		
+
+		
+
+		
+
+		
+
+	
+		<li class="pageNav-page "><a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2">2</a></li>
+	
+
+	</ul>
+
+	
+		<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2" class="pageNav-jump pageNav-jump--next">Next</a>
+	
+</div>
+
+<div class="pageNavSimple">
+	
+
+	<a class="pageNavSimple-el pageNavSimple-el--current"
+		data-xf-init="tooltip" title="Go to page"
+		data-xf-click="menu" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
+		1 of 2
+	</a>
+	
+
+	<div class="menu menu--pageJump" data-menu="menu" aria-hidden="true">
+		<div class="menu-content">
+			<h4 class="menu-header">Go to page</h4>
+			<div class="menu-row" data-xf-init="page-jump" data-page-url="/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-%page%">
+				<div class="inputGroup inputGroup--numbers">
+					<div class="inputGroup inputGroup--numbers inputNumber" data-xf-init="number-box"><input type="number" pattern="\d*" class="input input--number js-numberBoxTextInput input input--numberNarrow js-pageJumpPage" value="1"  min="1" max="2" step="1" required="required" data-menu-autofocus="true" /></div>
+					<span class="inputGroup-text"><button type="button" class="js-pageJumpGo button"><span class="button-text">Go</span></button></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+		<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2" class="pageNavSimple-el pageNavSimple-el--next">
+			Next <i aria-hidden="true"></i>
+		</a>
+		<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2"
+			class="pageNavSimple-el pageNavSimple-el--last"
+			data-xf-init="tooltip" title="Last">
+			<i aria-hidden="true"></i> <span class="u-srOnly">Last</span>
+		</a>
+	
+</div>
+
+</nav>
+
+
+
+</div></div>
+
+	
+
+	
+		
+	<div class="block-outer js-threadStatusField"></div>
+
+	
+
+	<div class="block-container lbContainer"
+		data-xf-init="lightbox select-to-quote"
+		data-message-selector=".js-post"
+		data-lb-id="thread-80120"
+		data-lb-universal="0">
+
+		<div class="block-body js-replyNewMessageContainer">
+			
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Videophile"
+		data-content="post-336558"
+		id="js-post-336558">
+
+		<span class="u-anchorTarget" id="post-336558"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/videophile.8573/" class="avatar avatar--m" data-user-id="8573" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/8/8573.jpg?1660165823" srcset="/forum/data/avatars/l/8/8573.jpg?1660165823 2x" alt="Videophile" class="avatar-u8573-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/videophile.8573/" class="username " dir="auto" data-user-id="8573" data-xf-init="member-tooltip" itemprop="name">Videophile</a></h4>
+			
+			<div class="userBanner userBanner--elgato message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Elgato</strong><span class="userBanner-after"></span></div>
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336558" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-01-23T21:09:36+0000" data-time="1516741776" data-date-string="Jan 23, 2018" data-time-string="9:09 PM" title="Jan 23, 2018 at 9:09 PM" itemprop="datePublished">Jan 23, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336558"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/336558/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336558" rel="nofollow">
+						#1
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-336558"
+		data-lb-caption-desc="Videophile &middot; Jan 23, 2018 at 9:09 PM">
+
+		
+			
+
+	
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">LtRoyalShrimp submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/" class="link link--internal">How to setup instant replay in OBS Studio</a> - This guide will show you how to create an instant replay feature.<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Thanks to the hard work of volunteers on OBS Studio, it now includes the powerful functionality of scripting. More on that <a href="https://obsproject.com/docs/scripting.html" class="link link--internal">here</a>.<br />
+<br />
+This has enabled a very cool feature: Instant Replays.<br />
+<br />
+This guide will go over how to setup an instant replay and get it working with your Stream Deck.<br />
+<br />
+<br />
+<b>Requirements:</b><br />
+OBS Studio Update 21.xx.xx<br />
+<br />
+---<br />
+<br />
+1.<b> Open the OBS Studio settings, go to output, and check the box &quot;Enable Replay Buffer&quot;</b><br />
+Set...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/" class="link link--internal">Read more about this resource...</a></div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+			
+
+	
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Reactions:</span>
+<a class="reactionsBar-link" href="https://obsproject.com/forum/posts/336558/reactions" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>slimpikins1990</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Dregu"
+		data-content="post-336823"
+		id="js-post-336823">
+
+		<span class="u-anchorTarget" id="post-336823"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/dregu.53651/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="53651" data-xf-init="member-tooltip" style="background-color: #e0a385; color: #8f4724">
+			<span class="avatar-u53651-m" role="img" aria-label="Dregu">D</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/dregu.53651/" class="username " dir="auto" data-user-id="53651" data-xf-init="member-tooltip" itemprop="name">Dregu</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336823" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-01-25T13:50:08+0000" data-time="1516888208" data-date-string="Jan 25, 2018" data-time-string="1:50 PM" title="Jan 25, 2018 at 1:50 PM" itemprop="datePublished">Jan 25, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336823"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/336823/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336823" rel="nofollow">
+						#2
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-336823"
+		data-lb-caption-desc="Dregu &middot; Jan 25, 2018 at 1:50 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">This is awesome, but sometimes you need non-instant replays, e.g. saving a bunch of hilights and showing them after the round is ended.<br />
+<br />
+So I just added these features! I haven't tested this much, but there are now three hotkeys (Instant replay, Add replay to playlist, Clear playlist) and you need to add a vlc source in a separate scene if you want to use the playlist function. Instant replays can also be added to the playlist for later, and the playlist can be cleared automatically after shown. The instant replay media source is also cleared after shown, so it won't play again when changing scenes.<br />
+<br />
+<a href="https://gist.github.com/Dregu/441d7abd30cf9257a5c3fab25cc66047" target="_blank" class="link link--external" rel="nofollow ugc noopener">Download the updated script from github.</a></div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Reactions:</span>
+<a class="reactionsBar-link" href="https://obsproject.com/forum/posts/336823/reactions" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>eXtwofour</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="ikmyer"
+		data-content="post-336838"
+		id="js-post-336838">
+
+		<span class="u-anchorTarget" id="post-336838"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/ikmyer.138822/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="138822" data-xf-init="member-tooltip" style="background-color: #7a7a1f; color: #000000">
+			<span class="avatar-u138822-m" role="img" aria-label="ikmyer">I</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/ikmyer.138822/" class="username " dir="auto" data-user-id="138822" data-xf-init="member-tooltip" itemprop="name">ikmyer</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336838" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-01-25T16:03:00+0000" data-time="1516896180" data-date-string="Jan 25, 2018" data-time-string="4:03 PM" title="Jan 25, 2018 at 4:03 PM" itemprop="datePublished">Jan 25, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336838"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/336838/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336838" rel="nofollow">
+						#3
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-336838"
+		data-lb-caption-desc="ikmyer &middot; Jan 25, 2018 at 4:03 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">I set this up but when I hit &quot;Ctrl+Shift+R&quot; it does save the current replay but in the video source it plays the previously made replay.<br />
+Anyone else having this issue?</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Dregu"
+		data-content="post-336958"
+		id="js-post-336958">
+
+		<span class="u-anchorTarget" id="post-336958"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/dregu.53651/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="53651" data-xf-init="member-tooltip" style="background-color: #e0a385; color: #8f4724">
+			<span class="avatar-u53651-m" role="img" aria-label="Dregu">D</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/dregu.53651/" class="username " dir="auto" data-user-id="53651" data-xf-init="member-tooltip" itemprop="name">Dregu</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336958" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-01-26T00:58:15+0000" data-time="1516928295" data-date-string="Jan 26, 2018" data-time-string="12:58 AM" title="Jan 26, 2018 at 12:58 AM" itemprop="datePublished">Jan 26, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336958"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/336958/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-336958" rel="nofollow">
+						#4
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-336958"
+		data-lb-caption-desc="Dregu &middot; Jan 26, 2018 at 12:58 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper"><blockquote data-attributes="member: 138822" data-quote="ikmyer" data-source="post: 336838"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="https://obsproject.com/forum/goto/post?id=336838"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-336838">ikmyer said:</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			I set this up but when I hit &quot;Ctrl+Shift+R&quot; it does save the current replay but in the video source it plays the previously made replay.<br />
+Anyone else having this issue?
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote>Yes sometimes, and I think the code needs to be changed to wait for &quot;get_last_replay&quot; to actually change from the current value and not accept just any value thats != nil. I'll try implementing this in my gist sometime.<br />
+<br />
+EDIT: <a href="https://gist.github.com/Dregu/441d7abd30cf9257a5c3fab25cc66047" target="_blank" class="link link--external" rel="nofollow ugc noopener">My version</a> works like I described now. No more old replays because obs took too long to save the file. It also starts instant replays a bit quicker, because I made the timer 100ms instead of 1000ms.</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+		<div class="message-lastEdit">
+			
+				Last edited: <time  class="u-dt" dir="auto" datetime="2018-01-26T06:49:10+0000" data-time="1516949350" data-date-string="Jan 26, 2018" data-time-string="6:49 AM" title="Jan 26, 2018 at 6:49 AM" itemprop="dateModified">Jan 26, 2018</time>
+			
+		</div>
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Dobrowney"
+		data-content="post-342543"
+		id="js-post-342543">
+
+		<span class="u-anchorTarget" id="post-342543"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/dobrowney.7892/" class="avatar avatar--m" data-user-id="7892" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/7/7892.jpg?1545884418"  alt="Dobrowney" class="avatar-u7892-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/dobrowney.7892/" class="username " dir="auto" data-user-id="7892" data-xf-init="member-tooltip" itemprop="name">Dobrowney</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-342543" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-02-28T19:32:46+0000" data-time="1519846366" data-date-string="Feb 28, 2018" data-time-string="7:32 PM" title="Feb 28, 2018 at 7:32 PM" itemprop="datePublished">Feb 28, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-342543"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/342543/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-342543" rel="nofollow">
+						#5
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-342543"
+		data-lb-caption-desc="Dobrowney &middot; Feb 28, 2018 at 7:32 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">Dregu could this be setup to pull High-Quality Highlights for say something like Youtube Highlight Videos or something like that. Also how far back does it rewind on the Recording .. Like If I hit that key for the replay would it record out the last min before the key was hit. Been looking for a option to pull highlights without having to go though vods and vods of videos.</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="DeejayQuest"
+		data-content="post-353037"
+		id="js-post-353037">
+
+		<span class="u-anchorTarget" id="post-353037"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/deejayquest.148713/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="148713" data-xf-init="member-tooltip" style="background-color: #33cc99; color: #0f3d2e">
+			<span class="avatar-u148713-m" role="img" aria-label="DeejayQuest">D</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/deejayquest.148713/" class="username " dir="auto" data-user-id="148713" data-xf-init="member-tooltip" itemprop="name">DeejayQuest</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-353037" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-05-17T16:26:09+0100" data-time="1526570769" data-date-string="May 17, 2018" data-time-string="4:26 PM" title="May 17, 2018 at 4:26 PM" itemprop="datePublished">May 17, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-353037"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/353037/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-353037" rel="nofollow">
+						#6
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-353037"
+		data-lb-caption-desc="DeejayQuest &middot; May 17, 2018 at 4:26 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper"><blockquote data-attributes="member: 53651" data-quote="Dregu" data-source="post: 336958"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="https://obsproject.com/forum/goto/post?id=336958"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-336958">Dregu said:</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			Yes sometimes, and I think the code needs to be changed to wait for &quot;get_last_replay&quot; to actually change from the current value and not accept just any value thats != nil. I'll try implementing this in my gist sometime.<br />
+<br />
+EDIT: <a href="https://gist.github.com/Dregu/441d7abd30cf9257a5c3fab25cc66047" target="_blank" class="link link--external" rel="nofollow ugc noopener">My version</a> works like I described now. No more old replays because obs took too long to save the file. It also starts instant replays a bit quicker, because I made the timer 100ms instead of 1000ms.
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+Hey Dregu, I got your version of the script working, and have it setup so that it runs in a different scene, triggered by the same hotkey combo as the instant replay. It works well, except that I can't get the file to loop. It plays once and then freezes. Any ideas? Thanks!</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="I3ordo"
+		data-content="post-373509"
+		id="js-post-373509">
+
+		<span class="u-anchorTarget" id="post-373509"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/i3ordo.161882/" class="avatar avatar--m" data-user-id="161882" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/161/161882.jpg?1536419290" srcset="/forum/data/avatars/l/161/161882.jpg?1536419290 2x" alt="I3ordo" class="avatar-u161882-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/i3ordo.161882/" class="username " dir="auto" data-user-id="161882" data-xf-init="member-tooltip" itemprop="name">I3ordo</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-373509" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-09-11T14:18:35+0100" data-time="1536671915" data-date-string="Sep 11, 2018" data-time-string="2:18 PM" title="Sep 11, 2018 at 2:18 PM" itemprop="datePublished">Sep 11, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-373509"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/373509/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-373509" rel="nofollow">
+						#7
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-373509"
+		data-lb-caption-desc="I3ordo &middot; Sep 11, 2018 at 2:18 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">so does this mean, we can have multiple replay files as the script looks for the alphabetically the latest file that contains &quot;replay&quot; or any other name you gave for the &quot;suffix&quot;?</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="nbtc971"
+		data-content="post-375622"
+		id="js-post-375622">
+
+		<span class="u-anchorTarget" id="post-375622"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/nbtc971.35224/" class="avatar avatar--m" data-user-id="35224" data-xf-init="member-tooltip">
+			<img src="https://secure.gravatar.com/avatar/c0382456008f88dd97549f6fd47e4296?s=96" srcset="https://secure.gravatar.com/avatar/c0382456008f88dd97549f6fd47e4296?s=192 2x" alt="nbtc971" class="avatar-u35224-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/nbtc971.35224/" class="username " dir="auto" data-user-id="35224" data-xf-init="member-tooltip" itemprop="name">nbtc971</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375622" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-10-01T09:46:44+0100" data-time="1538383604" data-date-string="Oct 1, 2018" data-time-string="9:46 AM" title="Oct 1, 2018 at 9:46 AM" itemprop="datePublished">Oct 1, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375622"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/375622/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375622" rel="nofollow">
+						#8
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-375622"
+		data-lb-caption-desc="nbtc971 &middot; Oct 1, 2018 at 9:46 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">Dregu's script doesn't appear to work any longer and is causing OBS to report a crash when you close the program. Just a heads up.</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList is-active">
+			
+	
+	
+		<ul class="reactionSummary">
+		
+			<li><span class="reaction reaction--small reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" /></span></li>
+		
+		</ul>
+	
+
+
+<span class="u-srOnly">Reactions:</span>
+<a class="reactionsBar-link" href="https://obsproject.com/forum/posts/375622/reactions" data-xf-click="overlay" data-cache="false" rel="nofollow"><bdi>I3ordo</bdi></a>
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="I3ordo"
+		data-content="post-375678"
+		id="js-post-375678">
+
+		<span class="u-anchorTarget" id="post-375678"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/i3ordo.161882/" class="avatar avatar--m" data-user-id="161882" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/161/161882.jpg?1536419290" srcset="/forum/data/avatars/l/161/161882.jpg?1536419290 2x" alt="I3ordo" class="avatar-u161882-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/i3ordo.161882/" class="username " dir="auto" data-user-id="161882" data-xf-init="member-tooltip" itemprop="name">I3ordo</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375678" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-10-01T22:22:19+0100" data-time="1538428939" data-date-string="Oct 1, 2018" data-time-string="10:22 PM" title="Oct 1, 2018 at 10:22 PM" itemprop="datePublished">Oct 1, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375678"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/375678/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375678" rel="nofollow">
+						#9
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-375678"
+		data-lb-caption-desc="I3ordo &middot; Oct 1, 2018 at 10:22 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">I was wondering about that... the crashes were bareable as they were  at the end but<br />
+today this happened:<br />
+<script class="js-extraPhrases" type="application/json">
+			{
+				"lightbox_close": "Close",
+				"lightbox_next": "Next",
+				"lightbox_previous": "Previous",
+				"lightbox_error": "The requested content cannot be loaded. Please try again later.",
+				"lightbox_start_slideshow": "Start slideshow",
+				"lightbox_stop_slideshow": "Stop slideshow",
+				"lightbox_full_screen": "Full screen",
+				"lightbox_thumbnails": "Thumbnails",
+				"lightbox_download": "Download",
+				"lightbox_share": "Share",
+				"lightbox_zoom": "Zoom",
+				"lightbox_new_window": "New window",
+				"lightbox_toggle_sidebar": "Toggle sidebar"
+			}
+			</script>
+		
+		
+	
+
+
+	<div class="bbImageWrapper  js-lbImage" title="1538428840925.png"
+		data-src="https://obsproject.com/forum/attachments/1538428840925-png.39742/" data-lb-sidebar-href="" data-lb-caption-extra-html="" data-single-image="1">
+		<img src="https://obsproject.com/forum/attachments/1538428840925-png.39742/"
+			data-url=""
+			class="bbImage"
+			data-zoom-target="1"
+			style=""
+			alt="1538428840925.png"
+			title="1538428840925.png"
+			width="250" height="836" loading="lazy" />
+	</div>this is  my collection of scenes and components but there are dublicates everywhere..<br />
+<br />
+<br />
+tried to clean them but they dont disappear.<br />
+<br />
+here is the log file..<br />
+<br />
+ıt s too bad , i was just getting used to the &quot;add to replay list&quot; and other functionalities...<br />
+<a href="https://obsproject.com/logs/DVatdpB974WADnnN" class="link link--internal">https://obsproject.com/logs/DVatdpB974WADnnN</a></div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+			
+	
+		
+		<section class="message-attachments">
+			<h4 class="block-textHeader">Attachments</h4>
+			<ul class="attachmentList">
+				
+					
+						
+	<li class="file file--linked">
+		<a class="u-anchorTarget" id="attachment-39743"></a>
+		
+			
+	
+		
+		
+
+		
+		
+	
+
+
+			<a class="file-preview js-lbImage" href="https://obsproject.com/forum/attachments/1538428889406-png.39743/" target="_blank">
+				<img src="https://obsproject.com/forum/data/attachments/39/39485-23a4024d316391c5a7877530c9493c64.jpg" alt="1538428889406.png"
+					width="30" height="100" loading="lazy" />
+			</a>
+		
+
+		<div class="file-content">
+			<div class="file-info">
+				<span class="file-name" title="1538428889406.png">1538428889406.png</span>
+				<div class="file-meta">
+					53.5 KB &middot; Views: 117
+				</div>
+			</div>
+		</div>
+	</li>
+
+					
+				
+			</ul>
+		</section>
+	
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="I3ordo"
+		data-content="post-375679"
+		id="js-post-375679">
+
+		<span class="u-anchorTarget" id="post-375679"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/i3ordo.161882/" class="avatar avatar--m" data-user-id="161882" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/161/161882.jpg?1536419290" srcset="/forum/data/avatars/l/161/161882.jpg?1536419290 2x" alt="I3ordo" class="avatar-u161882-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/i3ordo.161882/" class="username " dir="auto" data-user-id="161882" data-xf-init="member-tooltip" itemprop="name">I3ordo</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375679" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-10-01T22:36:03+0100" data-time="1538429763" data-date-string="Oct 1, 2018" data-time-string="10:36 PM" title="Oct 1, 2018 at 10:36 PM" itemprop="datePublished">Oct 1, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375679"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/375679/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375679" rel="nofollow">
+						#10
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-375679"
+		data-lb-caption-desc="I3ordo &middot; Oct 1, 2018 at 10:36 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">i disabled the script but it is still crashing, gonna make a new post</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="I3ordo"
+		data-content="post-375714"
+		id="js-post-375714">
+
+		<span class="u-anchorTarget" id="post-375714"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/i3ordo.161882/" class="avatar avatar--m" data-user-id="161882" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/161/161882.jpg?1536419290" srcset="/forum/data/avatars/l/161/161882.jpg?1536419290 2x" alt="I3ordo" class="avatar-u161882-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/i3ordo.161882/" class="username " dir="auto" data-user-id="161882" data-xf-init="member-tooltip" itemprop="name">I3ordo</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375714" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-10-02T11:47:50+0100" data-time="1538477270" data-date-string="Oct 2, 2018" data-time-string="11:47 AM" title="Oct 2, 2018 at 11:47 AM" itemprop="datePublished">Oct 2, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375714"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/375714/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-375714" rel="nofollow">
+						#11
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-375714"
+		data-lb-caption-desc="I3ordo &middot; Oct 2, 2018 at 11:47 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">when script is disabled, it crashes again but not anymore.<br />
+<br />
+I Hope dregu fixes it, because i got used to it, i was using it in conjunction with the instant replay function.<br />
+<br />
+heck i am still gonna use it , the crashes matter alot when you make a dublicat of your scene collections. If you are not adding scenes or subtracting them, you can enable it and bare with the crashes...</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="I3ordo"
+		data-content="post-377366"
+		id="js-post-377366">
+
+		<span class="u-anchorTarget" id="post-377366"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/i3ordo.161882/" class="avatar avatar--m" data-user-id="161882" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/161/161882.jpg?1536419290" srcset="/forum/data/avatars/l/161/161882.jpg?1536419290 2x" alt="I3ordo" class="avatar-u161882-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/i3ordo.161882/" class="username " dir="auto" data-user-id="161882" data-xf-init="member-tooltip" itemprop="name">I3ordo</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-377366" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2018-10-17T04:16:54+0100" data-time="1539746214" data-date-string="Oct 17, 2018" data-time-string="4:16 AM" title="Oct 17, 2018 at 4:16 AM" itemprop="datePublished">Oct 17, 2018</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-377366"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/377366/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-377366" rel="nofollow">
+						#12
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-377366"
+		data-lb-caption-desc="I3ordo &middot; Oct 17, 2018 at 4:16 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">Hey <a href="https://obsproject.com/forum/members/53651/" class="username" data-xf-init="member-tooltip" data-user-id="53651" data-username="@Dregu">@Dregu</a>  , is there any chance of you looking back the script and fix the problem? I just need the add to replaylist feature which quite lacking in OBS</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Ghastly"
+		data-content="post-392793"
+		id="js-post-392793">
+
+		<span class="u-anchorTarget" id="post-392793"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/ghastly.180998/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="180998" data-xf-init="member-tooltip" style="background-color: #99cc66; color: #406020">
+			<span class="avatar-u180998-m" role="img" aria-label="Ghastly">G</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/ghastly.180998/" class="username " dir="auto" data-user-id="180998" data-xf-init="member-tooltip" itemprop="name">Ghastly</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-392793" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2019-02-19T17:55:18+0000" data-time="1550598918" data-date-string="Feb 19, 2019" data-time-string="5:55 PM" title="Feb 19, 2019 at 5:55 PM" itemprop="datePublished">Feb 19, 2019</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-392793"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/392793/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-392793" rel="nofollow">
+						#13
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-392793"
+		data-lb-caption-desc="Ghastly &middot; Feb 19, 2019 at 5:55 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper"><blockquote data-attributes="member: 8573" data-quote="LtRoyalShrimp" data-source="post: 336558"
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="https://obsproject.com/forum/goto/post?id=336558"
+					class="bbCodeBlock-sourceJump"
+					rel="nofollow"
+					data-xf-click="attribution"
+					data-content-selector="#post-336558">LtRoyalShrimp said:</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			LtRoyalShrimp submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/" class="link link--internal">How to setup instant replay in OBS Studio</a> - This guide will show you how to create an instant replay feature.<br />
+<br />
+<br />
+<br />
+<a href="https://obsproject.com/forum/resources/how-to-setup-instant-replay-in-obs-studio.613/" class="link link--internal">Read more about this resource...</a>
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote>Is there a way for instant replay to work when I'm not streaming? I followed the instructions and everything works fin and the file is saved. But the problem is it just starts to stream on my Twitch when all I wanna do is capture an instant replay not stream... Is there a way I can not stream and still save replays???</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="vasqued2"
+		data-content="post-483725"
+		id="js-post-483725">
+
+		<span class="u-anchorTarget" id="post-483725"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/vasqued2.279707/" class="avatar avatar--m" data-user-id="279707" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/279/279707.jpg?1601512757" srcset="/forum/data/avatars/l/279/279707.jpg?1601512757 2x" alt="vasqued2" class="avatar-u279707-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/vasqued2.279707/" class="username " dir="auto" data-user-id="279707" data-xf-init="member-tooltip" itemprop="name">vasqued2</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-483725" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2020-10-01T02:09:38+0100" data-time="1601514578" data-date-string="Oct 1, 2020" data-time-string="2:09 AM" title="Oct 1, 2020 at 2:09 AM" itemprop="datePublished">Oct 1, 2020</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-483725"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/483725/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-483725" rel="nofollow">
+						#14
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-483725"
+		data-lb-caption-desc="vasqued2 &middot; Oct 1, 2020 at 2:09 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper"><a href="https://obsproject.com/forum/members/161882/" class="username" data-xf-init="member-tooltip" data-user-id="161882" data-username="@I3ordo">@I3ordo</a>, I've got the fix for the crashes when exiting and can take out the code prevents the VNC playlist from looping, but I haven't been able to recreate the duplicate scenes.  If you can consistently recreate it, tell me the steps and I'll see what I can do.<br />
+<br />
+To stop the crashes, go to line 326:<br />
+<br />
+Change it from<br />
+    obs.source_list_release(sources) <br />
+To<br />
+    obs.source_list_release(msources) <br />
+<br />
+And then add a new line<br />
+    obs.source_list_release(vsources) <br />
+<br />
+To enable looping, seach for this line (it appears 3 times)<br />
+        obs.obs_data_set_bool(settings, &quot;loop&quot;, false) <br />
+and change all 3 to<br />
+--        obs.obs_data_set_bool(settings, &quot;loop&quot;, false)</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Daniel Piazza"
+		data-content="post-489919"
+		id="js-post-489919">
+
+		<span class="u-anchorTarget" id="post-489919"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/daniel-piazza.286819/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="286819" data-xf-init="member-tooltip" style="background-color: #7a7a1f; color: #000000">
+			<span class="avatar-u286819-m" role="img" aria-label="Daniel Piazza">D</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/daniel-piazza.286819/" class="username " dir="auto" data-user-id="286819" data-xf-init="member-tooltip" itemprop="name">Daniel Piazza</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-489919" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2020-11-05T10:28:36+0000" data-time="1604572116" data-date-string="Nov 5, 2020" data-time-string="10:28 AM" title="Nov 5, 2020 at 10:28 AM" itemprop="datePublished">Nov 5, 2020</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-489919"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/489919/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-489919" rel="nofollow">
+						#15
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-489919"
+		data-lb-caption-desc="Daniel Piazza &middot; Nov 5, 2020 at 10:28 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">Scusate, c'è un modo di avere il replay in più scene? nel senso io devo fare delle dirette per partite di tennis e mi servirebbe un replay diverso dalla telecamera principale e quindi in un'altra scena. sapete come fare? OVVIAMENTE SENZA STREAM DECK</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="josh333shaw"
+		data-content="post-496614"
+		id="js-post-496614">
+
+		<span class="u-anchorTarget" id="post-496614"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/josh333shaw.293455/" class="avatar avatar--m" data-user-id="293455" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/293/293455.jpg?1607520814" srcset="/forum/data/avatars/l/293/293455.jpg?1607520814 2x" alt="josh333shaw" class="avatar-u293455-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/josh333shaw.293455/" class="username " dir="auto" data-user-id="293455" data-xf-init="member-tooltip" itemprop="name">josh333shaw</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-496614" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2020-12-09T13:31:53+0000" data-time="1607520713" data-date-string="Dec 9, 2020" data-time-string="1:31 PM" title="Dec 9, 2020 at 1:31 PM" itemprop="datePublished">Dec 9, 2020</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-496614"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/496614/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-496614" rel="nofollow">
+						#16
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-496614"
+		data-lb-caption-desc="josh333shaw &middot; Dec 9, 2020 at 1:31 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">Thank you for this guide! It was useful for me, since I am not a developer at all, so the forums are my savior :D Currently, I work as a freelance writer in <a href="https://essaykeeper.com/" target="_blank" class="link link--external" rel="nofollow ugc noopener">https://essaykeeper.com/</a> , I enjoy my job to be honest.</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Stanley98"
+		data-content="post-498220"
+		id="js-post-498220">
+
+		<span class="u-anchorTarget" id="post-498220"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/stanley98.295119/" class="avatar avatar--m" data-user-id="295119" data-xf-init="member-tooltip">
+			<img src="https://obsproject.com/forum/data/avatars/m/295/295119.jpg?1608206397"  alt="Stanley98" class="avatar-u295119-m" width="96" height="96" loading="lazy" itemprop="image" /> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/stanley98.295119/" class="username " dir="auto" data-user-id="295119" data-xf-init="member-tooltip" itemprop="name">Stanley98</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-498220" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2020-12-17T11:56:16+0000" data-time="1608206176" data-date-string="Dec 17, 2020" data-time-string="11:56 AM" title="Dec 17, 2020 at 11:56 AM" itemprop="datePublished">Dec 17, 2020</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-498220"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/498220/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-498220" rel="nofollow">
+						#17
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-498220"
+		data-lb-caption-desc="Stanley98 &middot; Dec 17, 2020 at 11:56 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">A great guide.</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="Watto_1"
+		data-content="post-515984"
+		id="js-post-515984">
+
+		<span class="u-anchorTarget" id="post-515984"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/watto_1.312729/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="312729" data-xf-init="member-tooltip" style="background-color: #993366; color: #df9fbf">
+			<span class="avatar-u312729-m" role="img" aria-label="Watto_1">W</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/watto_1.312729/" class="username " dir="auto" data-user-id="312729" data-xf-init="member-tooltip" itemprop="name">Watto_1</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-515984" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2021-03-09T09:35:06+0000" data-time="1615282506" data-date-string="Mar 9, 2021" data-time-string="9:35 AM" title="Mar 9, 2021 at 9:35 AM" itemprop="datePublished">Mar 9, 2021</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-515984"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/515984/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-515984" rel="nofollow">
+						#18
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-515984"
+		data-lb-caption-desc="Watto_1 &middot; Mar 9, 2021 at 9:35 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">Is there an update to get this to work I have watched and read how to do it but it will not place the next file</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="BamaBreeze"
+		data-content="post-522938"
+		id="js-post-522938">
+
+		<span class="u-anchorTarget" id="post-522938"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/bamabreeze.320894/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="320894" data-xf-init="member-tooltip" style="background-color: #663366; color: #c388c3">
+			<span class="avatar-u320894-m" role="img" aria-label="BamaBreeze">B</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/bamabreeze.320894/" class="username " dir="auto" data-user-id="320894" data-xf-init="member-tooltip" itemprop="name">BamaBreeze</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-522938" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2021-04-21T00:39:14+0100" data-time="1618961954" data-date-string="Apr 21, 2021" data-time-string="12:39 AM" title="Apr 21, 2021 at 12:39 AM" itemprop="datePublished">Apr 21, 2021</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-522938"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/522938/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-522938" rel="nofollow">
+						#19
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-522938"
+		data-lb-caption-desc="BamaBreeze &middot; Apr 21, 2021 at 12:39 AM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">I can't seem to get this to work with multiple cameras.<br />
+<br />
+I'm running a Pinewood Derby and each heat will have a cam at the starting line, switch to trackside, and finally switch to the finish line. Would love for the replay to capture the entire sequence.<br />
+<br />
+Am I doing it wrong, or can the code be tweaked to accomplish this?</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+
+					
+
+					
+						
+
+	
+
+	
+
+	
+	<article class="message message--post js-post js-inlineModContainer  "
+		data-author="hypnos97"
+		data-content="post-523042"
+		id="js-post-523042">
+
+		<span class="u-anchorTarget" id="post-523042"></span>
+
+		
+			<div class="message-inner">
+				
+					<div class="message-cell message-cell--user">
+						
+
+	<section itemscope itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="https://obsproject.com/forum/members/hypnos97.321012/" class="avatar avatar--m avatar--default avatar--default--dynamic" data-user-id="321012" data-xf-init="member-tooltip" style="background-color: #a385e0; color: #47248f">
+			<span class="avatar-u321012-m" role="img" aria-label="hypnos97">H</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="https://obsproject.com/forum/members/hypnos97.321012/" class="username " dir="auto" data-user-id="321012" data-xf-init="member-tooltip" itemprop="name">hypnos97</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">New Member</h5>
+			
+		</div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+					</div>
+				
+
+				
+					<div class="message-cell message-cell--main">
+					
+						<div class="message-main js-quickEditTarget">
+
+							
+								
+
+	<header class="message-attribution message-attribution--split">
+		<ul class="message-attribution-main listInline ">
+			
+			
+			<li class="u-concealed">
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-523042" rel="nofollow">
+					<time  class="u-dt" dir="auto" datetime="2021-04-21T17:54:58+0100" data-time="1619024098" data-date-string="Apr 21, 2021" data-time-string="5:54 PM" title="Apr 21, 2021 at 5:54 PM" itemprop="datePublished">Apr 21, 2021</time>
+				</a>
+			</li>
+			
+		</ul>
+
+		<ul class="message-attribution-opposite message-attribution-opposite--list ">
+			
+			<li>
+				<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-523042"
+					class="message-attribution-gadget"
+					data-xf-init="share-tooltip"
+					data-href="/forum/posts/523042/share"
+					aria-label="Share"
+					rel="nofollow">
+					<i class="fa--xf far fa-share-alt" aria-hidden="true"></i>
+				</a>
+			</li>
+			
+			
+				<li>
+					<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/post-523042" rel="nofollow">
+						#20
+					</a>
+				</li>
+			
+		</ul>
+	</header>
+
+							
+
+							<div class="message-content js-messageContent">
+							
+
+								
+									
+	
+	
+	
+
+								
+
+								
+									
+
+	<div class="message-userContent lbContainer js-lbContainer "
+		data-lb-id="post-523042"
+		data-lb-caption-desc="hypnos97 &middot; Apr 21, 2021 at 5:54 PM">
+
+		
+
+		<article class="message-body js-selectToQuote">
+			
+				
+			
+			
+				<div class="bbWrapper">I set this up but when I hit &quot;Ctrl+Shift+R&quot; it does save the current replay but in the video source it plays the previously made replay.</div>
+			
+			<div class="js-selectToQuoteEnd">&nbsp;</div>
+			
+				
+			
+		</article>
+
+		
+
+		
+	</div>
+
+								
+
+								
+									
+	
+
+								
+
+								
+									
+	
+
+								
+
+							
+							</div>
+
+							
+								
+	<footer class="message-footer">
+		
+
+		<div class="reactionsBar js-reactionsList ">
+			
+		</div>
+
+		<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+	</footer>
+
+							
+						</div>
+
+					
+					</div>
+				
+			</div>
+		
+	</article>
+
+	
+	
+
+					
+
+					
+
+				
+			
+		</div>
+	</div>
+
+	
+		<div class="block-outer block-outer--after">
+			
+				<div class="block-outer-main"><nav class="pageNavWrapper pageNavWrapper--mixed ">
+
+
+
+<div class="pageNav  ">
+	
+
+	<ul class="pageNav-main">
+		
+
+	
+		<li class="pageNav-page pageNav-page--current "><a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/">1</a></li>
+	
+
+
+		
+
+		
+
+		
+
+		
+
+	
+		<li class="pageNav-page "><a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2">2</a></li>
+	
+
+	</ul>
+
+	
+		<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2" class="pageNav-jump pageNav-jump--next">Next</a>
+	
+</div>
+
+<div class="pageNavSimple">
+	
+
+	<a class="pageNavSimple-el pageNavSimple-el--current"
+		data-xf-init="tooltip" title="Go to page"
+		data-xf-click="menu" role="button" tabindex="0" aria-expanded="false" aria-haspopup="true">
+		1 of 2
+	</a>
+	
+
+	<div class="menu menu--pageJump" data-menu="menu" aria-hidden="true">
+		<div class="menu-content">
+			<h4 class="menu-header">Go to page</h4>
+			<div class="menu-row" data-xf-init="page-jump" data-page-url="/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-%page%">
+				<div class="inputGroup inputGroup--numbers">
+					<div class="inputGroup inputGroup--numbers inputNumber" data-xf-init="number-box"><input type="number" pattern="\d*" class="input input--number js-numberBoxTextInput input input--numberNarrow js-pageJumpPage" value="1"  min="1" max="2" step="1" required="required" data-menu-autofocus="true" /></div>
+					<span class="inputGroup-text"><button type="button" class="js-pageJumpGo button"><span class="button-text">Go</span></button></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+		<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2" class="pageNavSimple-el pageNavSimple-el--next">
+			Next <i aria-hidden="true"></i>
+		</a>
+		<a href="https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/page-2"
+			class="pageNavSimple-el pageNavSimple-el--last"
+			data-xf-init="tooltip" title="Last">
+			<i aria-hidden="true"></i> <span class="u-srOnly">Last</span>
+		</a>
+	
+</div>
+
+</nav>
+
+
+
+</div>
+
+				
+				
+					<div class="block-outer-opposite">
+						
+							<a href="https://obsproject.com/forum/login/" class="button--link button--wrap button" data-xf-click="overlay"><span class="button-text">
+								You must log in or register to reply here.
+							</span></a>
+						
+					</div>
+				
+			
+		</div>
+	
+
+	
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="blockMessage blockMessage--none">
+	
+
+	
+		
+
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons" data-page-url="" data-page-title="" data-page-desc="" data-page-image="">
+			
+				<span class="shareButtons-label">Share:</span>
+			
+
+			<div class="shareButtons-buttons">
+				
+					
+
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--reddit" data-href="https://reddit.com/submit?url={url}&amp;title={title}">
+							<i aria-hidden="true"></i>
+							<span>Reddit</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--pinterest" data-href="https://pinterest.com/pin/create/bookmarklet/?url={url}&amp;description={title}&amp;media={image}">
+							<i aria-hidden="true"></i>
+							<span>Pinterest</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--tumblr" data-href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&amp;title={title}">
+							<i aria-hidden="true"></i>
+							<span>Tumblr</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--brand shareButtons-button--whatsApp" data-href="https://api.whatsapp.com/send?text={title}%20{url}">
+							<i aria-hidden="true"></i>
+							<span>WhatsApp</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--email" data-href="mailto:?subject={title}&amp;body={url}">
+							<i aria-hidden="true"></i>
+							<span>Email</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--share is-hidden"
+							data-xf-init="web-share"
+							data-title="" data-text="" data-url=""
+							data-hide=".shareButtons-button:not(.shareButtons-button--share)">
+
+							<i aria-hidden="true"></i>
+							<span>Share</span>
+						</a>
+					
+
+					
+						<a class="shareButtons-button shareButtons-button--link is-hidden" data-clipboard="{url}">
+							<i aria-hidden="true"></i>
+							<span>Link</span>
+						</a>
+					
+				
+			</div>
+		</div>
+	
+
+</div>
+
+
+
+
+
+
+
+</div>
+				
+			</div>
+
+			
+		</div>
+
+		
+		
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom"
+			itemscope itemtype="https://schema.org/BreadcrumbList">
+		
+			
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/" itemprop="item">
+			<span itemprop="name">Home</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</li>
+
+			
+
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/" itemprop="item">
+			<span itemprop="name">Forums</span>
+		</a>
+		<meta itemprop="position" content="2" />
+	</li>
+
+			
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/#resources.23" itemprop="item">
+			<span itemprop="name">Resources</span>
+		</a>
+		<meta itemprop="position" content="3" />
+	</li>
+
+			
+				
+				
+	<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a href="https://obsproject.com/forum/list/guides.25/" itemprop="item">
+			<span itemprop="name">Guides</span>
+		</a>
+		<meta itemprop="position" content="4" />
+	</li>
+
+			
+
+		
+		</ul>
+	
+
+		
+	</div>
+</div>
+
+<footer class="p-footer" id="footer">
+	<div class="p-footer-inner">
+
+		<div class="p-footer-row">
+			
+				<div class="p-footer-row-main">
+					<ul class="p-footer-linkList">
+					
+						
+							<li><a href="https://obsproject.com/forum/misc/style" data-xf-click="overlay"
+								data-xf-init="tooltip" title="Style chooser" rel="nofollow">
+								<i class="fa--xf far fa-paint-brush" aria-hidden="true"></i> OBS Bright
+							</a></li>
+						
+						
+					
+					</ul>
+				</div>
+			
+			<div class="p-footer-row-opposite">
+				<ul class="p-footer-linkList">
+					
+						
+							<li><a href="https://obsproject.com/help" data-xf-click="">Contact us</a></li>
+						
+					
+
+					
+						<li><a href="https://obsproject.com/forum/help/terms/">Terms and rules</a></li>
+					
+
+					
+						<li><a href="https://obsproject.com/forum/help/privacy-policy/">Privacy policy</a></li>
+					
+
+					
+						<li><a href="https://obsproject.com/forum/help/">Help</a></li>
+					
+
+					
+						<li><a href="https://obsproject.com/">Home</a></li>
+					
+
+					<li><a href="https://obsproject.com/forum/list/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa--xf far fa-rss" aria-hidden="true"></i><span class="u-srOnly">RSS</span></span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		
+			<div class="p-footer-copyright">
+			
+				<a href="https://xenforo.com/" class="u-concealed" dir="ltr" target="_blank" rel="sponsored noopener">Community platform by XenForo<sup>&reg;</sup> <span class="copyright">&copy; 2010-2021 XenForo Ltd.</span></a>
+				We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to  amazon.com.
+			
+			</div>
+		
+
+		
+	</div>
+</footer>
+
+</div> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+	
+		
+	
+		
+		
+		
+
+		<ul class="notices notices--bottom_fixer  js-notices"
+			data-xf-init="notices"
+			data-type="bottom_fixer"
+			data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary notice--cookie"
+		data-notice-id="-1"
+		data-delay-duration="0"
+		data-display-duration="0"
+		data-auto-dismiss="0"
+		data-visibility="">
+
+		
+		<div class="notice-content">
+			
+			<div class="u-alignCenter">
+	This site uses cookies to help personalise content, tailor your experience and to keep you logged in if you register.<br />
+By continuing to use this site, you are consenting to our use of cookies.
+</div>
+
+<div class="u-inputSpacer u-alignCenter">
+	<a href="https://obsproject.com/forum/account/dismiss-notice" class="js-noticeDismiss button--notice button button--icon button--icon--confirm"><span class="button-text">Accept</span></a>
+	<a href="https://obsproject.com/forum/help/cookies" class="button--notice button"><span class="button-text">Learn more…</span></a>
+</div>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+	
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="up">
+		<a href="#top" class="button--scroll button" data-xf-click="scroll-to"><span class="button-text"><i class="fa--xf far fa-arrow-up" aria-hidden="true"></i><span class="u-srOnly">Top</span></span></a>
+		
+	</div>
+
+
+
+	<script src="https://obsproject.com/forum/js/vendor/jquery/jquery-3.5.1.min.js?_v=fdedd7e7"></script>
+	<script src="https://obsproject.com/forum/js/vendor/vendor-compiled.js?_v=fdedd7e7"></script>
+	<script src="https://obsproject.com/forum/js/xf/core-compiled.js?_v=fdedd7e7"></script>
+	<script src="https://obsproject.com/forum/js/xf/lightbox-compiled.js?_v=fdedd7e7"></script>
+<script src="https://obsproject.com/forum/js/xf/notice.min.js?_v=fdedd7e7"></script>
+
+	<script>
+		jQuery.extend(true, XF.config, {
+			// 
+			userId: 0,
+			enablePush: false,
+			pushAppServerKey: '',
+			url: {
+				fullBase: 'https://obsproject.com/forum/',
+				basePath: '/forum/',
+				css: '/forum/css.php?css=__SENTINEL__&s=11&l=1&d=1684574114',
+				keepAlive: '/forum/login/keep-alive'
+			},
+			cookie: {
+				path: '/',
+				domain: '',
+				prefix: 'xf_',
+				secure: true
+			},
+			cacheKey: 'b3e97f20d1b127417d0a032406bae1fc',
+			csrf: '1703995014,0954388619c306550186a1150f18ee46',
+			js: {"\/forum\/js\/xf\/lightbox-compiled.js?_v=fdedd7e7":true,"\/forum\/js\/xf\/notice.min.js?_v=fdedd7e7":true},
+			css: {"public:attachments.less":true,"public:bb_code.less":true,"public:lightbox.less":true,"public:message.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:extra.less":true},
+			time: {
+				now: 1703995014,
+				today: 1703980800,
+				todayDow: 0,
+				tomorrow: 1704067200,
+				yesterday: 1703894400,
+				week: 1703462400
+			},
+			borderSizeFeature: '3px',
+			fontAwesomeWeight: 'r',
+			enableRtnProtect: true,
+			
+			enableFormSubmitSticky: true,
+			uploadMaxFilesize: 8388608,
+			allowedVideoExtensions: ["m4v","mov","mp4","mp4v","mpeg","mpg","ogv","webm"],
+			allowedAudioExtensions: ["mp3","opus","ogg","wav"],
+			shortcodeToEmoji: true,
+			visitorCounts: {
+				conversations_unread: '0',
+				alerts_unviewed: '0',
+				total_unread: '0',
+				title_count: true,
+				icon_indicator: true
+			},
+			jsState: {},
+			publicMetadataLogoUrl: '',
+			publicPushBadgeUrl: 'https://obsproject.com/forum/styles/default/xenforo/bell.png'
+		});
+
+		jQuery.extend(XF.phrases, {
+			// 
+			date_x_at_time_y: "{date} at {time}",
+			day_x_at_time_y:  "{day} at {time}",
+			yesterday_at_x:   "Yesterday at {time}",
+			x_minutes_ago:    "{minutes} minutes ago",
+			one_minute_ago:   "1 minute ago",
+			a_moment_ago:     "A moment ago",
+			today_at_x:       "Today at {time}",
+			in_a_moment:      "In a moment",
+			in_a_minute:      "In a minute",
+			in_x_minutes:     "In {minutes} minutes",
+			later_today_at_x: "Later today at {time}",
+			tomorrow_at_x:    "Tomorrow at {time}",
+
+			day0: "Sunday",
+			day1: "Monday",
+			day2: "Tuesday",
+			day3: "Wednesday",
+			day4: "Thursday",
+			day5: "Friday",
+			day6: "Saturday",
+
+			dayShort0: "Sun",
+			dayShort1: "Mon",
+			dayShort2: "Tue",
+			dayShort3: "Wed",
+			dayShort4: "Thu",
+			dayShort5: "Fri",
+			dayShort6: "Sat",
+
+			month0: "January",
+			month1: "February",
+			month2: "March",
+			month3: "April",
+			month4: "May",
+			month5: "June",
+			month6: "July",
+			month7: "August",
+			month8: "September",
+			month9: "October",
+			month10: "November",
+			month11: "December",
+
+			active_user_changed_reload_page: "The active user has changed. Reload the page for the latest version.",
+			server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+			oops_we_ran_into_some_problems: "Oops! We ran into some problems.",
+			oops_we_ran_into_some_problems_more_details_console: "Oops! We ran into some problems. Please try again later. More error details may be in the browser console.",
+			file_too_large_to_upload: "The file is too large to be uploaded.",
+			uploaded_file_is_too_large_for_server_to_process: "The uploaded file is too large for the server to process.",
+			files_being_uploaded_are_you_sure: "Files are still being uploaded. Are you sure you want to submit this form?",
+			attach: "Attach files",
+			rich_text_box: "Rich text box",
+			close: "Close",
+			link_copied_to_clipboard: "Link copied to clipboard.",
+			text_copied_to_clipboard: "Text copied to clipboard.",
+			loading: "Loading…",
+			you_have_exceeded_maximum_number_of_selectable_items: "You have exceeded the maximum number of selectable items.",
+
+			processing: "Processing",
+			'processing...': "Processing…",
+
+			showing_x_of_y_items: "Showing {count} of {total} items",
+			showing_all_items: "Showing all items",
+			no_items_to_display: "No items to display",
+
+			number_button_up: "Increase",
+			number_button_down: "Decrease",
+
+			push_enable_notification_title: "Push notifications enabled successfully at OBS Forums",
+			push_enable_notification_body: "Thank you for enabling push notifications!"
+		});
+	</script>
+
+	<form style="display:none" hidden="hidden">
+		<input type="text" name="_xfClientLoadTime" value="" id="_xfClientLoadTime" title="_xfClientLoadTime" tabindex="-1" />
+	</form>
+
+	
+
+
+
+	<script type="text/template" id="xfReactTooltipTemplate">
+		<div class="tooltip-content-inner">
+			<div class="reactTooltip">
+				
+					<a href="#" class="reaction reaction--1" data-reaction-id="1"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Like" title="Like" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--2" data-reaction-id="2"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Love" title="Love" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--3" data-reaction-id="3"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Haha" title="Haha" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--4" data-reaction-id="4"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Wow" title="Wow" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--5" data-reaction-id="5"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Sad" title="Sad" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+					<a href="#" class="reaction reaction--6" data-reaction-id="6"><i aria-hidden="true"></i><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="reaction-sprite js-reaction" alt="Angry" title="Angry" data-xf-init="tooltip" data-extra-class="tooltip--basic tooltip--noninteractive" /></a>
+				
+			</div>
+		</div>
+	</script>
+
+
+
+	
+	
+		
+		
+			<script type="application/ld+json">
+				{
+    "@context": "https://schema.org",
+    "@type": "DiscussionForumPosting",
+    "@id": "https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/",
+    "headline": "How to setup instant replay in OBS Studio",
+    "articleBody": "LtRoyalShrimp submitted a new resource:\n\nHow to setup instant replay in OBS Studio - This guide will show you how to create an instant replay feature.\n\nThanks to the hard work of volunteers on OBS Studio, it now includes the powerful...",
+    "articleSection": "Guides",
+    "author": {
+        "@type": "Person",
+        "name": "Videophile"
+    },
+    "datePublished": "2018-01-23T21:09:36+00:00",
+    "dateModified": "2023-11-27T07:29:51+00:00",
+    "image": "https://obsproject.com/forum/data/avatars/h/8/8573.jpg?1660165823",
+    "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": "https://schema.org/ReplyAction",
+        "userInteractionCount": 27
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "OBS Forums"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/"
+    }
+}
+			</script>
+		
+	
+
+
+<script>
+$(document).ready(function(){
+	$('a').each (function() {
+		var dest_url = $(this).attr ('href');
+		if (!dest_url)
+			return;
+		if (dest_url.indexOf ('amazon.com') != -1 && dest_url.indexOf ('tag=obsprojectcom-20') == -1) {
+			if (dest_url.indexOf ('?') != -1) {
+				dest_url += "&tag=obsprojectcom-20";
+			} else {
+				dest_url += "?tag=obsprojectcom-20";
+			}
+			$(this).attr ('href', dest_url);
+		} else if (dest_url.indexOf ('amazon.de') != -1 && dest_url.indexOf ('tag=obsproject0a-21') == -1) {
+			if (dest_url.indexOf ('?') != -1) {
+				dest_url += "&tag=obsproject0a-21";
+			} else {
+				dest_url += "?tag=obsproject0a-21";
+			}
+			$(this).attr ('href', dest_url);
+		}
+	});
+});
+</script>
+	
+</body>
+
+<!-- Mirrored from obsproject.com/forum/threads/how-to-setup-instant-replay-in-obs-studio.80120/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:05 GMT -->
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <title>Mac Support</title>
+    <description>Support for the Mac version of OBS Studio</description>
+    <pubDate>Sun, 31 Dec 2023 03:52:57 +0000</pubDate>
+    <lastBuildDate>Sun, 31 Dec 2023 03:52:57 +0000</lastBuildDate>
+    <generator>OBS Forums</generator>
+    <link>https://obsproject.com/forum/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://obsproject.com/forum/list/mac-support.33/index.rss"/>
+    <item>
+      <title>Elgato video capture device</title>
+      <pubDate>Sat, 30 Dec 2023 18:45:40 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/elgato-video-capture-device.170055/</link>
+      <guid isPermaLink="false">170055</guid>
+      <author>invalid@example.com (Paul kallu)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>Paul kallu</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">My Elgato capture device ( I transfer VHS tapes to digital ) is just not showing on my Mac when I go add a source, I am running Catalina , OBS is up to date  &amp; works  perfectly well on Windows. I have deleted all settings, done a fresh install &amp; still no good. I would be very grateful for any help.</div>]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+    <item>
+      <title>Macos menubar missing in Application Capture</title>
+      <pubDate>Sat, 30 Dec 2023 13:55:22 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/macos-menubar-missing-in-application-capture.172109/</link>
+      <guid isPermaLink="false">172109</guid>
+      <author>invalid@example.com (omiK)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>omiK</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hello! I'm having an issue with Application Capture, the macos menu bar is no longer visible, instead there is a black bar at the top. This problem started a couple days ago, before that Application Capture was working fine. Anyone else has this problem?<br />
+<br />
+Working on mac mini m2 pro / Sonoma 14.2.1 / OBS 30.0.2<br />
+<br />
+Vid with behaviour: <a href="https://youtu.be/Xih4lsqXCL0" target="_blank" class="link link--external" rel="nofollow ugc noopener">https://youtu.be/Xih4lsqXCL0</a><br />
+Screenshot from a couple of days working fine: <a href="https://i.imgur.com/4kcz08S.png" target="_blank" class="link link--external" rel="nofollow ugc noopener">https://i.imgur.com/4kcz08S.png</a><br />
+<br />
+Thanks in advance!</div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>OBS 30.0.2 Crash in Sonoma 14.2</title>
+      <pubDate>Sat, 30 Dec 2023 03:21:55 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-30-0-2-crash-in-sonoma-14-2.171776/</link>
+      <guid isPermaLink="false">171776</guid>
+      <author>invalid@example.com (Pablito Key)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>Pablito Key</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">After I updated my Mac to Sonoma 14.2, my OBS 30.0.2 no longer opens. It even opens for 3 seconds and closes. <br />
+I have already tried previous versions of obs but the problem persists. <br />
+Someone with the same problem?</div>]]></content:encoded>
+      <slash:comments>5</slash:comments>
+    </item>
+    <item>
+      <title>obs recording blurry</title>
+      <pubDate>Sat, 30 Dec 2023 03:20:05 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-recording-blurry.172098/</link>
+      <guid isPermaLink="false">172098</guid>
+      <author>invalid@example.com (altanis)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>altanis</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I'm trying to record my game, but the recording quality is worse than expected.<br />
+<br />
+The video: <div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="https://www.youtube.com/embed/a2BNStNd9kU?wmode=opaque"
+				width="560" height="315"
+				frameborder="0" allowfullscreen="true"></iframe>
+	</div>
+</div><br />
+Quality I want:<br />
+<img src="https://obsproject.com/forum/attachments/1703871758745-png.100510/"
+			class="bbImage "
+			style=""
+			alt="1703871758745.png"
+			title="1703871758745.png"
+			width="1878" height="989" loading="lazy" /><br />
+<br />
+<br />
+My recording settings are here:<br />
+<img src="https://obsproject.com/forum/attachments/1703871920058-png.100511/"
+			class="bbImage "
+			style=""
+			alt="1703871920058.png"
+			title="1703871920058.png"
+			width="727" height="388" loading="lazy" /><img src="https://obsproject.com/forum/attachments/1703871925832-png.100512/"
+			class="bbImage "
+			style=""
+			alt="1703871925832.png"
+			title="1703871925832.png"
+			width="654" height="103" loading="lazy" /><img src="https://obsproject.com/forum/attachments/1703871932514-png.100513/"
+			class="bbImage "
+			style=""
+			alt="1703871932514.png"
+			title="1703871932514.png"
+			width="748" height="199" loading="lazy" /><br />
+<br />
+If it helps, my monitor is 165Hz and 27&quot;.</div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Presenter Overlay Large</title>
+      <pubDate>Fri, 29 Dec 2023 19:58:45 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/presenter-overlay-large.172102/</link>
+      <guid isPermaLink="false">172102</guid>
+      <author>invalid@example.com (PopsCycle)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>PopsCycle</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Running Sonoma 14.1.2 and OBS Studio 30.0.2.<br />
+<br />
+I do screen recordings of my grand daughters basketball games which are live streamed.   I Use the small overlay presenter to show that I'm watching her game. and the small Presenter overlay works perfect.  I can relocate it on the screen, add reactions, etc.  The Large Overlay, however, does not appear full screen in my screen recording.  It doesn't appear anywhere in my screen recording.   Would love to transition from the small PRESENTER...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/presenter-overlay-large.172102/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>switch between windows, full screen</title>
+      <pubDate>Fri, 29 Dec 2023 17:40:57 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/switch-between-windows-full-screen.172097/</link>
+      <guid isPermaLink="false">172097</guid>
+      <author>invalid@example.com (ddownn)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>ddownn</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I would like to be able to be able to command-tab to/from the full screen preview window. When I am in the full screen view, command-tab takes me to another application, but the only way to get back to the full screen window seems to be finding the OBS icon on the dock, which is super annoying. Is there any way to make this happen? I have disabled using trackpad gestures and I am not going to use those to switch between apps. I just want command tab to work like it 'usually' does. I am using...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/switch-between-windows-full-screen.172097/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>No sound for my shared videos</title>
+      <pubDate>Fri, 29 Dec 2023 17:07:21 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/no-sound-for-my-shared-videos.172096/</link>
+      <guid isPermaLink="false">172096</guid>
+      <author>invalid@example.com (Toffeye)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>Toffeye</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi! Hoping anyone here can help me with that: I`m streaming live via OBS and Zoom (Mac Book Pro) in my coaching sessions and share lyric- videos with sound via my Streamdeck. Unfortunately, I cannot hear the sound of the videos mysel and I cannot share the sound with the participants in my session. You only see the video next to me in the scene without sound. Which audio setting do I have to change here, what am I doing wrong? I'm looking forward to a solution to my sound problem. Thanks!!</div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Canon EOS Webcam Utility Fix</title>
+      <pubDate>Fri, 29 Dec 2023 16:33:25 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/canon-eos-webcam-utility-fix.171398/</link>
+      <guid isPermaLink="false">171398</guid>
+      <author>invalid@example.com (briandeitch)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>briandeitch</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi all-<br />
+<br />
+Thought I'd share this fix since I didn't see it posted on here.<br />
+<br />
+Running:<br />
+<ul>
+<li data-xf-list-type="ul">MacOS Sonoma v14.1.1</li>
+<li data-xf-list-type="ul">OBS v30.0.0</li>
+<li data-xf-list-type="ul">Canon EOS M6 Mark II</li>
+<li data-xf-list-type="ul">EOS Webcam Utility v1.1</li>
+<li data-xf-list-type="ul">EOS Webcam Utility Pro v2.0.30 &lt;---Tested this version too</li>
+</ul><br />
+I woke up Monday morning and fired up my setup, and the EOS Webcam Utility was no longer displayed in the device drop-down menu in OBS for my video capture device. After hours of messing with it, I finally figured out it was an update in MacOS v14.1.1...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/canon-eos-webcam-utility-fix.171398/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>14</slash:comments>
+    </item>
+    <item>
+      <title>NDI™ Runtime not found</title>
+      <pubDate>Fri, 29 Dec 2023 08:05:02 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/ndi%E2%84%A2-runtime-not-found.122245/</link>
+      <guid isPermaLink="false">122245</guid>
+      <author>invalid@example.com (jongriffin111)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>jongriffin111</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">&quot;NDI™ Runtime not found.<br />
+Download the installer here: <a href="https://ndi.palakis.fr/runtime/ndi-runtime-4.5.1-macOS.pkg" target="_blank" class="link link--external" rel="nofollow ugc noopener">https://ndi.palakis.fr/runtime/ndi-runtime-4.5.1-macOS.pkg</a>&quot;<br />
+<br />
+Recurring message every time I open OBS and, of course, no NDI source available.  I've downloaded and tried to install, re-install, erase OBS and abs-studio in LIBRARY&gt;&gt;Application Support, tried previous versions and multiple NDI installs - all to no avail.<br />
+<br />
+Here are the specs :<br />
+<br />
+MacBook Pro (15-inch, 2019)<br />
+Mojave 10.14.6<br />
+OBS : 25.0.8<br />
+obs-ndi-4.9.0<br />
+ndi-runtime-4.5.1-macOS...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/ndi%E2%84%A2-runtime-not-found.122245/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>27</slash:comments>
+    </item>
+    <item>
+      <title>Solution for NDI on M1 Macs´</title>
+      <pubDate>Fri, 29 Dec 2023 07:54:04 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/solution-for-ndi-on-m1-macs%C2%B4.162238/</link>
+      <guid isPermaLink="false">162238</guid>
+      <author>invalid@example.com (ThommiTechnik)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>ThommiTechnik</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Dear all,<br />
+<br />
+as a lot of us, I also struggled with NDI on my M1 Mac. Today I got it working, and I wanted to share my solution with you:<br />
+<br />
+- Go into /Programs, and choose &quot;Show Contents&quot; from NDI Video Monitor. Go into &quot;Contents &gt; Frameworks&quot; and copy the &quot;libndi_advanced.dynlib&quot;<br />
+- Chang into &quot;usr/local/lib&quot;, and paste this file<br />
+- rename the &quot;libndi4.dynlib&quot; (like e.g. &quot;old_libndi4.dynlib&quot;)<br />
+- rename &quot;libndi_advanced.dynlib&quot; to &quot;libndi4.dynlib&quot;<br />
+- start OBS, and you'll see the NDI Sources again...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/solution-for-ndi-on-m1-macs%C2%B4.162238/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>25</slash:comments>
+    </item>
+    <item>
+      <title>AVerMedia's GC553G2 HDMI 2.1 Video Capture Card at 4k60p Capture is FAKE</title>
+      <pubDate>Thu, 28 Dec 2023 19:52:27 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/avermedias-gc553g2-hdmi-2-1-video-capture-card-at-4k60p-capture-is-fake.171793/</link>
+      <guid isPermaLink="false">171793</guid>
+      <author>invalid@example.com (Zolja007)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>Zolja007</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Very sad day to see this product not perform... I just saw the &quot;grand&quot; update for MacOS M1/M2/M3 update, and boy what an insult to Mac owners. Promising 4k60p capture for all, just to find out today that it will NOT capture 4k60p on the Silicon(M) chips but capped at 4k30p like every other capture card... Very sad day indeed...<br />
+<br />
+<img src="https://obsproject.com/forum/attachments/1702640740973-png.100115/"
+			class="bbImage "
+			style=""
+			alt="1702640740973.png"
+			title="1702640740973.png"
+			width="968" height="783" loading="lazy" /></div>]]></content:encoded>
+      <slash:comments>5</slash:comments>
+    </item>
+    <item>
+      <title>YouTube Streaming choose account?</title>
+      <pubDate>Thu, 28 Dec 2023 18:50:12 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/youtube-streaming-choose-account.172071/</link>
+      <guid isPermaLink="false">172071</guid>
+      <author>invalid@example.com (ibrewster)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>ibrewster</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">When setting up YouTube streaming in OBS, it &quot;recommends&quot; to connect account. When I do that, however, it just shows my primary account. How do I &quot;switch accounts&quot; to a different account that I am a manger of? I'm trying to stream to the company account, not my personal one.<br />
+<br />
+Or do I just need to use the stream key option?</div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Background removal not found in filters</title>
+      <pubDate>Thu, 28 Dec 2023 16:39:01 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/background-removal-not-found-in-filters.163756/</link>
+      <guid isPermaLink="false">163756</guid>
+      <author>invalid@example.com (alexnguyen)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>alexnguyen</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I downloaded the Background Removal plugin and followed the installation process, but the plugin is not there when I click on 'filters'. I've uninstalled/reinstalled obs, but to no avail. Not showing in filters at all. Any tips how I can fix this? Thx</div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>Why can’t I make this work??</title>
+      <pubDate>Thu, 28 Dec 2023 05:00:13 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/why-can%E2%80%99t-i-make-this-work.168098/</link>
+      <guid isPermaLink="false">168098</guid>
+      <author>invalid@example.com (SongMom8)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>SongMom8</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I am beyond frustrated. I’ve been trying to connect cameras via RTSP, but no matter what I do, it will not work. I am plugging in the addresses as indicated, but I must be missing something. Currently I’m trying to connect through Reolink Client. I watch the how-to videos on YouTube but what is shown looks NOTHING like what I have on my desktop Mac. Is it the Windows version they are showing or has the program been totally overhauled?<br />
+<br />
+I don’t really know much about computers or how to...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/why-can%E2%80%99t-i-make-this-work.168098/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>10</slash:comments>
+    </item>
+    <item>
+      <title>OBS doesn't recognize SSL 12 audio interface microphone input</title>
+      <pubDate>Wed, 27 Dec 2023 19:14:13 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-doesnt-recognize-ssl-12-audio-interface-microphone-input.162470/</link>
+      <guid isPermaLink="false">162470</guid>
+      <author>invalid@example.com (boejiden69)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>boejiden69</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi. I recently picked up an <a href="https://www.solidstatelogic.com/products/ssl-12" target="_blank" class="link link--external" rel="nofollow ugc noopener">SSL 12 audio interface</a>. When in OBS, the only drop-down for the input is &quot;SSL 12.&quot; Selecting that for a microphone input does nothing, and it still receives no audio input from my mic. <br />
+<br />
+I'm trying to configure a livestreaming setup from a digital audio workstation (FL Studio) out to OBS and YouTube. The ideal setup is being able to record desktop audio from FL Studio and having that as one input in OBS. The other is an input for my microphone so I can...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/obs-doesnt-recognize-ssl-12-audio-interface-microphone-input.162470/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Out of the blue... zoom OBS Virtual Camera selection doesn't show OBS virtual camera</title>
+      <pubDate>Wed, 27 Dec 2023 19:09:43 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/out-of-the-blue-zoom-obs-virtual-camera-selection-doesnt-show-obs-virtual-camera.171878/</link>
+      <guid isPermaLink="false">171878</guid>
+      <author>invalid@example.com (justfitjessie)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>justfitjessie</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi everyone. I need to help. I can't figure out why my zoom camera won't show what is showing on my OBS system! Any ideas?<img src="https://obsproject.com/forum/attachments/screenshot-2023-12-19-at-9-16-35%E2%80%AFam-jpg.100217/"
+			class="bbImage "
+			style=""
+			alt="Screenshot 2023-12-19 at 9.16.35 AM.jpg"
+			title="Screenshot 2023-12-19 at 9.16.35 AM.jpg"
+			width="2830" height="1678" loading="lazy" /></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Obs für Mac OSX Mojave: Kamera schaltet sich kurz ein und aus bei Programmstart</title>
+      <pubDate>Wed, 27 Dec 2023 00:55:28 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-f%C3%BCr-mac-osx-mojave-kamera-schaltet-sich-kurz-ein-und-aus-bei-programmstart.172035/</link>
+      <guid isPermaLink="false">172035</guid>
+      <author>invalid@example.com (GerryV)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>GerryV</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hallo an alle<br />
+<br />
+Mein Name ist Gerry: Ich bin Musiker und streame seit Beginn der Corona Pandemie. Bisher lief alles immer immer reibungslos. Seit der Neuinstallation auf meinem Mac mit Mojave habe ich folgendes Problem:<br />
+Meine Logitech Kamera schaltet sich kurz ein und aus bei Programmstart und gibt dann auch kein Bild mehr, obwohl die Webcam am Mac angeschlossen ist. Facetime funktioniert ganz normal, OBS erkennt die Kamera auch, gibt aber kein Bild. Kann mir da jemand helfen? Hab schon wo...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/obs-f%C3%BCr-mac-osx-mojave-kamera-schaltet-sich-kurz-ein-und-aus-bei-programmstart.172035/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>There is not sufficient disk space to continue recording. after upgrade to OBS Studio 30.0.2</title>
+      <pubDate>Tue, 26 Dec 2023 19:43:46 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/there-is-not-sufficient-disk-space-to-continue-recording-after-upgrade-to-obs-studio-30-0-2.171711/</link>
+      <guid isPermaLink="false">171711</guid>
+      <author>invalid@example.com (tongds)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>tongds</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">There is not sufficient disk space to continue recording. after upgrade to OBS Studio 30.0.2 on Mac Silicon<br />
+Local folder works fine.  Not check external hard drive yet.<br />
+<br />
+downgrade to 30.0.1, not working anymore.</div>]]></content:encoded>
+      <slash:comments>5</slash:comments>
+    </item>
+    <item>
+      <title>OBS Could not find virtual camera after updating to 30.0.1</title>
+      <pubDate>Tue, 26 Dec 2023 00:27:00 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-could-not-find-virtual-camera-after-updating-to-30-0-1.171689/</link>
+      <guid isPermaLink="false">171689</guid>
+      <author>invalid@example.com (chrisheath)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>chrisheath</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">On updating OBS to the latest version, the virtual camera within OBS could not be found when clicking Start Virtual Camera.<br />
+<i>I'm using Sonoma 14.1.2 on a Mac Studio M2 Max.</i></div>]]></content:encoded>
+      <slash:comments>7</slash:comments>
+    </item>
+    <item>
+      <title>Image Slideshow Question</title>
+      <pubDate>Tue, 26 Dec 2023 00:00:28 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/image-slideshow-question.139772/</link>
+      <guid isPermaLink="false">139772</guid>
+      <author>invalid@example.com (robcrouch)</author>
+      <category domain="https://obsproject.com/forum/list/mac-support.33/"><![CDATA[Mac Support]]></category>
+      <dc:creator>robcrouch</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I have an image slideshow reading photoshop from a folder on my Imac. When I add photos to the folder Id like it to auto refresh the slideshow in OBS. Is there anyway that can happen? at the moment it doesn't seem to update unless I go in and re-add the folder.<br />
+<br />
+<br />
+Thanks</div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+  </channel>
+</rss>

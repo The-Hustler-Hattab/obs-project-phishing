@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/blog/obs-progress-report-august-2018 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>OBS Studio Progress Report, August 2018 | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="Welcome to the first OBS Studio Progress Report. My name is Lain, the normally-silent author of OBS. Version 22.0 has finally come out, and I had a really great time writing it. …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+                    <link rel="alternate" hreflang="cs" href="https://obsproject.com/cs/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="da" href="https://obsproject.com/da/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="de" href="https://obsproject.com/de/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="en" href="https://obsproject.com/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="es" href="https://obsproject.com/es/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="eu" href="https://obsproject.com/eu/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="fi" href="https://obsproject.com/fi/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="fr" href="https://obsproject.com/fr/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="hu" href="https://obsproject.com/hu/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="ja" href="https://obsproject.com/ja/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="ko" href="https://obsproject.com/ko/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="pt-br" href="https://obsproject.com/pt-br/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="ru" href="https://obsproject.com/ru/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="sv" href="https://obsproject.com/sv/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="tr" href="https://obsproject.com/tr/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="uk" href="https://obsproject.com/uk/blog/obs-progress-report-august-2018">
+                        <link rel="alternate" hreflang="zh-cn" href="https://obsproject.com/zh-cn/blog/obs-progress-report-august-2018">
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  class="active" href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header>
+<div class="pagewidth">
+
+  <div class="headerpusher"></div>
+
+  <div class="med_width">
+
+    <div class="bpheader">
+      <h1>OBS Latest News</h1>
+
+          </div>
+
+    <article class="blogpost">
+      <header>
+        <h2>
+          OBS Studio Progress Report, August 2018        </h2>
+      </header>
+
+      
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2018-08-22 02:30:00">
+      August 22nd, 2018    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+      <div class="bp_content">
+        <p>Welcome to the first OBS Studio Progress Report.  My name is Lain, the normally-silent author of OBS.  Version 22.0 has finally come out, and I had a really great time writing it.</p>
+<p>This is going to be a long post because I almost never normally speak, so get ready.</p>
+<h2>First, I want to say thank you</h2>
+<p>This month marks the sixth anniversary of the very first release of OBS back in August 2012.  Back during those times I was able to answer every single post on the forum, interacted with almost every single person who came around the chat, and answered every email.  Some time around 2014-2015, forum posts, emails, and chat became so active that it would take me 10 hours per day to answer everything.  Eventually, I had to stop, delegate that task to others, and focus exclusively on working on the program.</p>
+<p><strong>As of today, 21.1.2, the previous release before 22.0, had nine million downloads in three months time.</strong></p>
+<p>This blows my mind.</p>
+<p>The program has (along with its derivatives) arguably become the most widely used tool for live streaming and recording on Twitch, YouTube, and around the world.  I can't stress enough how grateful I am for this opportunity.  Before I made the program, I was in a pretty bad place.  Now, I've had opportunities that I never thought I would ever have, and a unique, solid resume that will keep me fed for a long time.  Hopefully, I can continue to do this as long as I can, because I am having a lot of fun doing it.</p>
+<p>So again, to every one of you who use my program and find it useful: Thank you.  You have changed my life; and I hope I have been able to change yours for the better as well.  I know that many of you have become quite successful with the help of our humble tool, and I hope you continue to be successful.</p>
+<p>Now, let's do a quick run over the biggest developments that happened since 21.1.</p>
+<h2>The browser source was majorly refactored, and is now hardware accelerated</h2>
+<p>The browser source is arguably one of the most complicated and vital plugins of the project.  Packaging Chrome itself to be usable as a source that you can add to OBS is about as complicated as it sounds.  Fortunately, thanks to the great developers and contributors over at the <a href="https://bitbucket.org/Chromiumembedded/cef">CEF project</a>, we've been able to integrate the power of the browser in to the project for use as a compositing tool.  And with version 22.0, we've finally achieved hardware accelerated off-screen browser surfaces thanks to the wonderful developers and contributors of the CEF project.</p>
+<p>Before, the way the browser source worked was one of two ways:</p>
+<ul>
+<li>
+<p>Chromium renders the browser surface with hardware rendering (GPU rendering) -&gt; Chromium downloads the surface to RAM -&gt; Surface is passed from Chromium to OBS with RAM -&gt; We upload back to the GPU to be used as a source for OBS</p>
+</li>
+<li>
+<p>Chromium renders the browser surface with software rendering (CPU rendering) -&gt; Surface is passed from Chromium to OBS with RAM -&gt; We upload to the GPU to be used as a source for OBS</p>
+</li>
+</ul>
+<p>Unfortunately, for the longest time, the former case took more resources than the latter case, and would also have strange hiccups in rendering, so we were forced to use software rendering for the browser source.  However, software rendering also had its own issues, such as obscure crashes and the inability to use WebGL for advanced overlays.  In either case, we were forced to always upload every single frame back on to the GPU for compositing.  So we've always been stuck between a rock and a hard place for the browser.</p>
+<p>Today, there are proposed changes on CEF which would allow passing of a shared surface from the Chromium renderer directly to the program implementing CEF.  What this means is the pipeline now looks like this:</p>
+<ul>
+<li>Chromium renders the browser surface with hardware rendering (GPU rendering) -&gt; Chromium shares that surface with OBS to be used as a source without moving off of the GPU</li>
+</ul>
+<p>The performance and resource benefits of this are astounding.  You might initially think "but wait, isn't it using more GPU now that it has to render on the GPU?", but it turns out it's actually the opposite case: before, when we had to upload the browser surface to the GPU every browser frame, that action of uploading frames alone required more GPU usage than actually just rendering the browser surface with the GPU.</p>
+<p>To give some perspective on how much data had to be transferred to the GPU, let's take the worst case scenario as an example:  a 1920x1080 browser surface updating at 60 frames per second.  A 1920x1080 RGBA frame is approximately eight megabytes, and transferring that to the GPU at 60 frames per seconds is almost 500 megabytes per second.  What this means is not only do we reduce CPU and RAM usage due to the fact that we're no longer rendering the surfaces on CPU and to RAM, but we also reduce GPU usage because we're no longer transferring however many countless megabytes to VRAM!</p>
+<p><strong>This change to the browser source reduces its CPU usage, reduces its RAM usage, and reduces its GPU usage.  This is one of the most significant optimizations the program has ever seen since game capture was created.</strong></p>
+<p>On top of all this, the browser source was always an incredibly complicated plugin.  It had tens of thousands of lines by itself.  With version 22.0, it's now completely refactored, and <strong>over 13,000 lines of code were pruned</strong> (you can see the commit <a href="https://github.com/obsproject/obs-browser/commit/46116403705b482eeccd0c2d1d2136c8a610747f">here</a>).  Any experienced programmer can probably sense the joy I have when I say those words.  The act of pruning massive amounts of unnecessary code is arguably more valuable to the overall health of a program than is adding new features.  All the memory leaks were fixed, the design has been greatly simplified, and the code is much more readable.  It was a monumental undertaking that was well overdue, and I'm proud to say that the code is now in the best place it's been in years.</p>
+<p>It was absolutely worth it to finally tackle one of the biggest issues that we've had to face with the program.</p>
+<h2>Source Grouping</h2>
+<p>Source grouping has been a long-requested feature -- the ability to treat multiple sources as one.  We originally added the ability to use scenes as sources which were an interim workaround to this problem (which you can still use).  However, scenes are always the same size as the canvas, and to edit the sources, you have to switch to those scenes to edit the elements.  It has its upsides and downsides, but it's always been a little bit awkward to use them that way.</p>
+<p>With 22.0, we now have source grouping.  I contemplated implementing this by just automatically combining the selection rectangles for multiple sub-items and always treating them as "one", which would have been the most simple solution.  However, if I implemented groups as resizable scenes internally, we'd be able to apply filters to the group and be able to more easily reference groups in other scenes.  It was a bit more complicated, but I decided to go with the latter because that gave the users the most benefit and features.</p>
+<p>I also wanted to make sure that you could see sub-items of groups in the list box, select/modify those sub-items, and expand and collapse that list, so the widget for the list of sources had to be completely rewritten.</p>
+<h1>What's next for the program</h1>
+<h2>Making the program easier, and improving user experience</h2>
+<p>If recent events have taught us anything, it's that OBS isn't particularly the friendliest towards new users.  The auto-configuration tool (which users can use on the first time they start the program, or access in the tools menu) helped a lot with this; it was a really good first step.  It can get streamers started with their encoding settings and getting the program outputting to stream, but what it doesn't help them with is setting up other parts of their stream, like the captures, overlays, cameras, alerts, and all the things that are increasingly important to streamers these days.</p>
+<p>One of the primary things being focused on for the next few versions will be making things easier for new users and getting people started more easily; being able to set up not just their encoding/video settings, but also to help them get started with overlays, captures, and other things as well.</p>
+<p>User experience is also something that goes a long way:  having a well designed user interface that has a smooth, intuitive flow and design.  Sadly, the program isn't the most ideal in this area either.  There are features that some people don't realize exist; some features which are hidden in menus.  Or sometimes, users don't know what a feature means or what it does, so they never use it.  The number of times users ask us why they're dropping frames is almost silly, and it's something that should probably be explained better in the program.  The status bar doesn't convey information very well, the settings window could use a lot of work, the context menus have endless numbers of options -- the list goes on and on.</p>
+<p>These are all things that can be improved to make the experience of the program better.  Reducing any sort of "clunky" feeling in the interface and making things feel better and easier to grasp is another one of the things being focused on.</p>
+<p>Another nice thing that I'm hoping to add will be the ability to log on to Twitch/Youtube from within the program, which leads me in to my next segment:</p>
+<h2>Access to service APIs from within the program</h2>
+<p>One of the things that we should have done from the beginning is implement service APIs within the program:  APIs for Twitch, YouTube, and perhaps even the APIs for streaming alert services.  This would be useful not only because we would like to avoid having to make the user copy and paste their stream keys, but because it would allow the program to add a wide variety of other features, such as being able to see viewer count, channel followers, channel subscribers, alerts for whatever alert services they use, and all sorts of things that are becoming an increasingly necessary part of streaming.  This would all be optional of course -- if a user doesn't want to use this functionality, they should always be allowed to use the program the way they have been and just enter in a stream key instead.</p>
+<p>When these APIs are implemented, not only will this help make the program easier to use for first time streamers, but also provide great new features that users can take advantage of, and provide tools to companies to improve the user flow and better accommodate their users.</p>
+<p>I had originally intended to have it be a part of the 22.0 release, but our settings window needed a ton of work to accommodate this, so I decided to just make the 22.0 release instead as-is.</p>
+<h2>On forks and plugins</h2>
+<p>There has been some interesting developments around OBS recently.  One of which is a fork of our own project by a certain company; it has our core, but different frontend.  I think users having options is always a good thing; even if it's putting a lot of pressure on me to perform, and even if it is very stressful for me at times.  It keeps the industry healthy and benefits the users the most because everyone is striving to improve and innovate.</p>
+<p>However, despite its name, I want to be clear that this fork is not associated with myself or the OBS team. I want to state very clearly that I have not made any contractual agreements with any of the alert service companies. The only true requirement I have ever made is that people abide by the GPL.</p>
+<p>I have never made nor will ever make any contractual agreement which would end up denying the users their freedom with the program. For me, the program is and always will be by the users, for the users. This is my personal ideal. Although there is a lot of zealotry around the GPL license at times, I fully believe in its intended ideals of freedom.</p>
+<p>Fundamentally, if I am lacking something that the industry needs, then I want to strive to provide it to the industry.  That is something I am focusing on; to make the program not only better for the users, but better for the industry, and help provide growth to the industry.  Making the program easier to use for new users, improving user experience, and providing better tools for both users and companies in the industry.</p>
+<p>However, I want to make sure that the users are always the ones who are in control.</p>
+<h2>Contribution, organizing, and moving forward</h2>
+<p>The program is quite a large project now.  It now has a few hundred thousand lines of code, and approximately 30-50 pull requests per month.  Meanwhile, I'm still adding improvements, fixes, and features of my own while managing all of this.  At this point, organization and delegation is becoming increasingly necessary to accommodate everyone's needs.  I realize now that this isn't something that I can do by myself, so there may be a time very soon when some sort of official organization needs to be made.</p>
+<p>Fortunately, the wonderful contributors to the project have been adding requested features, improving the project, fixing bugs, making translations, tending the website, doing support on the forums and chat, and helping in so many ways that it just blows my mind.</p>
+<p>I cannot emphasize enough how grateful I am to everyone who has been involved with the project; everyone who has contributed, everyone who has helped provide support, everyone who has helped manage the different aspects of the project, everyone who has donated, everyone who has reported a bug or feature request, and especially all of users who have used and enjoy our humble program.</p>
+<p><strong>This project has the best community anyone could have asked for.</strong></p>
+<p>I am by no means perfect, and not every decision I have made is perfect; but I will do what I can to make the program the best it can be.</p>
+<p>If you would like to contribute to the project, please read my <a href="https://obsproject.com/blog/how-to-contribute-to-open-source" rel="noopener noreferrer" target="_blank">guide on how to contribute to open source projects</a>.</p>
+<p>Thank you for reading!</p>      </div>
+
+    </article>
+
+  </div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/blog/obs-progress-report-august-2018">Čeština</a> 
+                                  <a href="https://obsproject.com/da/blog/obs-progress-report-august-2018">Dansk</a> 
+                                  <a href="https://obsproject.com/de/blog/obs-progress-report-august-2018">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/blog/obs-progress-report-august-2018">Español</a> 
+                                  <a href="https://obsproject.com/eu/blog/obs-progress-report-august-2018">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/blog/obs-progress-report-august-2018">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/blog/obs-progress-report-august-2018">Français</a> 
+                                  <a href="https://obsproject.com/hu/blog/obs-progress-report-august-2018">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/blog/obs-progress-report-august-2018">日本語</a> 
+                                  <a href="https://obsproject.com/ko/blog/obs-progress-report-august-2018">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/blog/obs-progress-report-august-2018">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/blog/obs-progress-report-august-2018">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/blog/obs-progress-report-august-2018">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/blog/obs-progress-report-august-2018">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/blog/obs-progress-report-august-2018">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/blog/obs-progress-report-august-2018">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/blog/obs-progress-report-august-2018 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

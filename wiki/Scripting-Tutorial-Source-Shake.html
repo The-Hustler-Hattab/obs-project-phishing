@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/wiki/Scripting-Tutorial-Source-Shake by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki - Scripting Tutorial Source Shake | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="This page proposes a tutorial for Python and Lua scripting. As an educational example, we want to make a script that can "shake a source" when the user hits a hotkey. In other …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header><!-- Debug2 -->
+<div class="pagewidth wiki_container">
+
+	<div class="headerpusher"></div>
+
+	<div class="full_width wiki_header">
+		<h1>Scripting Tutorial Source Shake</h1>
+	</div>
+
+	<div class="wiki_content">
+		<p>This page proposes a tutorial for Python and Lua scripting. As an educational example, we want to make a script that can "shake a source" when the user hits a hotkey. In other words, for a given source already present in OBS and displayed on the current scene, we want to continuously rotate it back and forth according to a given frequency and angular amplitude, such that the source jiggles, when the user presses a key continuously.</p>
+<p>Depending how you came to this page, it is advisable now to take a look at the <a href="https://obsproject.com/docs/scripting.html">OBS scripting documentation</a> and the <a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">scripting introduction on the Wiki</a> if not already done.</p>
+<p>If you cannot wait and want to see how the Source Shake effect behaves, the <a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake-Listing">complete scripts</a> are available in Python and Lua.</p>
+<p>Let's go for a ride!</p>
+<p><a id='hello-world' class='anchor' aria-hidden='true'></a></p>
+<h3>Hello World</h3>
+<p>Use a text editor and create a file named <code>source-shake.py</code> or <code>source-shake.lua</code> (both Python and Lua versions of the code will be given in the next sections). For now write only the following line in the file, which works for Python and Lua:</p>
+<pre><code class="language-python">print("Hello World!")</code></pre>
+<p>Add the file in the <em>Scripts</em> dialog window, open the script log, you should see something like this:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-hello-world.png" alt="Hello World!" /></p>
+<p>Please note that <code>print</code> does the job but is not the best choice for logging, consider using <a href="https://obsproject.com/docs/reference-libobs-util-base.html?highlight=blog#c.blog"><code>blog</code></a> instead.</p>
+<p>If it worked, you can remove the Hello World line from your file.</p>
+<p><a id='import-of-obspython-or-obslua' class='anchor' aria-hidden='true'></a></p>
+<h3>Import of obspython or obslua</h3>
+<p>At the top of the script, insert some line(s) as following:</p>
+<ul>
+<li>In a Python script, it is mandatory to import the <code>obspython</code> module because the interpreter is not embedded. By convention, it is imported as <code>obs</code> (and we import already some additional Python modules):</li>
+</ul>
+<pre><code class="language-Python">import obspython as obs
+import math, time</code></pre>
+<ul>
+<li>In Lua the <code>obslua</code> module is pre-imported, as well as the available standard modules. Again by convention, because it is shorter and some code snippets are then similar in Lua and Python, a global variable called <code>obs</code> usually references the module:</li>
+</ul>
+<pre><code class="language-Lua">obs = obslua</code></pre>
+<p><a id='script-description' class='anchor' aria-hidden='true'></a></p>
+<h3>Script description</h3>
+<p>As a next step, create the function called <code>script_description</code> with no arguments, which is expected to return a character string containing the description of the script.</p>
+<p>In Python:</p>
+<pre><code class="language-Python">&lt;a id='description-displayed-in-the-scripts-dialog-window' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Description displayed in the Scripts dialog window
+def script_description():
+  return """Source Shake!!
+            Shake a source in the current scene when a hotkey is pressed. Go to Settings
+             then Hotkeys to select the key combination.Check the 
+            Source Shake Scripting Tutorial on the OBS Wiki for more information."""</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Description displayed in the Scripts dialog window
+function script_description()
+  print("in script_description")
+  return [[Source Shake!!
+           Shake a source in the current scene when a hotkey is pressed. Go to Settings
+            then Hotkeys to select the key combination.Check the 
+           Source Shake Scripting Tutorial on the OBS Wiki for more information.]]
+end</code></pre>
+<p>After reloading the script, the description should now be displayed:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-description.png" alt="Description" /></p>
+<p>Please note that the description string is displayed by Qt, meaning that a <a href="https://doc.qt.io/qt-5/richtext-html-subset.html">subset of HTML</a> can be used for formatting. A self-contained <a href="https://en.wikipedia.org/wiki/Data_URI_scheme">Data URI</a> of a PNG or BMP file can be used as well to show a picture in the description.</p>
+<p><a id='source-setup' class='anchor' aria-hidden='true'></a></p>
+<h3>Source setup</h3>
+<p>At this point, set a source in OBS (an image, your webcam, whatever) and give it a name. For this tutorial, let's call the source "Spaceship" such that it is easily identifiable (adapt the name as convenient).</p>
+<p>As we will rotate the source, it is better to have it centered. It is not absolutely necessary but the shake effect looks better if the source rotates around its center than around one of its corners.</p>
+<p>To do it: select the source, right-click on it, <em>Transform</em> &gt; <em>Edit transform..</em>, for <em>Positional Alignment</em> select <em>Center</em>, then <em>Close</em> (changing the alignment will change the position of the source):</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-source-setup.png" alt="Source setup" /></p>
+<p>Please note that the "transform" of a source depends on its actual position in a given scene. The same source in another scene would have another transform linked to its "scene item" (more about that in the next section). One parameter is the "Rotation" that will be changed by the script.</p>
+<p><a id='finding-the-relevant-obs-api-functions' class='anchor' aria-hidden='true'></a></p>
+<h3>Finding the relevant OBS API functions</h3>
+<p>The basis is in place (we will come back to properties and hotkey later on) and we want to find out how to rotate the source. When writing code for OBS, a very time-consuming task is to browse the huge OBS API to determine which functions or combinations of functions are required to reach OBS data.</p>
+<p>A <a href="https://obsproject.com/docs/search.html?q=rotation">quick search for "rotation"</a> in the OBS API points out one promising function among many results: <a href="https://obsproject.com/docs/reference-scenes.html?highlight=rotation#c.obs_sceneitem_set_rot"><code>obs_sceneitem_set_rot</code></a> sets the rotation angle of a "scene item" (<a href="https://obsproject.com/docs/reference-scenes.html?highlight=rotation#c.obs_sceneitem_get_rot"><code>obs_sceneitem_get_rot</code></a> to retrieve the current angle). So actually we cannot directly rotate the source but only its embodiment in a scene, represented by a C structure with type <code>obs_sceneitem_t</code>.</p>
+<p>On the same page of the OBS API, we can find the function <a href="https://obsproject.com/docs/reference-scenes.html?highlight=sceneitem#c.obs_scene_find_source"><code>obs_find_source</code></a>, or even better the function <a href="https://obsproject.com/docs/reference-scenes.html?highlight=sceneitem#c.obs_scene_find_source_recursive"><code>obs_find_source_recursive</code></a> to scan groups too, which both return a pointer to an <code>obs_sceneitem_t</code> object from a scene and a source name.</p>
+<dl>
+<dt>Now how to find the current scene? Once again, a <a href="https://obsproject.com/docs/search.html?q=scene">search for "scene"</a> gives the function <a href="https://obsproject.com/docs/reference-frontend-api.html?highlight=scene#c.obs_frontend_get_current_scene"><code>obs_frontend_get_current_scene</code></a> among the first hits. But the function returns a source (everything seems to be a source in OBS). The function <a href="https://obsproject.com/docs/reference-scenes.html?highlight=scene#c.obs_scene_from_source"><code>obs_scene_from_source</code></a>, as well among the search results, makes the conversion.</dt>
+<dd>
+<p>warning: <code>obs_frontend_get_current_scene</code> returns a "<em>new reference</em> to the currently active scene". Like for some other functions, <em>new reference</em> means that the data returned by the function needs to be explicitly released, here with <a href="https://obsproject.com/docs/reference-sources.html#c.obs_source_release"><code>obs_source_release</code></a>. OBS will crash if the source is not released (as of OBS 26.1).</p>
+</dd>
+</dl>
+<p><a id='shake-it' class='anchor' aria-hidden='true'></a></p>
+<h3>Shake it</h3>
+<p>We know now how to find a scene item corresponding to a source in the current scene, how to change its rotation angle through several OBS functions, and from the <a href="https://obsproject.com/docs/scripting.html#script-function-exports">documentation of the "Script Function Exports"</a> we know that <code>script_tick</code> is called every frame.</p>
+<p>Time to write a quick and dirty animation function of "Spaceship", in Python:</p>
+<pre><code class="language-Python">def script_tick(seconds):
+  current_scene_as_source = obs.obs_frontend_get_current_scene()
+  if current_scene_as_source:
+    current_scene = obs.obs_scene_from_source(current_scene_as_source)
+    scene_item = obs.obs_scene_find_source_recursive(current_scene, "Spaceship")
+    if scene_item:
+      obs.obs_sceneitem_set_rot(scene_item, 10*math.sin(12*time.time()))
+    obs.obs_source_release(current_scene_as_source)</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">function script_tick(seconds)
+  local current_scene_as_source = obs.obs_frontend_get_current_scene()
+  if current_scene_as_source then
+    local current_scene = obs.obs_scene_from_source(current_scene_as_source)
+    local scene_item = obs.obs_scene_find_source_recursive(current_scene, "Spaceship")
+    if scene_item then
+      obs.obs_sceneitem_set_rot(scene_item, 10*math.sin(12*os.clock()))
+    end
+    obs.obs_source_release(current_scene_as_source)
+  end
+end</code></pre>
+<p>The animation depends on the time in seconds, implemented in the line <code>obs.obs_sceneitem_set_rot(scene_item, 10*math.sin(12*time.time()))</code> in Python, where <code>10</code> is the amplitude of the oscillations (&plusmn; 10 degrees) and <code>12</code> a frequency factor (for <em>12/2&pi;</em> oscillations per second).</p>
+<p>Add the function above, reload the script, and the animation should start:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-effect.gif" alt="Shake effect" /></p>
+<p>Looks good!! Check how the <em>Edit Transform..</em> window shows nicely the changes of rotation angle.</p>
+<p><a id='some-re-factoring' class='anchor' aria-hidden='true'></a></p>
+<h3>Some re-factoring</h3>
+<p>The function defined in the previous section works well, is robust against some modifications of the source (moving, adding in another scene, etc) but is far from perfect:</p>
+<ul>
+<li>The scene item oscillates around the angle 0, overriding any pre-existing rotation set by the user</li>
+<li>There is no way to restore the source in its initial position after the animation, such that on exit OBS saves the source in a crooked position</li>
+</ul>
+<p>So first of all, the initial rotation angle of the scene item needs to be stored before touching it, in order to restore everything when necessary (note that the angle will be used as well for the oscillations in the animation). A reference to the modified scene item is kept too.</p>
+<p>We define the two new functions <code>save_sceneitem_for_shake</code> and <code>restore_sceneitem_after_shake</code> plus the related global variables, in Python:</p>
+<pre><code class="language-Python">&lt;a id='global-variables-to-restore-the-scene-item-after-shake' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Global variables to restore the scene item after shake
+shaken_sceneitem = None     # Reference to the modified scene item
+shaken_sceneitem_angle = 0  # Initial rotation angle, used as well for oscillations
+
+&lt;a id='saves-the-original-rotation-angle-of-the-given-sceneitem-assumed-not-none' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Saves the original rotation angle of the given sceneitem (assumed not None)
+def save_sceneitem_for_shake(sceneitem):
+  global shaken_sceneitem, shaken_sceneitem_angle
+  shaken_sceneitem = sceneitem
+  shaken_sceneitem_angle = obs.obs_sceneitem_get_rot(sceneitem)
+
+&lt;a id='restores-the-original-rotation-angle-on-the-scene-item-after-shake' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Restores the original rotation angle on the scene item after shake
+def restore_sceneitem_after_shake():
+  global shaken_sceneitem, shaken_sceneitem_angle
+  if shaken_sceneitem:
+    obs.obs_sceneitem_set_rot(shaken_sceneitem, shaken_sceneitem_angle)
+    shaken_sceneitem = None</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Global variables to restore the scene item after shake
+shaken_sceneitem = nil     -- Reference to the modified scene item
+shaken_sceneitem_angle = 0 -- Initial rotation angle, used as well for oscillations
+
+-- Saves the original rotation angle of the given sceneitem (assumed not nil)
+function save_sceneitem_for_shake(sceneitem)
+  shaken_sceneitem = sceneitem
+  shaken_sceneitem_angle = obs.obs_sceneitem_get_rot(sceneitem)
+end
+
+-- Restores the original rotation angle on the scene item after shake
+function restore_sceneitem_after_shake()
+  if shaken_sceneitem then
+    obs.obs_sceneitem_set_rot(shaken_sceneitem, shaken_sceneitem_angle)
+    shaken_sceneitem = nil
+  end
+end</code></pre>
+<p>Then we define a function to encapsulate the search for the scene item, mainly for code clarity. This function is self-contained so it can be re-used as is (no global variable involved), in Python:</p>
+<pre><code class="language-Python">&lt;a id='retrieves-the-scene-item-of-the-given-source-name-in-the-current-scene-or-none-if-not-found' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Retrieves the scene item of the given source name in the current scene or None if not found
+def get_sceneitem_from_source_name_in_current_scene(name):
+  result_sceneitem = None
+  current_scene_as_source = obs.obs_frontend_get_current_scene()
+  if current_scene_as_source:
+    current_scene = obs.obs_scene_from_source(current_scene_as_source)
+    result_sceneitem = obs.obs_scene_find_source_recursive(current_scene, name)
+    obs.obs_source_release(current_scene_as_source)
+  return result_sceneitem</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Retrieves the scene item of the given source name in the current scene or nil if not found
+function get_sceneitem_from_source_name_in_current_scene(name)
+  local result_sceneitem = nil
+  local current_scene_as_source = obs.obs_frontend_get_current_scene()
+  if current_scene_as_source then
+    local current_scene = obs.obs_scene_from_source(current_scene_as_source)
+    result_sceneitem = obs.obs_scene_find_source_recursive(current_scene, name)
+    obs.obs_source_release(current_scene_as_source)
+  end
+  return result_sceneitem
+end</code></pre>
+<p>Finally we define the main function <code>shake_source</code>, to be called in <code>script_tick</code>, that puts everything together and implements the animation. We search for the scene item at every frame in order to better follow changes triggered by the user. The logic is to animate the scene item if it can be found in the current scene, otherwise to restore any previously modified scene item. This is a rather naive approach because it assumes that restoring the initial angle is always possible whatever happened to the scene item in between (more about that in the next sections).</p>
+<p>For simplicity in this tutorial, global variables are used directly by the functions (a more re-usable version of these functions should pass everything as arguments). Each script runs in its own context, so no interference with other scripts is expected. The global variables hold values that will be defined as editable properties in a later section: <code>source_name</code>, oscillation <code>frequency</code> and oscillation <code>amplitude</code>.</p>
+<p>In Python, including the call in <code>script_tick</code>:</p>
+<pre><code class="language-Python">&lt;a id='global-variables-holding-the-values-of-data-settings--properties' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Global variables holding the values of data settings / properties
+source_name = "Spaceship"  # Name of the source to shake
+frequency = 2              # Frequency of oscillations in Hertz
+amplitude = 10             # Angular amplitude of oscillations in degrees
+
+&lt;a id='animates-the-scene-item-corresponding-to-sourcename-in-the-current-scene' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Animates the scene item corresponding to source_name in the current scene
+def shake_source():
+  sceneitem = get_sceneitem_from_source_name_in_current_scene(source_name)
+  if sceneitem:
+    id = obs.obs_sceneitem_get_id(sceneitem)
+    if shaken_sceneitem and obs.obs_sceneitem_get_id(shaken_sceneitem) != id:
+      restore_sceneitem_after_shake()
+    if not shaken_sceneitem:
+      save_sceneitem_for_shake(sceneitem)
+    angle = shaken_sceneitem_angle + amplitude*math.sin(time.time()*frequency*2*math.pi)
+    obs.obs_sceneitem_set_rot(sceneitem, angle)
+  else:
+    restore_sceneitem_after_shake()
+
+&lt;a id='called-every-frame' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called every frame
+def script_tick(seconds):
+  shake_source()</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Animates the scene item corresponding to source_name in the current scene
+function shake_source()
+  local sceneitem = get_sceneitem_from_source_name_in_current_scene(source_name)
+  if sceneitem then
+    local id = obs.obs_sceneitem_get_id(sceneitem)
+    if shaken_sceneitem and obs.obs_sceneitem_get_id(shaken_sceneitem) ~= id then
+      restore_sceneitem_after_shake()
+    end
+    if not shaken_sceneitem then
+      save_sceneitem_for_shake(sceneitem)
+    end
+    local angle = shaken_sceneitem_angle + amplitude*math.sin(os.clock()*frequency*2*math.pi)
+    obs.obs_sceneitem_set_rot(sceneitem, angle)
+  else
+    restore_sceneitem_after_shake()
+  end
+end
+
+-- Called every frame
+function script_tick(seconds)
+  shake_source()
+end</code></pre>
+<p>Adapt the code, reload the script, and you should have the same behavior as in the previous section. Please note that we can call <code>restore_sceneitem_after_shake</code> at any time (provided the shaken scene item is still there), the next call to <code>shake_source</code> would re-initialize everything transparently and advance the animation.</p>
+<p><a id='handling-script-reload' class='anchor' aria-hidden='true'></a></p>
+<h3>Handling script reload</h3>
+<p>The function <code>restore_sceneitem_after_shake</code> defined in the previous section will be helpful to manage the various events occurring in OBS, by restoring the original angle at the right time. Switching between scenes or renaming the source work fine, the original angle is restored properly. But if you try to reload the script, then you will see that the orientation of the animated source is lost, and diverges almost randomly with each new script reload.</p>
+<p>This point is easy to solve, we just restore the angle in <code>script_unload</code>, part of the <a href="https://obsproject.com/docs/scripting.html#script-function-exports">global script functions</a>.</p>
+<p>In Python:</p>
+<pre><code class="language-Python">&lt;a id='called-at-script-unload' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called at script unload
+def script_unload():
+  restore_sceneitem_after_shake()</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Called at script unload
+function script_unload()
+  restore_sceneitem_after_shake()
+end</code></pre>
+<p>Once the function is in place, reloading the script is just transparent, no visible effect on the shake animation. At this point you may want to edit the transform of the source(s) and restore the initial rotation angle by hand. Just rename the source temporarily to be able to edit the angle if the script is still active.</p>
+<p><a id='handling-obs-exit' class='anchor' aria-hidden='true'></a></p>
+<h3>Handling OBS exit</h3>
+<p>Even with the restore added in <code>script_unload</code>, the same kind of issue remains when OBS is closed: at next OBS start the orientation of the source is almost random. This event is a bit more difficult to handle because <code>script_unload</code> and <code>script_save</code> (called only upon OBS exit) are called after the scene data is saved, hence restoring the angle in these functions is too late.</p>
+<p>One possible solution is to force again to save the sources in <code>script_save</code> using <a href="https://obsproject.com/docs/reference-core.html#c.obs_save_sources"><code>obs_save_sources</code></a>, in Python:</p>
+<pre><code class="language-Python">&lt;a id='called-before-data-settings-are-saved' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called before data settings are saved
+def script_save(settings):
+  restore_sceneitem_after_shake()
+  obs.obs_save_sources()</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Called before data settings are saved
+function script_save(settings)
+  restore_sceneitem_after_shake()
+  obs.obs_save_sources()
+end</code></pre>
+<p><a id='handling-scene-item-deletion' class='anchor' aria-hidden='true'></a></p>
+<h3>Handling scene item deletion</h3>
+<p>We are now done with saving and restoring the angle, all events should be covered, but there is still a quite nasty thing to handle: if the scene item is deleted by the user, the related C object is freed and trying to restore its angle with <code>restore_sceneitem_after_shake</code> may lead to an OBS crash! The issue may not be visible at all, depending on actual memory management and other allocated objects.</p>
+<p>Fortunately, OBS provides a <a href="https://obsproject.com/docs/reference-scenes.html#scene-signals">sophisticated set of scene signals</a> to handle such events, one of them is <code>item_remove</code>. It is not well documented but the callback of this signal is called <em>before</em> the object is finally destroyed, as of OBS 26.1 (need to add logging in <code>obs_sceneitem_destroy</code> in <code>obs-scene.c</code> and recompile OBS to really check this behavior..).</p>
+<p>We start by defining the callback function that will just call <code>restore_sceneitem_after_shake</code>. The parameter <code>calldata</code> is not used, in Python:</p>
+<pre><code class="language-Python">&lt;a id='callback-for-itemremove-signal' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Callback for item_remove signal
+def on_shaken_sceneitem_removed(calldata):
+  restore_sceneitem_after_shake()</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Callback for item_remove signal
+function on_shaken_sceneitem_removed(calldata)
+  restore_sceneitem_after_shake()
+end</code></pre>
+<p>We will use a signal handler to connect the signal, and keep a reference to it as a global variable to disconnect the signal, in Python:</p>
+<pre><code class="language-Python">shaken_scene_handler = None # Signal handler of the scene kept to restore</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">shaken_scene_handler = nil -- Signal handler of the scene kept to restore</code></pre>
+<p>The function <a href="https://obsproject.com/docs/scripting.html#signal_handler_connect"><code>signal_handler_connect</code></a> to setup a callback in <code>save_sceneitem_for_shake</code> (with some additional function te re-determine the scene as source to get the signal handler), keeping the reference to the signal handler. Add the connection of the signal at the end of the <code>save_sceneitem_for_shake</code> function, in Python:</p>
+<pre><code class="language-Python">  # Handles scene item deletion
+  global shaken_scene_handler
+  scene_as_source = obs.obs_scene_get_source(obs.obs_sceneitem_get_scene(sceneitem))
+  shaken_scene_handler = obs.obs_source_get_signal_handler(scene_as_source)
+  obs.signal_handler_connect(shaken_scene_handler, "item_remove", on_shaken_sceneitem_removed)</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">  -- Handles scene item deletion
+  local scene_as_source = obs.obs_scene_get_source(obs.obs_sceneitem_get_scene(sceneitem))
+  shaken_scene_handler = obs.obs_source_get_signal_handler(scene_as_source)
+  obs.signal_handler_connect(shaken_scene_handler, "item_remove", on_shaken_sceneitem_removed)</code></pre>
+<p>Finally add the disconnection at the end of in <code>restore_sceneitem_after_shake</code>, before the line that sets <code>shaken_sceneitem</code> to <code>None</code>, in Python:</p>
+<pre><code class="language-Python">    obs.signal_handler_disconnect(shaken_scene_handler, "item_remove", on_shaken_sceneitem_removed)</code></pre>
+<p>Add this line before the line that sets <code>shaken_sceneitem</code> to <code>nil</code> at the end of <code>restore_sceneitem_after_shake</code>, in Lua:</p>
+<pre><code class="language-Lua">    obs.signal_handler_disconnect(shaken_scene_handler, "item_remove", shaken_sceneitem_remove_callback)</code></pre>
+<p>This long change is nothing spectacular but shows how to catch an OBS event and avoid potential crashes.</p>
+<p><a id='properties-and-data-settings' class='anchor' aria-hidden='true'></a></p>
+<h3>Properties and data settings</h3>
+<p>Time to add real functionality again after several sections about management of corner conditions.</p>
+<p>Until now the parameters of the animation are only stored in global variables .They should be customizable by the user. OBS provides a large set of functions to manage user settings, based on two main objects:</p>
+<ul>
+<li><a href="https://obsproject.com/docs/reference-settings.html">Data Settings</a> hold the values, support default values and are automatically saved by OBS for scripts</li>
+<li><a href="https://obsproject.com/docs/reference-properties.html">Properties</a> build the GUI to modify data settings</li>
+</ul>
+<p>The global script functions of interest are:</p>
+<ul>
+<li><strong><code>script_defaults(settings)</code></strong> to set default values using functions such as <a href="https://obsproject.com/docs/reference-settings.html#c.obs_data_set_default_string"><code>obs_data_set_default_string(settings, name, value)</code></a>, where <code>settings</code> is the data settings object and <code>name</code> the name of the user setting parameter</li>
+<li><strong><code>script_properties()</code></strong> to build and return the GUI properties object, using functions such as <a href="https://obsproject.com/docs/reference-properties.html#c.obs_properties_add_text"><code>obs_properties_add_text(props, name, description, type)</code></a>, where <code>props</code> is the properties object, <code>name</code> the name of the related user setting parameter, <code>description</code> an HTML short description of the parameter and <code>type</code> the type of text entry field (here classical single line string)</li>
+<li><strong><code>script_update(settings)</code></strong> to transfer the values from the data settings parameters to the relevant variables using functions such as <a href="https://obsproject.com/docs/reference-settings.html#c.obs_data_get_string"><code>obs_data_get_string(settings, name)</code></a> (the function is called systematically once during script loading for a first initialization of the variables)</li>
+</ul>
+<p>As a kind of convention in this tutorial, the same names are used for global variables and for the related data settings parameters (there is no obligation to do so).</p>
+<p>The property objects will take care of updating the values of the data settings if changed by the user, and the values are stored persistently without additional effort. The code is straightforward for our 3 settings/properties, in Python:</p>
+<pre><code class="language-Python">&lt;a id='called-to-set-default-values-of-data-settings' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called to set default values of data settings
+def script_defaults(settings):
+  obs.obs_data_set_default_string(settings, "source_name", "")
+  obs.obs_data_set_default_double(settings, "frequency", 2)
+  obs.obs_data_set_default_int(settings, "amplitude", 10)
+
+&lt;a id='called-to-display-the-properties-gui' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called to display the properties GUI
+def script_properties():
+  props = obs.obs_properties_create()
+  obs.obs_properties_add_text(props, "source_name", "Source name", obs.OBS_TEXT_DEFAULT)
+  obs.obs_properties_add_float_slider(props, "frequency", "Shake frequency", 0.1, 20, 0.1)
+  obs.obs_properties_add_int_slider(props, "amplitude", "Shake amplitude", 0, 90, 1)
+  return props
+
+&lt;a id='called-after-change-of-settings-including-once-after-script-load' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called after change of settings including once after script load
+def script_update(settings):
+  global source_name, frequency, amplitude
+  restore_sceneitem_after_shake()
+  source_name = obs.obs_data_get_string(settings, "source_name")
+  frequency = obs.obs_data_get_double(settings, "frequency")
+  amplitude = obs.obs_data_get_int(settings, "amplitude")</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Called to set default values of data settings
+function script_defaults(settings)
+  obs.obs_data_set_default_string(settings, "source_name", "")
+  obs.obs_data_set_default_double(settings, "frequency", 2)
+  obs.obs_data_set_default_int(settings, "amplitude", 10)
+end
+
+-- Called to display the properties GUI
+function script_properties()
+  props = obs.obs_properties_create()
+  obs.obs_properties_add_text(props, "source_name", "Source name", obs.OBS_TEXT_DEFAULT)
+  obs.obs_properties_add_float_slider(props, "frequency", "Shake frequency", 0.1, 20, 0.1)
+  obs.obs_properties_add_int_slider(props, "amplitude", "Shake amplitude", 0, 90, 1)
+  return props
+end
+
+-- Called after change of settings including once after script load
+function script_update(settings)
+  restore_sceneitem_after_shake()
+  source_name = obs.obs_data_get_string(settings, "source_name")
+  frequency = obs.obs_data_get_double(settings, "frequency")
+  amplitude = obs.obs_data_get_int(settings, "amplitude")
+end</code></pre>
+<p>Please note:</p>
+<ul>
+<li><code>restore_sceneitem_after_shake</code> is called at the beginning of <code>script_update</code> in case the source name was changed</li>
+<li>There is always a slight difference between GUI-related properties and data settings in the OBS API. For example, a decimal number is named <code>double</code> in data settings while the GUI element is a <code>float_slider</code> (with a min, max and step to guide the user). A <code>string</code> in data settings is edited with a <code>text</code> property on the GUI.</li>
+</ul>
+<p>Once the code is updated, reload the script, enter the name of the source, and then properties can be modified live:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-properties.gif" alt="Shake properties" /></p>
+<p><a id='drop-down-list-of-sources' class='anchor' aria-hidden='true'></a></p>
+<h3>Drop-down list of sources</h3>
+<p>In the previous section, the <code>obs_properties_add_text</code> function has been introduced to let the user enter the name of the source manually. Obviously, as OBS knows all source names, any user would expect that the source can be selected in a drop-down list.</p>
+<p>A drop-down list property is implemented through the function <code>obs_properties_add_list</code> that returns a list <code>property</code> object. Once the drop-down list property exists, it must be populated with selectable entries using <a href="https://obsproject.com/docs/reference-properties.html#c.obs_property_list_add_string"><code>obs_property_list_add_string</code></a>. A selectable entry is always a pair of displayed value (<code>name</code> argument of <code>obs_property_list_add_string</code>, visible to the user) and encoded value (<code>val</code>, used for processing). In our case, both values are the same.</p>
+<p>Existing sources in OBS are enumerated with the script-specific function <a href="https://obsproject.com/docs/scripting.html#obs_enum_sources"><code>obs_enum_sources</code></a>. It returns a Python/Lua array of references to source objects. We use <a href="https://obsproject.com/docs/reference-sources.html#c.obs_source_get_name"><code>obs_source_get_name</code></a> to retrieve the name of each source. At the end, <a href="https://obsproject.com/docs/scripting.html#source_list_release"><code>source_list_release</code></a> must be used to release allocated objects.</p>
+<p>We start by defining a self-contained function that reads the list of sources and populates them in the given list property object. It adds as well an empty entry to manage the default value of <code>source_name</code> set in <code>script_defaults</code>, in Python:</p>
+<pre><code class="language-Python">&lt;a id='fills-the-given-list-property-object-with-the-names-of-all-sources-plus-an-empty-one' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Fills the given list property object with the names of all sources plus an empty one
+def populate_list_property_with_source_names(list_property):
+  sources = obs.obs_enum_sources()
+  obs.obs_property_list_clear(list_property)
+  obs.obs_property_list_add_string(list_property, "", "")
+  for source in sources:
+    name = obs.obs_source_get_name(source)
+    obs.obs_property_list_add_string(list_property, name, name)
+  obs.source_list_release(sources)</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Fills the given list property object with the names of all sources plus an empty one
+function populate_list_property_with_source_names(list_property)
+  local sources = obs.obs_enum_sources()
+  obs.obs_property_list_clear(list_property)
+  obs.obs_property_list_add_string(list_property, "", "")
+  for _,source in pairs(sources) do
+    local name = obs.obs_source_get_name(source)
+    obs.obs_property_list_add_string(list_property, name, name)
+  end
+  obs.source_list_release(sources)
+end</code></pre>
+<p>Then we re-define the property related to <code>source_name</code> with a drop-down list property implemented through the function <a href="https://obsproject.com/docs/reference-properties.html#c.obs_properties_add_list"><code>obs_properties_add_list</code></a> that returns a list <code>property</code> object. In our case it will be non-editable (<code>OBS_COMBO_TYPE_LIST</code>) and used to select a string data type (<code>OBS_COMBO_FORMAT_STRING</code>).</p>
+<p>In <code>script_properties</code>, replace the line related to <code>source_name</code> (commented out below) with the following lock, in Python:</p>
+<pre><code class="language-Python">  # Drop-down list of sources
+  list_property = obs.obs_properties_add_list(props, "source_name", "Source name",
+              obs.OBS_COMBO_TYPE_LIST, obs.OBS_COMBO_FORMAT_STRING)
+  populate_list_property_with_source_names(list_property)
+  # obs.obs_properties_add_text(props, "source_name", "Source name", obs.OBS_TEXT_DEFAULT)</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">  -- Drop-down list of sources
+  local list_property = obs.obs_properties_add_list(props, "source_name", "Source name",
+              obs.OBS_COMBO_TYPE_LIST, obs.OBS_COMBO_FORMAT_STRING)
+  populate_list_property_with_source_names(list_property)
+  -- obs.obs_properties_add_text(props, "source_name", "Source name", obs.OBS_TEXT_DEFAULT)</code></pre>
+<p>Update the code, reload the script, then the drop-down list should be visible:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-drop-down-list.png" alt="drop down list" /></p>
+<p><a id='button-to-refresh-the-drop-down-list' class='anchor' aria-hidden='true'></a></p>
+<h3>Button to refresh the drop-down list</h3>
+<p>If a source is added or renamed, the list of sources needs to be refreshed. An easy way to do it is to reload the script but it may not always be wished if some resources need to be de-allocated then re-allocated (this is not strictly the case in the Source Shake script, this section shows just an alternative method).</p>
+<p>In general, <code>script_properties</code> is called once at the first time the properties widget needs to be displayed (e.g. script first addition or first display of the <em>Scripts</em> window). After that, the properties can be modified by the user or by script, and there is no new call to <code>script_properties</code>. But the widget is refreshed only if <em>one of the callbacks set on a property returns true</em>. This mechanism works for the callbacks set using <a href="https://obsproject.com/docs/reference-properties.html#c.obs_property_set_modified_callback"><code>obs_property_set_modified_callback</code></a> (e.g. to adapt the visibility of properties depending on other properties) and for the callbacks of buttons.</p>
+<p>Hence another way to refresh the entries of the drop-down list is to define a button that will trigger the update of the list and return true. The new property is defined using the script-specific function <a href="https://obsproject.com/docs/scripting.html#obs_properties_add_button"><code>obs_properties_add_button</code></a>. The callback takes 2 parameters that will not be used. It is placed just under the property of the drop-down list in <code>script_properties</code>, in Python (<code>list_property</code> is a reference on the drop-down list property, see previous section):</p>
+<pre><code class="language-Python">  # Button to refresh the drop-down list
+  obs.obs_properties_add_button(props, "button", "Refresh list of sources",
+    lambda props,prop: True if populate_list_property_with_source_names(list_property) else True)</code></pre>
+<p>Admire the very compact lambda/closure construction that really insists on the return value <code>True</code>!</p>
+<p>In Lua the same construction is possible and easier to understand (no need to give the callback arguments):</p>
+<pre><code class="language-Lua">  -- Button to refresh the drop-down list
+  obs.obs_properties_add_button(props, "button", "Refresh list of sources",
+    function() populate_list_property_with_source_names(list_property) return true end)</code></pre>
+<p>The buttons should now show up under the drop-down list property:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-refresh-button.png" alt="refresh button" /></p>
+<p>Please note that if a source is renamed or deleted, the old value of <code>source_name</code> is kept. The widget of the drop-down list will default to the first entry, which is empty, such that it looks like no source is selected and actually no source is animated because the old name cannot be found in the list of sources, so everything seems normal. There are some cases where this small inconsistency could be visible, e.g. if the user delete a source, then add another source with the same name, this other source will get animated although the selection list would probably show no selected source. This could be solved by re-checking in <code>shake_source</code> if <code>source_name</code> is in the list returned by <code>enum_sources</code>, then set <code>source_name</code> to an empty string if not. But as the case is highly improbable, let's consider that as a feature!</p>
+<p>Strangely, there is no known method in OBS to trigger a refresh except the properties management functions used by the refresh button. This is probably the only workaround so far.</p>
+<p><a id='hotkey' class='anchor' aria-hidden='true'></a></p>
+<h3>Hotkey</h3>
+<p>Since the beginning of the tutorial, the description mentions the Hotkey, time to implement it.</p>
+<p>A hotkey is registered in OBS through <a href="https://obsproject.com/docs/scripting.html#obs_hotkey_register_frontend"><code>obs_hotkey_register_frontend</code></a> using some identifiers and a callback. Registering the hotkey does not set the key combination, which is set by the user in the settings of OBS. But as the selected key combination is not really part of the settings of the script, OBS will not store it in the user's configuration file automatically. This settings storage is actually the complex part of adding a hotkey to a script, especially because arrays are involved.</p>
+<p>Let's start at the beginning. Up to now the shake effect is active all the time, so we need a global activity flag and need to change <code>script_tick</code> to either animate the source with <code>shake_source</code> or restore the original angle with <code>restore_sceneitem_after_shake</code>, in Python:</p>
+<pre><code class="language-Python">&lt;a id='global-animation-activity-flag' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Global animation activity flag
+is_active = False
+
+&lt;a id='called-every-frame' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called every frame
+def script_tick(seconds):
+  if is_active:
+    shake_source()
+  else:
+    restore_sceneitem_after_shake()</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Global animation activity flag
+is_active = false
+
+-- Called every frame
+function script_tick(seconds)
+  if is_active then
+    shake_source()
+  else
+    restore_sceneitem_after_shake()
+  end
+end</code></pre>
+<p>The callback of a hotkey has a boolean argument <code>pressed</code> set to true if the key combination is pressed, false if it was released. The callback is typically called once for the key press, once for the release. The <code>is_active</code> flag will just take the value of <code>pressed</code>, in Python:</p>
+<pre><code class="language-Python">&lt;a id='callback-for-the-hotkey' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Callback for the hotkey
+def on_shake_hotkey(pressed):
+  global is_active
+  is_active = pressed</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Callback for the hotkey
+function on_shake_hotkey(pressed)
+  is_active = pressed
+end</code></pre>
+<p>Now let's look at the difficult stuff. A key combination is represented by an array containing the main key plus optional modifiers such as "shift" or "control". Such an array is stored within a data settings object, is created or read if already existing using <a href="https://obsproject.com/docs/reference-settings.html#c.obs_data_get_array"><code>obs_data_get_array</code></a> (released by <a href="https://obsproject.com/docs/reference-settings.html#c.obs_data_array_release"><code>obs_data_array_release</code></a>), and is stored with <a href="https://obsproject.com/docs/reference-settings.html#c.obs_data_set_array"><code>obs_data_set_array</code></a>.</p>
+<p>Two (so far undocumented) functions are provided to load/save the hotkey:</p>
+<ul>
+<li><code>obs_hotkey_save(id)</code> returns the key combination array set in OBS for a given hotkey <code>id</code></li>
+<li><code>obs_hotkey_load(id, data)</code> loads into OBS the key combination array <code>data</code> for the given hotkey <code>id</code></li>
+</ul>
+<p>The hotkey ID is returned by <a href="https://obsproject.com/docs/scripting.html#obs_hotkey_register_frontend"><code>obs_hotkey_register_frontend</code></a>. It must be kept as a global variable to make the link between loaded and saved data. The hotkey is typically registered in <code>script_load</code>, where the key combination is read from the data settings and loaded into OBS, in Python:</p>
+<pre><code class="language-Python">&lt;a id='identifier-of-the-hotkey-set-by-obs' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Identifier of the hotkey set by OBS
+hotkey_id = obs.OBS_INVALID_HOTKEY_ID
+
+&lt;a id='called-at-script-load' class='anchor' aria-hidden='true'&gt;&lt;/a&gt;
+# Called at script load
+def script_load(settings):
+  global hotkey_id
+  hotkey_id = obs.obs_hotkey_register_frontend(script_path(), "Source Shake", on_shake_hotkey)
+  hotkey_save_array = obs.obs_data_get_array(settings, "shake_hotkey")
+  obs.obs_hotkey_load(hotkey_id, hotkey_save_array)
+  obs.obs_data_array_release(hotkey_save_array)</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">-- Identifier of the hotkey set by OBS
+hotkey_id = obs.OBS_INVALID_HOTKEY_ID
+
+-- Called at script load
+function script_load(settings)
+  hotkey_id = obs.obs_hotkey_register_frontend(script_path(), "Source Shake", on_shake_hotkey)
+  local hotkey_save_array = obs.obs_data_get_array(settings, "shake_hotkey")
+  obs.obs_hotkey_load(hotkey_id, hotkey_save_array)
+  obs.obs_data_array_release(hotkey_save_array)
+end</code></pre>
+<p>Please note that <a href="https://obsproject.com/docs/scripting.html#script_path"><code>script_path</code></a> is used as name in <code>obs_hotkey_register_frontend</code>. The advantage is that each copy of the same script (renamed or in a different directory) can have its own hotkey.</p>
+<p>Saving the hotkey settings is similar to the load part, add the following block at the end of the <code>script_save</code> function, in Python:</p>
+<pre><code class="language-Python">  # Hotkey save
+  hotkey_save_array = obs.obs_hotkey_save(hotkey_id)
+  obs.obs_data_set_array(settings, "shake_hotkey", hotkey_save_array)
+  obs.obs_data_array_release(hotkey_save_array)</code></pre>
+<p>In Lua:</p>
+<pre><code class="language-Lua">  -- Hotkey save
+  local hotkey_save_array = obs.obs_hotkey_save(hotkey_id)
+  obs.obs_data_set_array(settings, "shake_hotkey", hotkey_save_array)
+  obs.obs_data_array_release(hotkey_save_array)</code></pre>
+<p>Adapt the code, reload the script. The source should stop moving and the table in <em>Settings</em> &gt; <em>Hotkeys</em> should show the new hotkey:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/source-shake-hotkeys.png" alt="hotkeys" /></p>
+<p>Define a key combination (here a simple comma) and play with the hotkey!</p>
+<p><a id='concluding-words' class='anchor' aria-hidden='true'></a></p>
+<h2>Concluding words</h2>
+<p>This tutorial starts from an immediate quick-and-dirty solution to a nicely integrated, robust and customizable video effect. Several aspects of the OBS API are put into practice to show the main concepts and the overall logic of the API. But it only scratches the surface, there are still tons of functions in OBS.</p>
+<p>Have fun with scripting!</p>
+		&nbsp;
+
+	</div>
+
+	<div class="wiki_sidebar">
+
+		<h1><a href="https://obsproject.com/wiki/Home">Home</a></h1>
+<h1><a href="https://obsproject.com/wiki/install-instructions">Install instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/install-instructions#windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#macos">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#freebsd">FreeBSD</a></li>
+</ul>
+<h1><a href="https://obsproject.com/wiki/Building-OBS-Studio">Build instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Mac">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-FreeBSD">FreeBSD</a></li>
+</ul>
+<h1>Development &amp; Scripting</h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development">Getting Started with OBS Studio Development</a></li>
+<li><a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">Getting Started With OBS Scripting</a><ul>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake">Scripting Tutorial: Source Shake</a></li>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter">Scripting Tutorial: Halftone Filter</a></li>
+</ul>
+</li>
+<li><a href="https://obsproject.com/wiki/Service-Submission-Guidelines">Service Submission Guidelines</a></li>
+</ul>
+	</div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/wiki">Čeština</a> 
+                                  <a href="https://obsproject.com/da/wiki">Dansk</a> 
+                                  <a href="https://obsproject.com/de/wiki">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/wiki">Español</a> 
+                                  <a href="https://obsproject.com/eu/wiki">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/wiki">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/wiki">Français</a> 
+                                  <a href="https://obsproject.com/hu/wiki">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/wiki">日本語</a> 
+                                  <a href="https://obsproject.com/ko/wiki">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/wiki">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/wiki">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/wiki">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/wiki">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/wiki">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/wiki">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/wiki/Scripting-Tutorial-Source-Shake by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

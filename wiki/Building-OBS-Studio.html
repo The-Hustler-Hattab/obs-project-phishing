@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/wiki/Building-OBS-Studio by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki - Building OBS Studio | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="If you want to develop for OBS, please visit our [Discord](https://obsproject.com/discord) and get to know the devs or have questions answered! Also, if there is something in this …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header><!-- Debug2 -->
+<div class="pagewidth wiki_container">
+
+	<div class="headerpusher"></div>
+
+	<div class="full_width wiki_header">
+		<h1>Building OBS Studio</h1>
+	</div>
+
+	<div class="wiki_content">
+		<p>If you want to develop for OBS, please visit our <a href="https://obsproject.com/discord">Discord</a> and get to know the devs or have questions answered!</p>
+<p>Also, if there is something in this guide you want to change/improve on, it is recommended that you talk about it with the devs in Discord or IRC first.</p>
+<p>Please note that any install directions/packages for Linux/FreeBSD distributions listed as <em>Unofficial</em> means that they are community provided, and any support for those packages should be directed at the appropriate distro/package maintainers.</p>
+<p><a id='obs-build-dependencies' class='anchor' aria-hidden='true'></a></p>
+<h1>OBS build dependencies</h1>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Available Pre-Built (macOS and Windows)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FFmpeg</td>
+<td><code>YES</code></td>
+</tr>
+<tr>
+<td>x264</td>
+<td><code>YES</code></td>
+</tr>
+<tr>
+<td>cURL</td>
+<td><code>YES</code> (required on Windows only)</td>
+</tr>
+<tr>
+<td>mbedTLS</td>
+<td><code>YES</code></td>
+</tr>
+<tr>
+<td>Chromium Embedded Framework</td>
+<td><code>YES</code></td>
+</tr>
+<tr>
+<td>Qt</td>
+<td><code>YES</code></td>
+</tr>
+</tbody>
+</table>
+<p>We suggest having a current version of Git and CMake installed on the build system. <strong>macOS and Linux</strong> systems also require the <em>Ninja build system</em> to be installed, <em>CCache</em> can be installed to speed up consecutive builds as well and is supported by the build system.</p>
+<p>The repository has build scripts for Windows, macOS and Linux available (written for Powershell and Bash respectively) that can set up build tools and dependencies for the developer as well as building and packaging OBS. Check out the OS-dependent chapters below for more detail on available functionality.</p>
+<p><a id='cmake' class='anchor' aria-hidden='true'></a></p>
+<h1>CMake</h1>
+<p>OBS uses CMake to create build environments for different platforms and IDEs. As a modular project, each module can introduce its own build options and requirements, which are gathered and managed by CMake when invoking it.</p>
+<p>While these build options are detected and set automatically by CMake, they can also be changed after build configuration has finished or can be changed via overrides at configuration time.</p>
+<p>This article explains some intricacies of OBS' CMake build system structure and the available options to change its behavior.</p>
+<p><a id='obs-cmake-build-system' class='anchor' aria-hidden='true'></a></p>
+<h2>OBS CMake Build System</h2>
+<p>OBS requires at least CMake v3.22 or newer due to many quality-of-life changes introduced in this version. On Windows and macOS the most current CMake version (as of writing v3.27) is preferred, even if the current feature level is capped to v3.22.</p>
+<p>Due to OBS' modular structure, some build configuration settings are available globally, while others are introduced by modules. They are listed here in order of appearance (as defined by each <code>CMakeLists.txt</code> file, which is processed procedurally by CMake).</p>
+<p><a id='global-options' class='anchor' aria-hidden='true'></a></p>
+<h3>Global Options</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMAKE_BUILD_TYPE</td>
+<td>Sets the build configuration (available values are <code>Debug</code>, <code>RelWithDebInfo</code>, <code>Release</code> and <code>MinSizeRel</code>)</td>
+<td><code>RelWithDebInfo</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>CMAKE_INSTALL_PREFIX</td>
+<td>Sets either an absolute installation path or path relative to the build directory</td>
+<td><code>rundir</code> inside build directory (<code>install</code> on macOS)</td>
+<td>All</td>
+</tr>
+<tr>
+<td>CMAKE_PREFIX_PATH</td>
+<td>Additional search path for dependencies, use semicolons to seperate multiple paths</td>
+<td>None</td>
+<td>All</td>
+</tr>
+<tr>
+<td>CMAKE_OSX_ARCHITECTURES</td>
+<td>Specify architecture(s) to build binaries for (available values are <code>x86_64</code> and <code>arm64</code>)</td>
+<td><code>x86_64</code></td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>CMAKE_OSX_DEPLOYMENT_TARGET</td>
+<td>Minimum macOS versions to deploy binaries for</td>
+<td><code>10.13</code> for x86_64, <code>11.0</code> for <code>arm64</code></td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>CEF_ROOT_DIR</td>
+<td>Specify root directory of pre-built Chromium Embedded Framework (required for Browser source plugin)</td>
+<td>None</td>
+<td>All</td>
+</tr>
+<tr>
+<td>VLC_PATH</td>
+<td>Specify directory of downloaded VLC source files (required for VST source plugin)</td>
+<td>None</td>
+<td>macOS and Windows</td>
+</tr>
+</tbody>
+</table>
+<p><a id='obs-build-options' class='anchor' aria-hidden='true'></a></p>
+<h3>OBS Build Options</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLE_UI</td>
+<td>Enable building with UI (main OBS application)</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_SCRIPTING</td>
+<td>Enable scripting functionality (Lua and/or Python)</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>USE_LIBCXX</td>
+<td>Use libc++ instead of libstdc++</td>
+<td><code>ON</code></td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>LINUX_PORTABLE</td>
+<td>Use a portable directory structure to run OBS</td>
+<td><code>OFF</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>USE_XDG</td>
+<td>Utilize XDG base directory specification</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>OBS_VERSION_OVERRIDE</td>
+<td>Specify OBS version for configured build</td>
+<td>Most recent Git tag</td>
+<td>All</td>
+</tr>
+<tr>
+<td>OBS_BUILD_NUMBER</td>
+<td>Continuous build number for configured build</td>
+<td>Automatically incremented on local builds</td>
+<td>All</td>
+</tr>
+<tr>
+<td>OBS_BUNDLE_CODESIGN_IDENTITY</td>
+<td>Identity to use for code signing when building OBS application bundle</td>
+<td><code>-</code></td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>OBS_BUNDLE_CODESIGN_TEAM</td>
+<td>Team to use for code signing when building OBS application bundle</td>
+<td>None</td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>OBS_CODESIGN_ENTITLEMENTS</td>
+<td>Entitlements to use for code signing</td>
+<td>Shipped entitlements file</td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>OBS_CODESIGN_LINKER</td>
+<td>Enable automatic linker codesigning</td>
+<td><code>ON</code> on macOS 11.0+, <code>OFF</code> otherwise</td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>OBS_MULTIARCH_SUFFIX</td>
+<td>Specific architecture suffix to use (available values are <code>32</code> or <code>64</code>)</td>
+<td>None</td>
+<td>Linux</td>
+</tr>
+</tbody>
+</table>
+<p><a id='obs-feature-options' class='anchor' aria-hidden='true'></a></p>
+<h3>OBS Feature Options</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLE_PLUGINS</td>
+<td>Enable building with plugins</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_SPARKLE_UPDATER</td>
+<td>Enable building with Sparkle updater framework</td>
+<td><code>OFF</code></td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>ENABLE_WAYLAND</td>
+<td>Enable support for Wayland compositor</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_PIPEWIRE</td>
+<td>Enable support for Pipewire graphics processing engine</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+</tbody>
+</table>
+<p><a id='obs-module-options' class='anchor' aria-hidden='true'></a></p>
+<h3>OBS Module Options</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Default</th>
+<th>OS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENABLE_AJA</td>
+<td>Enable building with AJA NTV2 support</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_COREAUDIO_ENCODER</td>
+<td>Enable support for CoreAudio encoder</td>
+<td><code>ON</code></td>
+<td>Windows (cannot be disabled on macOS)</td>
+</tr>
+<tr>
+<td>ENABLE_DECKLINK</td>
+<td>Enable building with Decklink support</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_ALSA</td>
+<td>Enable building with Advanced Linux Sound Architecture (ALSA) support</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_JACK</td>
+<td>Enable support for JACK audio server</td>
+<td><code>OFF</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_PULSEAUDIO</td>
+<td>Enable Pulse Audio support</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_V4L2</td>
+<td>Enable Video4Linux v2 support</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_VIRTUALCAM</td>
+<td>Enable building with Virtual Camera modules</td>
+<td><code>ON</code></td>
+<td>Windows and macOS</td>
+</tr>
+<tr>
+<td>VIRTUALCAM_GUID</td>
+<td>Specify global unique identifier (GUID) for Virtual Camera Plugin</td>
+<td>None</td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>ENABLE_BROWSER</td>
+<td>Enable buidling Browser Source plugin</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_BROWSER_LEGACY</td>
+<td>Enable building Browser Source plugin with legacy CEF version 3770</td>
+<td><code>OFF</code></td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>ENABLE_BROWSER_SHARED_TEXTURE</td>
+<td>Enable building Browser Source plugin with shared texture support</td>
+<td><code>ON</code></td>
+<td>Windows and macOS</td>
+</tr>
+<tr>
+<td>ENABLE_BROWSER_QT_LOOP</td>
+<td>Enable building Browser source plugin with Qt message loop</td>
+<td><code>ON</code></td>
+<td>macOS</td>
+</tr>
+<tr>
+<td>ENABLE_BROWSER_PANELS</td>
+<td>Enable building Browser source plugin with support for browser panels</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_FFMPEG_LOGGING</td>
+<td>Enable more verbose logging for FFmpeg-based operations</td>
+<td><code>OFF</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_SPEEXDSP</td>
+<td>Enable noise suppression using SpeexDSP</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_RNNOISE</td>
+<td>Enable noise suppression using RNNoise</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_NVAFX</td>
+<td>Enable noise supporession using NVidia Audio Effects SDK</td>
+<td><code>ON</code></td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>ENABLE_LIBFDK</td>
+<td>Enable building support for Fraunhofer AAC codec</td>
+<td><code>OFF</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_RTMPS</td>
+<td>Enable support for TLS-based RTMP connections</td>
+<td><code>AUTO</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_VST</td>
+<td>Enable VST plugin support</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_VST_BUNDLED_HEADERS</td>
+<td>Enable building VST plugin with bundled headers</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_OSS</td>
+<td>Enable building with Open Sound System support</td>
+<td><code>ON</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_SERVICE_UPDATES</td>
+<td>Enable automatic streaming service updates</td>
+<td><code>OFF</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_SNDIO</td>
+<td>Enable sndio framework support</td>
+<td><code>OFF</code></td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>ENABLE_FREETYPE</td>
+<td>Enable support for FreeType 2 based text rendering</td>
+<td><code>ON</code></td>
+<td>macOS and Linux</td>
+</tr>
+<tr>
+<td>ENABLE_VLC</td>
+<td>Enable support for VLC-based sources</td>
+<td><code>ON</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td>ENABLE_D3D12_HOOK</td>
+<td>Enable capture hook for Direct3D 12-based games</td>
+<td><code>OFF</code></td>
+<td>Windows</td>
+</tr>
+<tr>
+<td>ENABLE_IVCAM</td>
+<td>Enable support for Realsense camera</td>
+<td><code>OFF</code></td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table>
+<p><a id='windows-specific-options' class='anchor' aria-hidden='true'></a></p>
+<h2>Windows-Specific Options</h2>
+<p>For improved support with legacy build setups, OBS will detect and "upgrade" the following older environment variables and cache variables:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Example</th>
+<th>Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DepsPath</td>
+<td>Set path to downloaded prebuilt dependencies</td>
+<td><code>C:\Dev\dependencies2019\win64</code></td>
+<td><code>CMAKE_PREFIX_PATH</code></td>
+</tr>
+<tr>
+<td>DepsPath32</td>
+<td>Set path to downloaded prebuilt 32-bit dependencies</td>
+<td><code>C:\Dev\dependencies2019\win32</code></td>
+<td><code>CMAKE_PREFIX_PATH</code></td>
+</tr>
+<tr>
+<td>DepsPath64</td>
+<td>Set path to downloaded prebuilt 64-bit dependencies</td>
+<td><code>C:\Dev\dependencies2019\win64</code></td>
+<td><code>CMAKE_PREFIX_PATH</code></td>
+</tr>
+<tr>
+<td>QTDIR</td>
+<td>Set path to Qt installation</td>
+<td><code>C:\Dev\Qt_5.15.2\msvc2019_64</code></td>
+<td><code>CMAKE_PREFIX_PATH</code></td>
+</tr>
+<tr>
+<td>QTDIR32</td>
+<td>Set path to 32-bit Qt installation</td>
+<td><code>C:\Dev\Qt_5.15.2\msvc2019</code></td>
+<td><code>CMAKE_PREFIX_PATH</code></td>
+</tr>
+<tr>
+<td>QTDIR64</td>
+<td>Set path to 64-bit Qt installation</td>
+<td><code>C:\Dev\Qt_5.15.2\msvc2019_64</code></td>
+<td><code>CMAKE_PREFIX_PATH</code></td>
+</tr>
+<tr>
+<td>VlcPath</td>
+<td>Set path to VLC installation</td>
+<td><code>C:\Dev\vlc-3.0.0-git</code></td>
+<td><code>VLC_Path</code></td>
+</tr>
+</tbody>
+</table>
+<p>The following legacy option switches are supported for a grace period as well and are automatically upgraded as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Upgrade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BROWSER_LEGACY</td>
+<td>ENABLE_BROWSER_LEGACY</td>
+</tr>
+<tr>
+<td>BROWSER_PANEL_SUPPORT_ENABLED</td>
+<td>ENABLE_BROWSER_PANELS</td>
+</tr>
+<tr>
+<td>BUILD_BROWSER</td>
+<td>ENABLE_BROWSER</td>
+</tr>
+<tr>
+<td>BUILD_CA_ENCODER</td>
+<td>ENABLE_COREAUDIO_ENCODER</td>
+</tr>
+<tr>
+<td>BUILD_VST</td>
+<td>ENABLE_VST</td>
+</tr>
+<tr>
+<td>BROWSER_LEGACY</td>
+<td>ENABLE_BROWSER_LEGACY</td>
+</tr>
+<tr>
+<td>CHECK_FOR_SERVICE_UPDATES</td>
+<td>ENABLE_SERVICE_UPDATES</td>
+</tr>
+<tr>
+<td>DEBUG_FFMPEG_MUX</td>
+<td>ENABLE_FFMPEG_MUX_DEBUG</td>
+</tr>
+<tr>
+<td>DISABLE_IVCAM</td>
+<td>ENABLE_IVCAM</td>
+</tr>
+<tr>
+<td>DISABLE_PLUGINS</td>
+<td>ENABLE_PLUGINS</td>
+</tr>
+<tr>
+<td>DISABLE_PYTHON</td>
+<td>ENABLE_SCRIPTING_PYTHON</td>
+</tr>
+<tr>
+<td>DISABLE_LUA</td>
+<td>ENABLE_SCRIPTING_LUA</td>
+</tr>
+<tr>
+<td>DISABLE_SPEEXDSP</td>
+<td>ENABLE_SPEEXDSP</td>
+</tr>
+<tr>
+<td>DISABLE_UPDATE_MODULE</td>
+<td>ENABLE_UPDATER</td>
+</tr>
+<tr>
+<td>SHARED_TEXTURE_SUPPORT_ENABLED</td>
+<td>ENABLE_BROWSER_SHARED_TEXTURE</td>
+</tr>
+<tr>
+<td>STATIC_MBEDTLS</td>
+<td>ENABLE_STATIC_MBEDTLS</td>
+</tr>
+<tr>
+<td>UNIX_STRUCTURE</td>
+<td>LINUX_PORTABLE</td>
+</tr>
+<tr>
+<td>USE_QT_LOOP</td>
+<td>ENABLE_BROWSER_QT_LOOP</td>
+</tr>
+<tr>
+<td>WITH_RTMPS</td>
+<td>ENABLE_RTMPS</td>
+</tr>
+</tbody>
+</table>
+<p><a id='general-cmake-guidance' class='anchor' aria-hidden='true'></a></p>
+<h2>General CMake guidance</h2>
+<p>All these commands implicitly expect to be run from within the OBS source code directory checked out via <code>git</code> including all submodules (check the [Installing and Building]() page for more details):</p>
+<p><a id='create-build-configuration' class='anchor' aria-hidden='true'></a></p>
+<h3>Create Build Configuration</h3>
+<p>Just running <code>cmake</code> triggers an "in-source" build (meaning: build artifacts are placed with the source code directory structure). Due to OBS' modular structure this build variant is not allowed, instead an "out-of-source" build needs to be configured.</p>
+<p>To create a build configuration in a <strong>desired subdirectory</strong> run <code>cmake -S . -B</code>. This will configure OBS with most modules available to the host operating system enabled.</p>
+<p>To change the <strong>CMake generator</strong> (and the build tool used to compile the project) pass a compatible generator name via the <code>-G</code> switch. Supported generators by CMake and OBS are:</p>
+<ul>
+<li>Unix Makefiles</li>
+<li>Ninja</li>
+<li>Xcode</li>
+<li>Visual Studio 17 2022</li>
+</ul>
+<p>Other generators are supported by CMake but have neither been tested nor are officially supported by the OBS team.</p>
+<p><a id='change-configuration-options' class='anchor' aria-hidden='true'></a></p>
+<h3>Change Configuration Options</h3>
+<p>To change a configuration option, supported variables can be passed via the <code>-D</code> switch. E.g. to disable building with the browser plugin, pass <code>-DENABLE_BROWSER=OFF</code>. While CMake supports several values as binary switches, within OBS <code>ON</code> or <code>OFF</code> are used.</p>
+<p>These changes are additive, as CMake stores these options as "cache variables" in a file called <code>CMakeCache.txt</code> in the specified build directory and reads from this file when <code>cmake</code> is run again. As such cache options can either be changed in this file directly, or overwritten by specifying new values for them via the <code>-D</code> switch (see above).</p>
+<p><a id='cmake-guis' class='anchor' aria-hidden='true'></a></p>
+<h4>CMake GUIs</h4>
+<p>CMake build configurations can also be managed using graphical user interfaces: On Windows <code>cmake-gui</code> is installed with the CMake package available for the platform and allows selection of source and build directories (<code>-S</code> and <code>-B</code> switches respectively) as well as direct manipulation of all cache variables. Detailed instructions for this GUI are available in the [Installation and Building]() article.</p>
+<p>On POSIX-based systems a <code>ncurses</code>-based user interface is available via the <code>ccmake</code> command which allows editing of cache variables. Note that due to CMake's internal processes, a configuration step (via the <code>c</code> shortcut) needs to be repeated until no <em>new</em> cache variables are created by it. Only then will the generation step (<code>g</code> shortcut) be made available.</p>
+<p><a id='apply-changes' class='anchor' aria-hidden='true'></a></p>
+<h3>Apply Changes</h3>
+<p>Whether changes to CMake script files themselves or to cache variables, CMake needs to be run again to "pick up" on these changes and apply them (as build system files are generated according to these changes). When using the GUI a repeat run of configuration and generation steps should be enough to pick up those changes; when using the command line a repeat invocation of <code>cmake -S . -B</code> will do the same.</p>
+<p><a id='modern-cmake' class='anchor' aria-hidden='true'></a></p>
+<h2>Modern CMake</h2>
+<p>OBS uses "Modern CMake" which differentiates from patterns and practices used by CMake before version 2.8/3 - for the full details please refer to <a href="https://cliutils.gitlab.io/modern-cmake/">An Introduction To Modern CMake</a>.</p>
+<p>Here are some general rules of thumb (lifted from the article mentioned above):</p>
+<p><a id='cmake-antipatterns' class='anchor' aria-hidden='true'></a></p>
+<h3>CMake Antipatterns</h3>
+<ul>
+<li>Do not use global functions: This includes <code>link_directories</code>, <code>include_libraries</code>, and similar.</li>
+<li>Don't add unneeded <code>PUBLIC</code> requirements: You should avoid forcing something on users that is not required (<code>-Wall</code>). Make these <code>PRIVATE</code> instead.</li>
+<li>Don't <code>GLOB</code> files: Make or another tool will not know if you add files without rerunning CMake. Note that CMake 3.12 adds a <code>CONFIGURE_DEPENDS</code> flag that makes this far better if you need to use it.</li>
+<li>Do not link to built files directly: Always link to targets if available.</li>
+<li>Never skip <code>PUBLIC/PRIVATE</code> when linking: This causes all future linking to be keyword-less.</li>
+</ul>
+<p><a id='cmake-patterns' class='anchor' aria-hidden='true'></a></p>
+<h3>CMake Patterns</h3>
+<ul>
+<li>Treat CMake as code: It is code. It should be as clean and readable as all other code.</li>
+<li>Think in targets: Your targets should represent concepts. Make an (<code>IMPORTED</code>) <code>INTERFACE</code> target for anything that should stay together and link to that.</li>
+<li>Export your interface: You should be able to run from build or install.</li>
+<li>Write a <code>Config.cmake</code> file: This is what a library author should do to support clients.</li>
+<li>Make <code>ALIAS</code> targets to keep usage consistent: Using <code>add_subdirectory</code> and <code>find_package</code> should provide the same targets and namespaces.</li>
+<li>Combine common functionality into clearly documented functions or macros: Functions are better usually.</li>
+<li>Use lowercase function names: CMake functions and macros can be called lower or upper case. Always use lower case. Upper case is for variables.</li>
+<li>Use <code>cmake_policy</code> and/or range of versions: Policies change for a reason. Only piecemeal set <code>OLD</code> policies if you have to.</li>
+</ul>
+<p><a id='examples' class='anchor' aria-hidden='true'></a></p>
+<h3>Examples</h3>
+<ul>
+<li>
+<p>Using (internal) finder variables to add libraries and their include directories:</p>
+<pre><code>  LEGACY:
+  ---------------
+  find_package(MyLibrary)
+  link_directores(${MY_LIBRARY_INCLUDE_DIRS})
+  include_libraries(${MY_LIBRARY_LIB})
+
+  MODERN:
+  ---------------
+  find_package(MyLibrary)
+  target_link_libraries(my_target PRIVATE My_Library::My_Library)</code></pre>
+<p><strong>NOTE:</strong> If the package does not create an imported library target (<code>My_Library::My_Library</code>), an issue should be filed with the respective library maintainer(s) to drop the outdated <code>FindXYZ.cmake</code> pattern and update to CMake's <code>export</code> function to create a CMake package. In the interim the finder module can be patched to create namespaced imported targets (see some examples in OBS' <code>CMake/Modules</code> directory.</p>
+</li>
+<li>
+<p>Gathering source files in variables and adding them at the bottom of the script:</p>
+<pre><code>  LEGACY:
+  ---------------
+  set(mytarget_SOURCES
+      my_source.c)
+  set(mytarget_HEADERS
+      include/my_headers.h)
+
+  add_library(my_target SHARED ${mytarget_SOURCES} ${mytarget_HEADERS)
+
+  MODERN:
+  ---------------
+  add_library(my_target SHARED)
+  target_sources(my_target
+      include/my_headers.h)</code></pre>
+</li>
+<li>
+<p>Polluting the build environment with local compilation requirements</p>
+<pre><code>  LEGACY:
+  ---------------
+
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_EXTENSIONS OFF)
+
+  add_compile_options(-Wextra -Wvla -Wno-unused-function -Wno-missing-field-initializers -fno-strict-aliasing)
+  add_link_options(/INCREMENTAL)
+
+  MODERN:
+  ---------------
+  target_compile_features(my_target PRIVATE cxx_std_17)
+  target_compile_options(my_target PRIVATE -Wextra PUBLIC -fno-strict-aliasing)
+  target_link_options(my_target PRIVATE LINKER:-z,defs)</code></pre>
+<p><strong>NOTE:</strong> The correct use of <code>PRIVATE</code> and <code>PUBLIC</code> is important here: <code>PRIVATE</code> target properties only apply to the target itself, while <code>PUBLIC</code> options are also inherited by targets linking to <em>this</em> target. Also note the <code>LINKER:</code> prefix for the link options - this allows CMake to use the compiler specific linker flags (e.g <code>-Xlinker -z -Xlinker defs</code> for Clang and <code>-Wl,-z,defs</code> for GNU GCC).</p>
+</li>
+</ul>
+<p><a id='think-in-targets' class='anchor' aria-hidden='true'></a></p>
+<h3>Think In Targets</h3>
+<p>This cannot be stressed enough: In Modern CMake everything revolves around targets, which allows CMake to resolve dependencies and relationships using target properties and the information contained within. E.g. when linking <code>target_a</code> with <code>target_b</code> (via <code>target_link_libraries()</code>) CMake will look up the <code>INTERFACE_INCLUDE_DIRECTORIES</code> property on <code>target_b</code> to yield the directory containing library headers, as well as <code>INTERFACE_LINK_LIBRARIES</code> which will contain the actual library files in the file system. Required compile options and defines are also read from <code>INTERFACE_COMPILE_OPTIONS</code> and <code>INTERFACE_COMPILE_DEFINITIONS</code> respectively and added to <code>target_a</code>'s compile options automatically.</p>
+<p>Using namespaces (<code>My_Library::My_Library</code>) when specifying targets for linking has the added benefit of ensuring a target reference (instead of a file reference), as colons are invalid for file names in many file systems.</p>
+		&nbsp;
+
+	</div>
+
+	<div class="wiki_sidebar">
+
+		<h1><a href="https://obsproject.com/wiki/Home">Home</a></h1>
+<h1><a href="https://obsproject.com/wiki/install-instructions">Install instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/install-instructions#windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#macos">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#freebsd">FreeBSD</a></li>
+</ul>
+<h1><a href="https://obsproject.com/wiki/Building-OBS-Studio">Build instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Mac">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-FreeBSD">FreeBSD</a></li>
+</ul>
+<h1>Development &amp; Scripting</h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development">Getting Started with OBS Studio Development</a></li>
+<li><a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">Getting Started With OBS Scripting</a><ul>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake">Scripting Tutorial: Source Shake</a></li>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter">Scripting Tutorial: Halftone Filter</a></li>
+</ul>
+</li>
+<li><a href="https://obsproject.com/wiki/Service-Submission-Guidelines">Service Submission Guidelines</a></li>
+</ul>
+	</div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/wiki">Čeština</a> 
+                                  <a href="https://obsproject.com/da/wiki">Dansk</a> 
+                                  <a href="https://obsproject.com/de/wiki">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/wiki">Español</a> 
+                                  <a href="https://obsproject.com/eu/wiki">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/wiki">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/wiki">Français</a> 
+                                  <a href="https://obsproject.com/hu/wiki">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/wiki">日本語</a> 
+                                  <a href="https://obsproject.com/ko/wiki">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/wiki">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/wiki">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/wiki">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/wiki">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/wiki">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/wiki">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/wiki/Building-OBS-Studio by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

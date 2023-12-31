@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/wiki/Getting-Started-With-OBS-Scripting by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki - Getting Started With OBS Scripting | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="OBS can be extended with Python and Lua scripts. This set of pages explains the basics to get started and describes how to implement common features. ## Scripts management window …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header><!-- Debug2 -->
+<div class="pagewidth wiki_container">
+
+	<div class="headerpusher"></div>
+
+	<div class="full_width wiki_header">
+		<h1>Getting Started With OBS Scripting</h1>
+	</div>
+
+	<div class="wiki_content">
+		<p>OBS can be extended with Python and Lua scripts. This set of pages explains the basics to get started and describes how to implement common features.</p>
+<p><a id='scripts-management-window' class='anchor' aria-hidden='true'></a></p>
+<h2>Scripts management window</h2>
+<p>Scripts are managed by the user through the <em>Scripts</em> dialog window, displayed via the menu item <em>Tools &gt; Scripts</em>:</p>
+<p><img src="https://obsproject.com/wiki/images/scripting/main-scripts-window.png" alt="Main scripts window" /></p>
+<p>A list of scripts currently added to OBS is displayed on the left hand side (here two scripts distributed with OBS). On the right hand side, if any, the description and editable properties of the script are shown. A script can be added by clicking on + and selecting the related Python or Lua file, removed with -. Use the &#128472; button to <em>Reload Scripts</em> and the Defaults button to reset the values of the editable properties to their default values.</p>
+<p>For Python scripts, a decent distribution of Python must be installed by the user, and the <em>Python Install Path</em> must be set in the tab <em>Python Settings</em>. Please refer to the <a href="https://obsproject.com/docs/scripting.html">OBS scripting documentation</a> for the supported version of Python (currently Python 3.6). Depending on the Python installation, locating the installation path can be difficult, e.g. on Windows 10 with Python installed from the Microsoft Store, the installation path is located at <code>[UserFolder]\AppData\Local\Programs\Python\Python36</code>.</p>
+<p><a id='obs-ecosystem' class='anchor' aria-hidden='true'></a></p>
+<h2>OBS ecosystem</h2>
+<p>Scripting is a way to add functionality to OBS but it is not the only one. Having an overview of the context is important before going into the details. Here is a non-exhaustive list of methods one could use to develop new functions that interact with OBS:</p>
+<ul>
+<li><a href="https://obsproject.com/docs/plugins.html"><em>Plugins</em></a> are typically implemented in C/C++ and compiled into dynamic libraries that are discovered and loaded at run time by OBS. The main advantages of plugins are obviously the performance and the raw access to all functions and libraries of OBS. A significant drawback is the need to setup an OBS compilation environment and to deal with subsequent OBS versions if re-compilation is necessary. In addition, if a wide distribution is envisaged, compilation and installation for different platforms must be considered.</li>
+<li><a href="https://obsproject.com/docs/scripting.html"><em>Scripts</em></a> are written in Lua or Python and are interpreted or compiled on-the-fly at run time. Scripts are mostly platform-independent and are usually not affected by slight changes of OBS data structures. They have access to large portions of the OBS C API. Obvious advantages are the simplified development and maintenance while supporting many features of plugins. The drawback is a lower performance, which is not an issue in most cases.</li>
+<li><a href="https://github.com/obsproject/obs-browser"><em>Browser docks and sources</em></a> (for Windows and macOS) can use a <a href="https://github.com/obsproject/obs-browser#js-bindings">Javascript API</a> to react to events in OBS and retrieve basic information. They can be hosted on a web-server or locally, and support what Chromium supports (including HTML5, WebGL, etc). They are typically used as sources for overlays reacting to events.</li>
+<li><a href="https://github.com/Palakis/obs-websocket"><em>WebSockets</em></a> can be used to remotely control OBS via a <a href="https://github.com/Palakis/obs-websocket/blob/4.x-current/docs/generated/protocol.md">network interface</a>. Different libraries support the protocol for customized applications (C#, Javascript, Python, Java, ..).</li>
+<li><a href="https://obsproject.com/forum/list/plugins.35"><em>Numerous plugins</em></a> and <a href="https://obsproject.com/forum/resources/categories/scripts.5"><em>scripts</em></a> may provide the wished behavior without development. As an example, <a href="https://github.com/Xaymar/obs-StreamFX">StreamFX</a> supports customized shaders with customizable input parameters for filter, source or transition video effects.</li>
+</ul>
+<p><a id='comparison-of-python-and-lua-for-scripting-in-obs' class='anchor' aria-hidden='true'></a></p>
+<h2>Comparison of Python and Lua for scripting in OBS</h2>
+<p>Lua is by far less popular and less powerful than Python, but it is a bit simpler (on purpose, to reduce complexity and footprint in the embedding executable) and better integrated in OBS (as of v26.1):</p>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th><a href="https://www.python.org/">Python</a></th>
+<th><a href="https://www.lua.org/">Lua</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General usage</td>
+<td>Wide usage for everything, <a href="https://docs.python.org/3.6/library">full-featured standard library</a>, etc</td>
+<td>Sparse usage mainly as embedded scripting extension (e.g. in <a href="https://gitlab.com/wireshark/wireshark/-/wikis/Lua">Wireshark</a>, <a href="https://www.videolan.org/developers/vlc/share/lua/README.txt">VLC</a>, <a href="https://rpm.org/user_doc/lua.html">RPM</a>, etc), <a href="https://www.lua.org/manual/5.1">poor standard library</a> (use the OBS API or <a href="https://luajit.org/ext_ffi.html">FFI</a> to fill the gaps)</td>
+</tr>
+<tr>
+<td>Additional modules</td>
+<td>Supported e.g. with pip</td>
+<td>Supported for pure Lua modules, probably possible but complex for modules with binary</td>
+</tr>
+<tr>
+<td>Interpreter</td>
+<td>Not embedded</td>
+<td>Fully embedded, based on <a href="http://luajit.org/">LuaJIT</a></td>
+</tr>
+<tr>
+<td>Supported <a href="https://obsproject.com/docs/reference-modules.html">libobs modules</a></td>
+<td>None</td>
+<td>Sources using <a href="https://obsproject.com/docs/scripting.html#script-sources-lua-only">source_info</a></td>
+</tr>
+</tbody>
+</table>
+<p><a id='api-documentation' class='anchor' aria-hidden='true'></a></p>
+<h2>API documentation</h2>
+<p>OBS has a huge API of C functions and data structures. Scripting-specific API features are described in the <a href="https://obsproject.com/docs/scripting.html">OBS scripting documentation</a>. The rest of the <a href="https://obsproject.com/docs">API</a> is documented in the original C flavour only, there is no documentation of the functions and data structures as seen from the scripting environment so far.</p>
+<p>These resources can be helpful (feel free to add something):</p>
+<ul>
+<li>Example scripts delivered with OBS in <code>[InstallationFolder]/data/obs-plugins/frontend-tools/scripts</code></li>
+<li><a href="https://github.com/upgradeQ/OBS-Studio-Python-Scripting-Cheatsheet-obspython-Examples-of-API">An extensive OBS Python cheat sheet by upgradeQ</a> (thanks to upgradeQ for this huge collection of code snippets)</li>
+<li>The forum page <a href="https://obsproject.com/forum/threads/tips-and-tricks-for-lua-scripts.132256">Tips and tricks for Lua scripts</a></li>
+<li><a href="https://github.com/Chriscodinglife/get-started-with-lua">A OBS Lua Cheat Sheet by MoreBackgroundsPlease</a> (Heavily inspired by upgradeQ's cheatsheet)</li>
+</ul>
+<p><a id='getting-started' class='anchor' aria-hidden='true'></a></p>
+<h2>Getting started</h2>
+<p>A bare text editor is the only thing you need to get started, but prefer the IDE of your choice for a more comfortable editing. There is no official supporting file for features such as Intellisense so far.</p>
+<p>Two tutorials are proposed in this Wiki:</p>
+<ul>
+<li>Start with the <a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake"><strong>Source Shake tutorial</strong></a> that shows how to animate a source displayed in a scene with a hotkey and customizable properties, in Python and Lua</li>
+<li>The <a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter"><strong>Halftone Filter tutorial</strong></a> is an example of shader-based video filter in Lua</li>
+</ul>
+<p>Other tutorial resources (feel free to add something):</p>
+<ul>
+<li><a href="https://medium.com/@morebackgroundsplease/how-to-a-create-simple-custom-user-interface-inside-obs-studio-with-a-lua-script-ef0ff76cfa74">Part 1: Custom user interface tutorial</a> and <a href="https://morebackgroundsplease.medium.com/use-a-lua-script-to-import-your-twitch-streaming-overlay-designs-into-obs-studio-b8f688aeb9e8">Part 2: Custom user interface, Adding sources and scenes</a> by More Backgrounds Please in Lua</li>
+<li><a href="https://jbscript.dev/my-first-lua-and-obs-script/">Bouncing background logo tutorial</a> by Jonny Buchanan in Lua</li>
+<li><a href="https://dev.to/hectorleiva/start-to-write-plugins-for-obs-with-lua-1172">Current date display tutorial</a> by Hector Leiva in Lua</li>
+<li>Tutorial by upgradeQ in Lua, <a href="https://translate.google.com/translate?sl=ru&amp;tl=en&amp;u=https%3A%2F%2Fhabr.com%2Fru%2Fpost%2F520684%2F">part 1</a> (global script functions, timers, hotkeys) and <a href="https://translate.google.com/translate?sl=ru&amp;tl=en&amp;u=https%3A%2F%2Fhabr.com%2Fru%2Fpost%2F522278%2F">part 2</a> (setting filter parameters, events)</li>
+</ul>
+<p><a id='bindings' class='anchor' aria-hidden='true'></a></p>
+<h2>Bindings</h2>
+<p>There is no strong layer of protection or consistency checking between scripting and binary functions. The C functions of the OBS API are bound to the scripting environment through <em>wrapper functions</em> written in C and compiled into OBS libraries.</p>
+<p>Typically, when a Python/Lua function is called in a script, the interpreter calls the related C wrapper function that implements these 3 steps:</p>
+<ol>
+<li>Validation of the data given as arguments to the script function and conversion of this data from Python/Lua types to C types</li>
+<li>Call to the original C function of the API</li>
+<li>Conversion of the data returned by the C function from C types to Python/Lua types</li>
+</ol>
+<p>Wrapper functions exist as well for "getters" and "setters", in order to access the members of OBS data structures, again with data conversion between C types and Python/Lua types.</p>
+<dl>
+<dt>Nearly all of wrapper functions are generated automatically by <a href="http://www.swig.org/">SWIG</a> during OBS build, based on the API functions definition in C. For a few complex C functions and structures, for which SWIG would not generate proper code automatically, wrapper functions are written manually. This is the case for frontend-related functions, <code>source_info</code> and functions with callback arguments (see the section <a href="https://obsproject.com/docs/scripting.html#other-differences-from-the-c-api">other differences from the C API</a>).</dt>
+<dd>
+<p>warning: Even if most functions are usable as intended (especially the ones specifically re-designed for scripting), a few functions with SWIG-written wrappers cannot be used directly for scripting so far, because SWIG cannot interpret properly the data types of arguments or return values given in the C definition. Typically, with values passed by reference or buffers, C pointers and pointer-pointer types are inherently ambiguous.</p>
+</dd>
+</dl>
+<p><a id='script-life-cycle' class='anchor' aria-hidden='true'></a></p>
+<h2>Script life-cycle</h2>
+<p>A script must define some <a href="https://obsproject.com/docs/scripting.html#script-function-exports">global script functions</a> called by the scripting environment at different stages of the script life-cycle and at different execution phases of OBS. The following steps are performed wherever the related global script functions are implemented.</p>
+<p><a id='global-script-functions-called-at-obs-startup' class='anchor' aria-hidden='true'></a></p>
+<h3>Global script functions called at OBS startup</h3>
+<p>When a script was previously added to OBS, at startup:</p>
+<ol>
+<li>The content of the script file is read and interpreted in a new script execution context (global script functions are defined during this first execution)</li>
+<li><code>script_defaults(settings)</code> is called to initialize default values in data settings</li>
+<li><code>script_description()</code> is called to retrieve a description string to be displayed in the <em>Scripts</em> window (with <a href="https://doc.qt.io/qt-5/richtext-html-subset.html">Qt-style formatting</a> :bulb:)</li>
+<li><code>script_load(settings)</code> is called for one-time initialization, possibly using values of data settings (typically to setup signal handlers)</li>
+<li><code>script_update(settings)</code> is called a first time for initializations depending on the values of data settings (this function will be called again after any change of value in the data settings, see below)</li>
+</ol>
+<p>Please note that:</p>
+<ul>
+<li>The values of the data settings available in <code>settings</code> during OBS startup reflect the state saved at previous OBS closure (properties changed by the user), and are already set in <code>settings</code> when <code>script_defaults</code>, <code>script_load</code> and <code>script_update</code> are called</li>
+<li>Because OBS does not store the values of properties that were not changed by the user, i.e. properties still set to their default values, such values are not available in <code>settings</code> when <code>script_defaults</code> is called at OBS startup (and are available as set by <code>script_defaults</code> later in <code>script_load</code> and <code>script_update</code>)</li>
+<li>During OBS startup, the steps 1 to 5 are performed <em>before</em> loading the scenes and sources in the frontend (before <code>OBS_FRONTEND_EVENT_FINISHED_LOADING</code> is emitted). This is especially important in <code>script_update</code> if sources or scenes are looked up.</li>
+</ul>
+<p>Check how OBS saves properties in the user's JSON configuration file (at <code>[UserFolder]\AppData\Roaming\obs-studio\basic\scenes</code> under Windows) to better understand what is going on.</p>
+<p><a id='global-script-function-called-every-frame' class='anchor' aria-hidden='true'></a></p>
+<h3>Global script function called every frame</h3>
+<dl>
+<dt>During OBS execution, once a script is initialized, <code>script_tick(seconds)</code> is called every rendered frame (<code>seconds</code> is the time in seconds passed since the previous frame). Consider using a timer instead of a recurrent test in <code>script_tick</code> if possible.</dt>
+<dd>
+<p>warning: Be very careful with the code in <code>script_tick</code>, OBS may rapidly become unresponsive if some error or text is logged every frame.</p>
+</dd>
+</dl>
+<p><a id='global-script-functions-called-at-obs-closure' class='anchor' aria-hidden='true'></a></p>
+<h3>Global script functions called at OBS closure</h3>
+<p>Two global script functions are called when OBS is closed:</p>
+<ol>
+<li><code>script_save(settings)</code> is called just before saving the data settings persistently</li>
+<li><code>script_unload()</code> is called just before the destruction of the script execution context</li>
+</ol>
+<p>Data settings are saved automatically at OBS closure, it is not necessary for the script to call any function to save data settings (and not necessary to implement <code>script_save</code> nor <code>script_unload</code> to trigger OBS to save data set by a script).</p>
+<p><a id='global-script-functions-for-editable-properties' class='anchor' aria-hidden='true'></a></p>
+<h3>Global script functions for editable properties</h3>
+<p>Once OBS startup is completed, <code>script_properties()</code> is called by OBS if the script is selected in the <em>Scripts</em> window (selecting another script would always call the related <code>script_properties</code> function).</p>
+<p>The function has to return an <code>obs_properties_t</code> object created using <a href="https://obsproject.com/docs/reference-properties.html#c.obs_properties_create"><code>obs_properties_create</code></a> and filled with GUI elements though <a href="https://obsproject.com/docs/reference-properties.html?highlight=obs_properties_add#c.obs_properties_add_bool"><code>obs_properties_add_*</code></a> functions. The object will be released by OBS when necessary.</p>
+<p>A callback function can be set to each property using <a href="https://obsproject.com/docs/reference-properties.html#c.obs_property_set_modified_callback"><code>obs_property_set_modified_callback</code></a>.</p>
+<p>When the value of a property is changed, the sequence is:</p>
+<ol>
+<li><code>script_update(settings)</code> is called (for initializations depending on the values of data settings)</li>
+<li>The callback of the modified property is called</li>
+</ol>
+<p>Please note that:</p>
+<ul>
+<li>:bulb: The description of a property supports <a href="https://doc.qt.io/qt-5/richtext-html-subset.html">Qt-style formatting</a></li>
+<li>:bulb: A callback function set on a property with <code>obs_property_set_modified_callback</code> has to <a href="https://obsproject.com/docs/plugins.html?highlight=return%20true#properties">return true to trigger the refresh of the properties widget</a> (no new call to <code>script_properties</code>)</li>
+<li>If another property or data setting is modified per script, e.g. in <code>script_update</code>, then its callback is not triggered automatically, use <a href="https://obsproject.com/docs/reference-properties.html#c.obs_properties_apply_settings"><code>obs_properties_apply_settings</code></a> to trigger all callbacks (e.g. in <code>script_update</code> with a properties object saved in a global variable in <code>script_properties</code>)</li>
+</ul>
+<p><a id='global-script-functions-call-sequence-for-other-operations' class='anchor' aria-hidden='true'></a></p>
+<h3>Global script functions call sequence for other operations</h3>
+<p>The management operations available on the <em>Scripts</em> window trigger more complex sequences (described in this section as in OBS v26.1, the behavior may change in the future).</p>
+<p>Adding a script:</p>
+<ul>
+<li>
+<p>Initialization steps like in OBS startup except that values of data settings are not available:</p>
+<ol>
+<li>First script execution</li>
+<li><code>script_defaults</code></li>
+<li><code>script_description</code></li>
+<li><code>script_load</code></li>
+<li><code>script_update</code></li>
+</ol>
+</li>
+<li>
+<p>Then, as the script is selected in the <em>Scripts</em> window, the properties are initialized and displayed:</p>
+<ol start="6">
+<li><code>script_properties</code></li>
+<li>Call to all "modified callbacks", for all properties (with data settings still not available)</li>
+<li><code>script_properties</code> again</li>
+<li><code>script_update</code> with data settings available</li>
+<li>Call to the "modified callbacks" of properties actually changed in previous steps</li>
+</ol>
+</li>
+</ul>
+<p>:warning: The complete sequence may lead to inconsistencies if not carefully handled, because the same functions are called multiple times, including property callbacks at step 7, while data settings are not available (credits to eukraticism for pointing out this behavior).</p>
+<p>Removing a script just triggers a call to <code>script_unload</code> (<em>not</em> <code>script_save</code>).</p>
+<p>Resetting to defaults starts with a call to <code>script_update</code> followed by the same steps as for removing and then re-adding a script (data settings not available).</p>
+<p>Reloading a script is the same as removing and then re-adding a script, except that the values of data settings are available during the complete sequence.</p>
+<p><a id='troubleshooting' class='anchor' aria-hidden='true'></a></p>
+<h2>Troubleshooting</h2>
+<p>It is common to experience OBS crashes or unexpected behavior during the development. A few hints (feel free to add your own!):</p>
+<ul>
+<li>Scripts are loaded very early when OBS starts, before the GUI appears. Depending on what the script does at start, it may lead to a very long start time (e.g. shader compilation with unrolled loops).</li>
+<li>If OBS crashes at start due to a script, or wrong parameters given to a script, it won't be possible to de-activate the faulty script in the <em>Scripts</em> dialog window. To recover: rename the script, start OBS, remove the faulty script from the list of attached scripts, etc.</li>
+<li>OBS will tend to keep any defined/changed property in the user's JSON configuration file, even if the related property does not exist any more in a later version of the script. Removing a script and then re-adding it (and set again the related properties) will clean-up such ghost properties.</li>
+<li>OBS may freeze when too much data is logged at once, or may become unresponsive after a couple of minutes. This is especially true when data is logged at every frame, e.g. when a recurrent error occurs in <code>script_tick</code>. It may be necessary to close the OBS window or even kill the process to recover.</li>
+<li>Many functions in OBS allocate data that needs to be released. This is the meaning of the warning in the documentation: <em>release/destroy objects you reference or create via the API</em>. For instance, a call to <a href="https://obsproject.com/docs/reference-frontend-api.html?#c.obs_frontend_get_current_scene"><code>obs_get_current_scene</code></a> must be followed by a call to <a href="https://obsproject.com/docs/reference-sources.html#c.obs_source_release"><code>obs_source_release</code></a> otherwise OBS may crash on exit (with "Freeing OBS context data" as last log entry).  The need to release objects is not always documented. As a rule of thumb, if the API documentation states <em>Returns: A new reference ...</em> or <em>Returns: An incremented reference...</em> then a call to a release function is probably necessary (credits to J. Buchanan for this helpful synthesis).</li>
+<li>The <a href="https://obsproject.com/docs/graphics.html#creating-effects">effects</a> parser misses often unbalanced brackets, without any log (credits to skeletonbow for this general remark). It is recommended to use an IDE able to detect such issues in HLSL (using the extension <code>.hlsl</code> on the effect file name may help).</li>
+</ul>
+		&nbsp;
+
+	</div>
+
+	<div class="wiki_sidebar">
+
+		<h1><a href="https://obsproject.com/wiki/Home">Home</a></h1>
+<h1><a href="https://obsproject.com/wiki/install-instructions">Install instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/install-instructions#windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#macos">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#freebsd">FreeBSD</a></li>
+</ul>
+<h1><a href="https://obsproject.com/wiki/Building-OBS-Studio">Build instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Mac">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-FreeBSD">FreeBSD</a></li>
+</ul>
+<h1>Development &amp; Scripting</h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development">Getting Started with OBS Studio Development</a></li>
+<li><a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">Getting Started With OBS Scripting</a><ul>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake">Scripting Tutorial: Source Shake</a></li>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter">Scripting Tutorial: Halftone Filter</a></li>
+</ul>
+</li>
+<li><a href="https://obsproject.com/wiki/Service-Submission-Guidelines">Service Submission Guidelines</a></li>
+</ul>
+	</div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/wiki">Čeština</a> 
+                                  <a href="https://obsproject.com/da/wiki">Dansk</a> 
+                                  <a href="https://obsproject.com/de/wiki">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/wiki">Español</a> 
+                                  <a href="https://obsproject.com/eu/wiki">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/wiki">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/wiki">Français</a> 
+                                  <a href="https://obsproject.com/hu/wiki">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/wiki">日本語</a> 
+                                  <a href="https://obsproject.com/ko/wiki">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/wiki">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/wiki">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/wiki">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/wiki">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/wiki">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/wiki">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/wiki/Getting-Started-With-OBS-Scripting by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

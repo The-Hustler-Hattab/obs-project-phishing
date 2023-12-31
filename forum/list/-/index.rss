@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+  <channel>
+    <title>OBS Forums</title>
+    <description>Discussion forums for OBS Studio, the free and open source software for video recording and live streaming.</description>
+    <pubDate>Sun, 31 Dec 2023 03:34:50 +0000</pubDate>
+    <lastBuildDate>Sun, 31 Dec 2023 03:34:50 +0000</lastBuildDate>
+    <generator>OBS Forums</generator>
+    <link>https://obsproject.com/forum/</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://obsproject.com/forum/list/-/index.rss"/>
+    <item>
+      <title>OBS Recordings freezing after 80 minutes or so, audio still records.</title>
+      <pubDate>Sun, 31 Dec 2023 03:34:45 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-recordings-freezing-after-80-minutes-or-so-audio-still-records.172081/</link>
+      <guid isPermaLink="false">172081</guid>
+      <author>invalid@example.com (oceansea)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>oceansea</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I recently began using OBS to record videos via my webcam. Before the recent update, they usually recorded the full 70 - 180 minute durations of what I was trying to record. Sometimes it would stop recording sooner than desired, but eventually that seemed to stop malfunctioning and recordings were recording the full durations until i selected to stop recordings and save them. <br />
+<br />
+But now the most recent times Ive recorded via my webcam, obs records video and audio fine but only for an hour or...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/obs-recordings-freezing-after-80-minutes-or-so-audio-still-records.172081/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>My stream randomly stops streaming</title>
+      <pubDate>Sun, 31 Dec 2023 03:30:31 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/my-stream-randomly-stops-streaming.172080/</link>
+      <guid isPermaLink="false">172080</guid>
+      <author>invalid@example.com (kirbo)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>kirbo</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I just started getting back into streaming today and everytime i stream it stops streaming after awhile. I just want to know what to do i used 2 different internet sources and it keeps stopping. there is no crashing in the crash logs, it doesnt say anything on youtube or OBS, and i just want to know what to do...</div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>OBS getting audio, but I can't monitor with headphones</title>
+      <pubDate>Sun, 31 Dec 2023 03:25:12 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/obs-getting-audio-but-i-cant-monitor-with-headphones.172078/</link>
+      <guid isPermaLink="false">172078</guid>
+      <author>invalid@example.com (darctur)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>darctur</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I have OBS Studio 29.1.3 on Windows 11 with an MSI gaming desktop. I have video-only feeds from 2 PTZ Optics 20x cameras via a Blackmagic Decklink Duo 2 SDI capture card, which seems to work fine. One video+audio source comes into the SDI capture card from a laptop (HDMI output converted to SDI for the capture card). I have audio from various mics coming from a Yamaha TF1 mixer via M-Audio M-Track Solo to convert the mixer analog output to USB input for the PC. That works fine in OBS. But I...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/obs-getting-audio-but-i-cant-monitor-with-headphones.172078/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>how to cancel or change the output timer once started?</title>
+      <pubDate>Sun, 31 Dec 2023 03:17:07 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/how-to-cancel-or-change-the-output-timer-once-started.137102/</link>
+      <guid isPermaLink="false">137102</guid>
+      <author>invalid@example.com (chitot)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>chitot</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Tools-&gt;Output timer: <br />
+<br />
+Hi, I mistakenly set the output timer to 1 hour instead of 2 hours to record something. After hitting &quot;start&quot;, it seems there is no way to change or cancel the timer without stopping the already running recording session.  It would be nice if I can actually cancel or change the timer without stopping first so that the recording is not split. Thanks.</div>]]></content:encoded>
+      <slash:comments>8</slash:comments>
+    </item>
+    <item>
+      <title>Workstation Shutting Down</title>
+      <pubDate>Sun, 31 Dec 2023 03:03:44 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/workstation-shutting-down.172119/</link>
+      <guid isPermaLink="false">172119</guid>
+      <author>invalid@example.com (lateapex)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>lateapex</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I've been using OBS for a while (recording only) with no problems.  A few weeks ago I upgraded to Windows 11.  Now, after 3-5 minutes of recording, my workstation turns off!  I have a dual monitor and am recording the second monitor.  If I start OBS with a blank screen, no problem.  When I display a source, the computer will shutdown after 3-5 minutes.  This is true even if I am NOT recording. or there is no video on the second screen (just a static screen).  <br />
+<br />
+I've upgraded the graphics...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/workstation-shutting-down.172119/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Black Screen with PS3 and BlackMagic Intensity Pro 4K</title>
+      <pubDate>Sun, 31 Dec 2023 02:55:35 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/black-screen-with-ps3-and-blackmagic-intensity-pro-4k.172073/</link>
+      <guid isPermaLink="false">172073</guid>
+      <author>invalid@example.com (guillaumesoucy)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>guillaumesoucy</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hello,<br />
+I’m trying to hookup my old PS3 to my BlackMagic Intensity Pro 4K using HDMI but it only showing a black screen or a green screen with vertical lines.<br />
+Initially, I hook the PS3 to a HDMI switch, seeing it wasn’t working, I plugged the PS3 directly to the BM card using the HDMI input, unfortunately it did not changes anything.<br />
+I read on this forums that it could be a HDCP issue. Is HDCP is enables on the whole PS3? With my XBox One the HDCP is only blacking specific apps such as...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/black-screen-with-ps3-and-blackmagic-intensity-pro-4k.172073/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Frames missed due to rendering lag HELP :D</title>
+      <pubDate>Sun, 31 Dec 2023 02:40:42 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/frames-missed-due-to-rendering-lag-help-d.172057/</link>
+      <guid isPermaLink="false">172057</guid>
+      <author>invalid@example.com (staffyrcoole)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>staffyrcoole</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">hello everyone i have been struggling to find the problem i have done everything and still cant work out what is causing this issue my pc is decent and this has been an on going issue everything else works dine even right now im offline and still missing frames to rendering lag <br />
+<br />
+
+	<div>
+		<a href="https://obsproject.com/logs/jPX7nWyc7UvwE5mz"
+			class="link link--internal"
+			target=""
+			rel=""
+			data-proxy-href="">
+			https://obsproject.com/logs/jPX7nWyc7UvwE5mz
+		</a>
+	</div></div>]]></content:encoded>
+      <slash:comments>3</slash:comments>
+    </item>
+    <item>
+      <title>dj streaming in Small room stressed out  HELP</title>
+      <pubDate>Sun, 31 Dec 2023 02:27:07 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/dj-streaming-in-small-room-stressed-out-help.172064/</link>
+      <guid isPermaLink="false">172064</guid>
+      <author>invalid@example.com (andy1webster)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>andy1webster</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">im stressed out.   please help if possible....<br />
+<br />
+im streaming music in a small room  10  x  9 fooot.   i want to have no lights on except my flashing strobe lights and  derby lights.  the camera is abot 7 feet from my dj booth .    so im trying to create some atmosphere with dark room  with flashing lights. ..  problem is to get the whole back drop in  which is a  10foot  by 8 foot high wall tapestry behind me i need to have the cam at 100% which makes me huge, im so not comfy filling peoples...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/dj-streaming-in-small-room-stressed-out-help.172064/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Looking for recommendations for IP Camera Streaming</title>
+      <pubDate>Sun, 31 Dec 2023 02:20:03 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/looking-for-recommendations-for-ip-camera-streaming.172063/</link>
+      <guid isPermaLink="false">172063</guid>
+      <author>invalid@example.com (bassnetz)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>bassnetz</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi everyone, <br />
+Newbie here and a noob at OBS Studio as well. :( <br />
+I am seeking for some recommendations to fix a couple of problems that we have while streaming with OBS. <br />
+Firstly, we use IP Cameras (not sure which build) that are wide-angled because the ceiling is not so high. So the video always looks stretched out (attachment 1). Is there any way this can be fixed on the output end?<br />
+<br />
+Secondly, sometimes there is a burned patch appearing on the video if some objects move across (attachment...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/looking-for-recommendations-for-ip-camera-streaming.172063/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Windows Remote Desktop Microphone not recognized</title>
+      <pubDate>Sun, 31 Dec 2023 02:03:04 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/windows-remote-desktop-microphone-not-recognized.172041/</link>
+      <guid isPermaLink="false">172041</guid>
+      <author>invalid@example.com (betagoo)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>betagoo</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I connect from my computer (win10) to another computer (win11) by Windows Remote Desktop.<br />
+Remote audio recording into connection window is enable.<br />
+All settings to share remote audio into gpedit.msc are configured.<br />
+I can use voice typing into remote computer.<br />
+Recording sound from microphone works fine on remote computer (microphone is on local computer).<br />
+But.......<br />
+OBS Studio not recognize microphone.<br />
+Microphone volume metter not change colors, is still grayed.<br />
+I spend few hours to resolve...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/windows-remote-desktop-microphone-not-recognized.172041/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>5</slash:comments>
+    </item>
+    <item>
+      <title>Looking for help on what settings would be good for the hardware I have for recording to YouTube</title>
+      <pubDate>Sun, 31 Dec 2023 01:25:13 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/looking-for-help-on-what-settings-would-be-good-for-the-hardware-i-have-for-recording-to-youtube.172113/</link>
+      <guid isPermaLink="false">172113</guid>
+      <author>invalid@example.com (GrimEnd)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>GrimEnd</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Need to know what settings would work for a Ryzen 7 5700x and a Nvidia rtx 4060ti for recording videos for YouTube don't know if I'm at the right spot to post this in new</div>]]></content:encoded>
+      <slash:comments>6</slash:comments>
+    </item>
+    <item>
+      <title>Darkle</title>
+      <pubDate>Sun, 31 Dec 2023 01:19:13 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/darkle.171880/</link>
+      <guid isPermaLink="false">171880</guid>
+      <author>invalid@example.com (Dezintuit)</author>
+      <category domain="https://obsproject.com/forum/list/themes/"><![CDATA[Themes]]></category>
+      <dc:creator>Dezintuit</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Dezintuit submitted a new resource:<br />
+<br />
+<a href="https://obsproject.com/forum/resources/darkle.1857/" class="link link--internal">Darkle</a> - Dark + Purple = Darkle, a fork of the main Dark theme<br />
+<br />
+
+
+
+
+<blockquote data-attributes="" data-quote="" data-source=""
+	class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote js-expandWatch">
+	
+	<div class="bbCodeBlock-content">
+		
+		<div class="bbCodeBlock-expandContent js-expandContent ">
+			A darker and slightly purple fork of the main dark theme. I used this as the base because of the smaller fonts, allowing for more content to be displayed at once.<br />
+<br />
+Disclaimer: I made this for myself mainly, in a single afternoon. I don't know QSS, I just did search and replace and used the color picker to find the right colors.<br />
+<br />
+That said, feel free to take it and change...
+		</div>
+		<div class="bbCodeBlock-expandLink js-expandLink"><a role="button" tabindex="0">Click to expand...</a></div>
+	</div>
+</blockquote><br />
+<a href="https://obsproject.com/forum/threads/darkle.171880/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Church Video Software (VideoPsalm)</title>
+      <pubDate>Sun, 31 Dec 2023 01:13:29 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/church-video-software-videopsalm.172120/</link>
+      <guid isPermaLink="false">172120</guid>
+      <author>invalid@example.com (ToddMunoz)</author>
+      <category domain="https://obsproject.com/forum/list/resource-requests.29/"><![CDATA[Resource Requests]]></category>
+      <dc:creator>ToddMunoz</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hello Everyone<br />
+Im trying to understand how to intergrate obs with videopsalm presentation software... im currently using obs w/powerpoint for our church streaming.<br />
+What im struggling with is if I can still use the preview window as usual in obs. Videopsalm is a free worship software that I would like to intergrate into our services.<br />
+when I change the image on the videopsalm program it also changes both images for the preview and program scene (simutaneously) in obs.<br />
+I want to be able (I...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/church-video-software-videopsalm.172120/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Small Stutters / Check Settings Correct</title>
+      <pubDate>Sun, 31 Dec 2023 00:32:12 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/small-stutters-check-settings-correct.172115/</link>
+      <guid isPermaLink="false">172115</guid>
+      <author>invalid@example.com (AlessaB)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>AlessaB</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi Everybody,<br />
+<br />
+Decided to re-post as i am still not sure i have everything correctly. Originally i thought it was just a bit-rate problem. My intention is to Record gameplay at 60fps, 4k with no quality loss.<br />
+<br />
+Could someone kindly help me set this up? <br />
+<br />
+i have tried with numerous tutorials but i still get small stutters and frame drops when playing back the videos. I do not see said stutters at all in the gameplay i was doing.<br />
+<br />
+My Specs:<br />
+ - INTEL CORE I9-13900KF<br />
+ -  64GB <br />
+  -...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/small-stutters-check-settings-correct.172115/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>1</slash:comments>
+    </item>
+    <item>
+      <title>Multiple (03) issues: OBS Ver: 29.1.3 (64 bit) \ "Stale Preview", "Stopping Recording", "Encoder Error" with at least one documented crash.</title>
+      <pubDate>Sat, 30 Dec 2023 23:55:43 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/multiple-03-issues-obs-ver-29-1-3-64-bit-stale-preview-stopping-recording-encoder-error-with-at-least-one-documented-crash.170493/</link>
+      <guid isPermaLink="false">170493</guid>
+      <author>invalid@example.com (query-01)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>query-01</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">With the first install of OBS, after a few times of usage within twenty-four hours, we began to experience  OBS refusing to stop recording; image below.<br />
+<img src="https://obsproject.com/forum/attachments/obs_will_not_stop_recording_cr-png.98680/"
+			class="bbImage "
+			style=""
+			alt="OBS_will_not_stop_recording_cr.png"
+			title="OBS_will_not_stop_recording_cr.png"
+			width="1189" height="493" loading="lazy" /><br />
+... each time this &quot;Stopping Recording&quot; presented itself, 'Task Manager'\'End Task' was employed. Ultimately, after a few more of these 'Stopping Recording' issues, OBS crashed.<br />
+<u>There is a crash-log: Snippet </u>...<br />
+Unhandled exception: 80000003<br />
+Date/Time: 2023-10-19, 07:59:06<br />
+Fault address: 7FFD1EB9AA42 (c:\program...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/multiple-03-issues-obs-ver-29-1-3-64-bit-stale-preview-stopping-recording-encoder-error-with-at-least-one-documented-crash.170493/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+    <item>
+      <title>p6 and p7 look ahead enabled</title>
+      <pubDate>Sat, 30 Dec 2023 23:41:54 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/p6-and-p7-look-ahead-enabled.172116/</link>
+      <guid isPermaLink="false">172116</guid>
+      <author>invalid@example.com (equalf)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>equalf</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">it still this a thing? look ahead used to be on on p6 and p7 nvenc presets regardless the check/uncheck box.</div>]]></content:encoded>
+      <slash:comments>2</slash:comments>
+    </item>
+    <item>
+      <title>Automate 24/7 Stream for a scheduled Playlist</title>
+      <pubDate>Sat, 30 Dec 2023 23:18:29 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/automate-24-7-stream-for-a-scheduled-playlist.85336/</link>
+      <guid isPermaLink="false">85336</guid>
+      <author>invalid@example.com (ledaouk)</author>
+      <category domain="https://obsproject.com/forum/list/studio-feedback-and-suggestions/"><![CDATA[Ideas and Suggestions]]></category>
+      <dc:creator>ledaouk</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Hi,<br />
+What is the best workflow to automate obs streaming a scheduled playlist<br />
+Hi,<br />
+<br />
+What is the best workflow to automate obs streaming a scheduled playlist that will be managed by an in-house application, I did a workaround by adding a scene with vlc source form a directory and I tried to drop files in this folder continuously but it seems the vlc source will play only clips located when starting, does creating multiple scene and trying to auto switch them will help in this case?<br />
+Or any...<br />
+<br />
+<a href="https://obsproject.com/forum/threads/automate-24-7-stream-for-a-scheduled-playlist.85336/" class="link link--internal">Read more</a></div>]]></content:encoded>
+      <slash:comments>460</slash:comments>
+    </item>
+    <item>
+      <title>Isn't there a Text To Speech plugin for real-time text?</title>
+      <pubDate>Sat, 30 Dec 2023 23:09:06 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/isnt-there-a-text-to-speech-plugin-for-real-time-text.163805/</link>
+      <guid isPermaLink="false">163805</guid>
+      <author>invalid@example.com (oo22339)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>oo22339</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">I am currently using Closed Captioning via Google Speech Recognition 0.0.8.<br />
+This plug-in converts my voice into text in real time.<br />
+This text is entered as an OBS source and disappears after a while.<br />
+I want to convert this real-time text into AI voice and send it to the broadcast using this text source. <br />
+Is there a TTS plugin for this?<br />
+I searched, but I only see TTS plugins for donations or chatting.<br />
+Any help please?</div>]]></content:encoded>
+      <slash:comments>7</slash:comments>
+    </item>
+    <item>
+      <title>Bug visual obs pc</title>
+      <pubDate>Sat, 30 Dec 2023 22:16:03 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/bug-visual-obs-pc.172118/</link>
+      <guid isPermaLink="false">172118</guid>
+      <author>invalid@example.com (The kebab king)</author>
+      <category domain="https://obsproject.com/forum/list/windows-support.32/"><![CDATA[Windows Support]]></category>
+      <dc:creator>The kebab king</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">hello I'm new here but that's not the subject, it's already been more than a month since my obs had image bugs like grain or I don't really know what, I tested EVERYTHING, the optimization on youtube, use chat gpt, go and check the quality of my game and still these bugs whereas before on a less powerful PC that still everything works well. My fixed pc config: graphics card: geforce gt 1030, intel core i3 16gb ram.<img src="https://obsproject.com/forum/attachments/bug-obs-rob-1-png.100531/"
+			class="bbImage "
+			style=""
+			alt="bug obs rob 1.png"
+			title="bug obs rob 1.png"
+			width="782" height="427" loading="lazy" /><img src="https://obsproject.com/forum/attachments/bug-obs-rob-2-png.100530/"
+			class="bbImage "
+			style=""
+			alt="bug obs rob 2.png"
+			title="bug obs rob 2.png"
+			width="521" height="340" loading="lazy" /></div>]]></content:encoded>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>New to OBS, Want to screen capture without logging into an account</title>
+      <pubDate>Sat, 30 Dec 2023 22:03:48 +0000</pubDate>
+      <link>https://obsproject.com/forum/threads/new-to-obs-want-to-screen-capture-without-logging-into-an-account.172110/</link>
+      <guid isPermaLink="false">172110</guid>
+      <author>invalid@example.com (RickyO)</author>
+      <category domain="https://obsproject.com/forum/list/general-development.21/"><![CDATA[General Development]]></category>
+      <dc:creator>RickyO</dc:creator>
+      <content:encoded><![CDATA[<div class="bbWrapper">Since I'm new, not even sure I'm posting in correct area; apologies if in wrong area, and let me know where I should be posting with beginner's questions.  Thanks.  I'm learning as I go, starting with screen capture and then planning on streaming at some point thereafter.  I was hoping OBS would allow me to simply screen capture without registering an acvount.  Is that possible?  If so, how??</div>]]></content:encoded>
+      <slash:comments>4</slash:comments>
+    </item>
+  </channel>
+</rss>

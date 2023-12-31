@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/blog/progress-report-february-2019 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>OBS Studio Progress Report, February 2019 | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="A new update is released and therefore a new progress report. The story of version 23 involves a whole lot of research and a whole lot of development. Crowdfunding Crowdfunding is …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+                    <link rel="alternate" hreflang="cs" href="https://obsproject.com/cs/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="da" href="https://obsproject.com/da/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="de" href="https://obsproject.com/de/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="en" href="https://obsproject.com/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="es" href="https://obsproject.com/es/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="eu" href="https://obsproject.com/eu/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="fi" href="https://obsproject.com/fi/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="fr" href="https://obsproject.com/fr/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="hu" href="https://obsproject.com/hu/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="ja" href="https://obsproject.com/ja/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="ko" href="https://obsproject.com/ko/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="pt-br" href="https://obsproject.com/pt-br/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="ru" href="https://obsproject.com/ru/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="sv" href="https://obsproject.com/sv/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="tr" href="https://obsproject.com/tr/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="uk" href="https://obsproject.com/uk/blog/progress-report-february-2019">
+                        <link rel="alternate" hreflang="zh-cn" href="https://obsproject.com/zh-cn/blog/progress-report-february-2019">
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  class="active" href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header>
+<div class="pagewidth">
+
+  <div class="headerpusher"></div>
+
+  <div class="med_width">
+
+    <div class="bpheader">
+      <h1>OBS Latest News</h1>
+
+          </div>
+
+    <article class="blogpost">
+      <header>
+        <h2>
+          OBS Studio Progress Report, February 2019        </h2>
+      </header>
+
+      
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2019-02-28 12:30:00">
+      February 28th, 2019    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+      <div class="bp_content">
+        <p>A new update is released and therefore a new progress report. The story of version 23 involves a whole lot of research and a whole lot of development.</p>
+<h2>Crowdfunding</h2>
+<p>Crowdfunding is something I now realize we should have done a long time ago. There's no reason why we shouldn't be pursuing this. As the project grows, and as more contributors come on board, I want to make sure that we can guarantee a future not just for myself but for the project and as many contributors as we possibly can.</p>
+<p>After much discussion and looking at existing open source projects, we decided to create both a <a href="https://patreon.com/obsproject">Patreon</a> and <a href="https://opencollective.com/obsproject">Open Collective</a>. Our goal is so we can ensure that not only can the project continue operating, but also have the ability to grow. Personally speaking, I want to ensure that not only can I work for the users, but that I can delegate important tasks to other contributors with experience working on core code and actually be able to pay them for doing so.</p>
+<p>See the <a href="https://obsproject.com/blog/new-ways-to-support-obs-development">announcement blog post</a> by Ben (dodgepong) for more details.</p>
+<h2>Development of browser-based widgets in 23.0</h2>
+<p>The goal of browser widgets was so that we could integrate services such as Twitch and allow the ability to display things like the user's chat directly within the program. In 22.0, I sort of had CEF-based Qt widgets working, but they had a number of issues that hadn't been resolved yet, so I put it aside for the time being and made the 22.0 release. However for 23.0, I wanted to get it finished, and get it right.</p>
+<p>For those of you who aren't programmers, CEF is the <a href="https://bitbucket.org/chromiumembedded/cef">Chromium Embedded Framework</a>, an awesome library we use to allow us to use Chrome within OBS for things like the browser source. It's also what Spotify uses for their entire desktop app. Because of CEF, we were able to implement browser as UI with no extra resource cost than what OBS was already using when they had browser sources loaded.</p>
+<h3>High-DPI insanity</h3>
+<p>The first issue was DPI scaling support. The browser widget would not display correctly on monitors that had high-DPI scaling enabled. Eventually I thought I had thought found the fix: the browser subprocess needed to have high-DPI mode enabled as well as OBS. I made the commit <a href="https://github.com/obsproject/obs-browser/commit/eea74ff67d8d3233ed6c0c018810c62b239ee754">eea74ff6</a>, which I thought worked. However, another person on the OBS team discovered that when they had multiple monitors with different scaling, it would break when moving it across monitors! After what seemed like an entire week just investigating DPI issues and digging deep in to CEF/Chromium code, I discovered a special <a href="https://docs.microsoft.com/en-us/windows/desktop/hidpi/dpi-awareness-context">new API</a> that Microsoft had added recently in Windows 10, which fixed it. The mystery was solved in commit <a href="https://github.com/obsproject/obs-browser/commit/8521b2531d052e184528ce46172a9f1460760762">8521b2</a>.</p>
+<p>What an unprecedented amount of annoyance, and it was all just due to high-DPI scaling that the user can set on one or more of their monitors.</p>
+<h3>Cookies and Profiles</h3>
+<p>I implemented the ability to log in to your Twitch account, and eventually had Twitch chat working as a dockable panel as well. However, I soon realized that users may want different accounts across profiles; so I had to create a "cookie manager" specific to each profile, so that if a user switches from profile A with one account to profile B with another account, the chat windows/etc will appropriately go to that account's channel. That required storing cookies for each profile in a discrete and separate location from each other. It was a pain, but CEF provided all the tools to make my plans happen.</p>
+<h3>BTTV/FFZ support for Twitch Chat</h3>
+<p>Naturally, when I created the chat, I quickly realized there was another problem: too many users use BTTV and/or FFZ extensions to add custom chat features, such as extra emojis, animated emojis, or other quality-of-life features that many people have come to love. It's basically a must-have for Twitch chat these days, whether we like it or not. So, with the help of web pros on the OBS team, I implemented custom javascript that injected them into Twitch chat.</p>
+<h3>Popups and Other Unexpected Issues</h3>
+<p>When implementing service integration, I started with Twitch, which was the easiest service to implement. Mixer was similarly easy, but along the way, I discovered another annoyance and delay. When Mixer was acquired by Microsoft, they understandably started adding Microsoft features: one of which was logging in via your Microsoft account. However, when you log in with your Microsoft account on the OAuth login page, it creates a popup that starts from <code>about:blank</code> URL and is controlled via Mixer javascript to redirect it to the Microsoft login. I thought I had custom popup whitelisting working, but I then discovered I had to completely defer all whitelisted popups entirely to CEF and let it manage the popups itself, just to get that login working. It was a learning process.</p>
+<h3>Mac/Linux Browser Issues</h3>
+<p>Mac and Linux are another story entirely. I tried getting browser widgets working on macOS, but had a lot of crashes, so I had to put off Mac support for widgets for the 23.0 patch. I discovered what the issue was only a week ago, as well as the source behind many other crashes, but it still needs a lot of work before releasing. It'll have to wait until 23.1 or a patch after because of that. So in the future, macOS will finally get a little loving and some stability fixes.</p>
+<p>Linux has also been pretty neglected. I plan on getting the browser source finally working on Linux, as well as browser widgets.</p>
+<h2>Service Integration</h2>
+<p>Which leads to service integration: when going in to Settings or Auto-Configuration, users can now simply connect their account, log in to their service and just use it right then and there, without having to search around for their stream key. We were going to get YouTube integrated, but its API is quite a bit more complex, so we put it on hold for now to get out a solid release first. Other services are such as Facebook, Restream.io, and others will also be coming. We may also add an external API so plugins can add their own integration separately in the future.</p>
+<p>Note that if for whatever reason you'd prefer to use a stream key, you still can. It's completely optional for services that support stream keys.</p>
+<h2>NVENC Improvements</h2>
+<p>Originally, we used FFmpeg's implementation of NVENC to save time. It was less than a few hundred lines to implement, and like x264, it only required the raw frames on system RAM. However, I knew that if I implemented it myself and revamped the backend to where we could just give encoders textures directly, it would improve performance. The reason we didn't was behind the complexity of supporting Windows 7 as well. NVIDIA had contacted me asking me about it, and we talked back and forth on the matter. After discussions, I came up with a pretty simple plan: just forget Windows 7. If the user is on Windows 7, just simply fall back to the older version! It saved a lot of time, though not as much time as I'd hoped.</p>
+<h3>Multi-threading is very difficult to do right</h3>
+<p>I started off simple to get an initial implementation going: having the encoder the graphics thread (which is normally for rendering), but if either rendering or encoding lagged, it would cause a cascade of subsequent lag. My hope was that the encode call wouldn't stall, but unfortunately it turned out that it can stall, so the only solution was to separate the encoding to another thread, like we already did with software encoders. I had to implement texture sharing in commit <a href="https://github.com/obsproject/obs-studio/commit/b64d7d71d048e3d">b64d7d7</a>. This allowed the ability to not only share textures (like we did for game capture), but also lock textures between multiple threads and graphics contexts to ensure frame synchronization.</p>
+<p>After a lot of trial and error, I finally came up with a good threaded implementation in the libobs backend, which I implemented in commit <a href="https://github.com/obsproject/obs-studio/commit/93ba6e71283c41ae8">93ba6e7</a>. It operates on a circular texture queue buffer of a few textures, and I was able to make a specific optimization where if an encoder that uses RAM data is not simultaneously active (e.g. x264), then I can just swap the NV12 texture directly in to the queue instead of having to do an extra texture copy. Finally, after painfully laying all that groundwork for texture-based encoding support in the backend, it was time to finalize my new custom implementation of NVENC, which was accomplished in commit <a href="https://github.com/obsproject/obs-studio/commit/ed0c7bcd6a7a7ad84">ed0c7bc</a>.</p>
+<p>So needless to say, I am very happy with how I was able to implement it as well as the optimizations I was able to come up with.  It was pretty fun.</p>
+<h3>Performance Benefits</h3>
+<p>The performance benefits of the new NVENC are pretty significant. Before, the process looked like this:</p>
+<ul>
+<li>OBS renders a frame</li>
+<li>OBS transfers that texture from GPU to RAM like it would for any other encoder</li>
+<li>FFmpeg NVENC uploads it to the GPU</li>
+<li>FFmpeg NVENC encodes it</li>
+</ul>
+<p>Now, it looks like this:</p>
+<ul>
+<li>OBS renders a frame</li>
+<li>NVENC encodes it</li>
+</ul>
+<p>This is not just a performance improvement of OBS, but also reduces the impact of OBS on any game you're playing while using NVENC. It's a must-have for anyone streaming or recording games with a single PC setup.</p>
+<h2>Pull Requests and New Features by Contributors</h2>
+<p>Of course, by no means am I the only one working on this project. The OBS developer community continued to produce a ton of great improvements while I was in the trenches working on some of these larger issues, many of which were suggested by you on our <a href="https://ideas.obsproject.com/">ideas page</a>. In fact, I started enlisting the help of fellow contributor <a href="https://github.com/DDRBoxman">DDRBoxman</a> to help maintain the project so I can delegate pull requests and focus on code and project management.</p>
+<p>Here are some of the things added by our contributors this patch:</p>
+<ul>
+<li><a href="https://github.com/DDRBoxman">DDRBoxman</a> worked hard adding support for a long-standing <a href="https://ideas.obsproject.com/posts/58/additional-sdi-output-of-the-program-signal">feature request</a>: Decklink output, including keyer support. This is an extremely useful feature for users who use OBS in higher-level productions.</li>
+<li><a href="https://github.com/pkviet">pkv</a> was certainly busy this patch. He added support for recording multiple audio tracks when using FFmpeg output, which has been a long-standing <a href="https://obsproject.com/mantis/view.php?id=447">feature request</a>. He also worked on adding several new audio enhancements, including an <a href="https://www.practical-music-production.com/audio-limiter/">audio limiter</a> filter to protect your audio from clipping (requested <a href="https://ideas.obsproject.com/posts/312/turn-the-compressor-into-an-audio-limiter">here</a>) and an <a href="http://recordmixandmaster.com/2010-06-what-is-an-expander">audio expander</a> filter for smoother noise gating (requested <a href="https://ideas.obsproject.com/posts/320/add-downward-audio-expander">here</a>). He also added support for adding PSD files as image sources.</li>
+<li><a href="https://github.com/cg2121">cg2121</a> continues to be one of our most active contributors. He made it possible to automatically remux recordings upon completion (requested <a href="https://ideas.obsproject.com/posts/165/automatic-remux-after-recording-stops">here</a>), so that you don’t have to remember to do it yourself if you don’t want to. He also implemented the ability to do stereo audio balancing in the advanced audio properties dialog, added the “About” dialog to show the license and list contributors, added an image limit to the slideshow source preventing users from using up too much memory if they need to use a lot of images, and finally, he added the ability to resize the OBS canvas to a specific source’s size (requested <a href="https://ideas.obsproject.com/posts/181/obs-dynamic-resolution-setting">here</a>), which makes it easier to record applications at exactly their native resolution.</li>
+<li><a href="https://github.com/nleseul">nleseul</a> added support for batch file remuxing, so that you can remux several files from FLV to MP4 all at once.</li>
+<li>VAAPI support was finally merged in this patch, adding support for hardware encoding on Intel and AMD graphics cards on Linux. This was a long-time collaboration from several members of the OBS developer community, so huge thanks in particular to <a href="https://github.com/w23">w23</a>, <a href="https://github.com/reboot">reboot</a>, <a href="https://github.com/kingargyle">kingargyle</a>, <a href="https://github.com/kc5nra">kc5nra</a>, <a href="https://github.com/GloriousEggroll">GloriousEggroll</a> and <a href="https://github.com/kkartaltepe">kkartaltepe</a> for helping make this feature a reality.</li>
+<li><a href="https://github.com/Andersama">Andersama</a> made the Stats window dockable, so that you can make it a more permanently visible part of your OBS UI (requested <a href="https://ideas.obsproject.com/posts/55/make-stats-window-dockable-or-vertically-resizable">here</a>).</li>
+<li><a href="https://github.com/VodBox">Dillon</a> has continued his work adding usability improvements to OBS, this time revamping the the way source selections and locations are shown in the OBS preview. This makes it easier to see which source is selected, which source you might select if you click on the preview, and what parts of sources are currently outside the preview. He also added the ability to filter the hotkeys list to make it easier to find the hotkey you are looking to set.</li>
+</ul>
+<p>And keep in mind, there are many features still in the works by many contributors. So many great people work on what was just my humble little project, adding features they want, adding little improvements they like, improving performance, and submitting fixes left and right. It's clear this project has become a project made by the people, for the people, and that's exactly how I wanted it to be. I love this community so much, and I can't wait to see what else we can accomplish in the future.</p>
+<h2>Hindsight, 23.1, 24.0, and beyond</h2>
+<p>Briefly, I want to share some of my plans for near and long-term future.</p>
+<p>First of all I want to note that 23.0 wasn't meant to take as long as it did. I originally wanted to get it out in late November 2018. However we added too many features that were way too big all at once, did too much R&amp;D, ran in to too many unexpected hurdles that we had to leap over, and it ended up taking months to complete. Fortunately, I don't see any major R&amp;D of that level coming up any time soon again this year, so patch pace should greatly speed up once again.</p>
+<p>We plan on releasing a 23.1 patch quickly after; the plan is to mostly just merge pull requests and make a quick minor release, hopefully no more than a few weeks. It should have a bunch of smaller new features and minor bug fixes, with at least one or two more services integrated.</p>
+<p>My biggest focus near-term is to improve user experience, design, and first-time user onboarding. We need to make it easier for users to start streaming or recording for their first time and making it easier for them to understand and use OBS. The auto-configuration dialog was a big first step for that, but it’s clear there are still things we can do to improve the first-time experience.  This year, especially for 24.0, expect to see not just more new features, but also improvements to user experience, onboarding, and design.</p>
+<p>I also want to say that I plan to show some love for our recording-only users as well, such as the highly-requested pause recording feature.  I also plan to spend some quality time on the macOS and Linux versions.  Expect to see all those things in the near future.</p>
+<p>For the long-term, there are a near endless number of features we want to implement, and a near endless number of features requested by the users. I myself have some plans I've wanted to see come to fruition for a long time, and finally it's looking like I can make it happen.  For requested features, we can't always guarantee that we can get every feature right away, but if you have a feature you really want to see, please make sure to <a href="https://ideas.obsproject.com/">visit out ideas page</a>, and upvote or submit a feature you'd like to see.  Even if we can't always implement it right away, it helps us gauge what the majority of you want to see, and helps us prioritize things.</p>
+<h2>Saying goodbye to a long-time contributor and friend</h2>
+<p>Michel "Osiris" Snippe, a long-time contributor to the project, passed away unexpectedly February 15th, 2019. He first joined the project near the very beginning; he was always active with helping users and contributing bug fixes, and when the original author of the browser plugin had to move on to other projects a few years ago, Osiris took it upon himself to take over maintaining the plugin for a year or two, during a period of time where I was unable to dedicate time to maintaining it myself due to its complexity. For the longest time, he managed builds for the browser plugin: fixing minor bugs where he could, adding minor features, merging pull requests, and he took care of the plugin best he was able until I was finally able to refactor the project and make it a core plugin in 2018.</p>
+<p>He was always kind to people, and always active in the community. No more than a week before we found out we lost him, he was chatting away in our Discord server, helping users with support and goofing around with other contributors, mods, and admins. To lose a friend so suddenly hurts. It's traumatizing. It makes me sad, and it makes me upset.</p>
+<p>Thank you Michel, for helping us when we needed it, for being a part of our community, and for being a good friend. We'll all miss you.</p>
+<h2>Thank you</h2>
+<p>I want to thank you all for using our humble project, and I want to thank the community for taking it to the next level and making their own features, as well as being patient with me. It started off as a tool I wanted to create for fun out of boredom, and it completely turned not just my life around, but many others as well.  It created a wonderful community of friends.  The fact that so many of you are becoming successful thanks to the help of our humble tool makes me so happy to see. Thank you so much for using OBS, and I hope we can continue to work on it as long as possible.</p>
+<p>Also, thank you for reading this giant blog post. There was a ton of stuff to go over, and I didn't even get to cover everything.</p>
+<p>-Lain</p>      </div>
+
+    </article>
+
+  </div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/blog/progress-report-february-2019">Čeština</a> 
+                                  <a href="https://obsproject.com/da/blog/progress-report-february-2019">Dansk</a> 
+                                  <a href="https://obsproject.com/de/blog/progress-report-february-2019">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/blog/progress-report-february-2019">Español</a> 
+                                  <a href="https://obsproject.com/eu/blog/progress-report-february-2019">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/blog/progress-report-february-2019">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/blog/progress-report-february-2019">Français</a> 
+                                  <a href="https://obsproject.com/hu/blog/progress-report-february-2019">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/blog/progress-report-february-2019">日本語</a> 
+                                  <a href="https://obsproject.com/ko/blog/progress-report-february-2019">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/blog/progress-report-february-2019">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/blog/progress-report-february-2019">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/blog/progress-report-february-2019">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/blog/progress-report-february-2019">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/blog/progress-report-february-2019">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/blog/progress-report-february-2019">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/blog/progress-report-february-2019 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/blog/how-to-contribute-to-open-source by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>A maintainer's guide on how to contribute to an open source project on GitHub | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="This guide is written by the maintainer of the OBS Project , a relatively large open source project which receives about 30-50 pull requests per month. This is meant to be a very …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+                    <link rel="alternate" hreflang="cs" href="https://obsproject.com/cs/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="da" href="https://obsproject.com/da/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="de" href="https://obsproject.com/de/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="en" href="https://obsproject.com/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="es" href="https://obsproject.com/es/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="eu" href="https://obsproject.com/eu/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="fi" href="https://obsproject.com/fi/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="fr" href="https://obsproject.com/fr/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="hu" href="https://obsproject.com/hu/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="ja" href="https://obsproject.com/ja/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="ko" href="https://obsproject.com/ko/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="pt-br" href="https://obsproject.com/pt-br/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="ru" href="https://obsproject.com/ru/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="sv" href="https://obsproject.com/sv/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="tr" href="https://obsproject.com/tr/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="uk" href="https://obsproject.com/uk/blog/how-to-contribute-to-open-source">
+                        <link rel="alternate" hreflang="zh-cn" href="https://obsproject.com/zh-cn/blog/how-to-contribute-to-open-source">
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  class="active" href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header>
+<div class="pagewidth">
+
+  <div class="headerpusher"></div>
+
+  <div class="med_width">
+
+    <div class="bpheader">
+      <h1>OBS Latest News</h1>
+
+          </div>
+
+    <article class="blogpost">
+      <header>
+        <h2>
+          A maintainer's guide on how to contribute to an open source project on GitHub        </h2>
+      </header>
+
+      
+<div class="bpheader cf">
+
+  <!-- Author -->
+  
+  <!-- Date -->
+  <div class="bpinfo bpdate">
+    <time datetime="2018-08-10 16:30:00">
+      August 10th, 2018    </time>
+  </div>
+
+  <!-- Tags -->
+  <!-- Valid: 0 -->
+  
+  <br />
+
+</div>
+<!-- End Post Header -->
+      <div class="bp_content">
+        <p>This guide is written by the maintainer of the <a href="https://obsproject.com/">OBS Project</a>, a relatively large open source project which receives about 30-50 pull requests per month.  This is meant to be a very concise and to-the-point guide on how to contribute to this (or any) open source project based upon my experience over the years; how to maximize both your contribution efficiency, and how to maximize the efficiency of the maintainers and your fellow contributors.</p>
+<h2>The Bare Basics</h2>
+<p>To contribute to a project, you must first have skill using both Git and the programming languages the project uses.</p>
+<h3>Know how to and how not to use Git</h3>
+<p>If you are not experienced using Git when you contribute, you will reduce the project's contribution efficiency.</p>
+<p>Examples of particularly vital Git skills:</p>
+<ul>
+<li>
+<p>Knowing how to use interactive rebase (<code>git rebase -i [commit]</code>)</p>
+</li>
+<li>
+<p>Knowing how to squash commits (See: "Knowing how to use interactive rebase" above)</p>
+</li>
+<li>
+<p>If you plan on making larger or significant changes to the project, knowing how to split commits and use patch mode (<code>git add -p</code>, <code>git reset -p</code>, <code>git checkout -p</code>)</p>
+</li>
+<li>
+<p>Using <code>git diff</code> frequently against your changes (especially your unstaged changes before you create a commit)</p>
+</li>
+<li>
+<p>Knowing how to use GitHub/Bitbucket/etc</p>
+</li>
+</ul>
+<p>If you are just starting out with Git, please see: <a href="#git-guides">Git Guides and Other Links</a></p>
+<h3>Be able to work with others, and keep your ego in check</h3>
+<p>Most open source projects are driven by their community; being able to work with others and communication skill are essential requirements.  Be willing to listen to others and be patient and do your utmost to prevent discussions from getting needlessly heated.  Be willing to make compromises when possible.</p>
+<h2>How to contribute to open source projects efficiently</h2>
+<h3>Read the project's guidelines</h3>
+<p>All projects have a specific style of programming that they adhere to.  If the project is written in C/C++, their code style may be Allman, K&amp;R/KNF, Google, or GNU.  If this is all new to you, it would be wise to <a href="https://en.wikipedia.org/wiki/Indentation_style">learn a little bit about them</a>.  There are various styles of code with various indentation styles.  If a project comes with a .clang-format file, make sure to utilize that file and run clang-format on your changes before staging.  If they use a custom styling and do not use automatic formatting tools, try to look at the project history and emulate that as closely as possible before submission.  This project for example uses Linux Kernel style of KNF (Kernel Normal Form).</p>
+<p>Every project has their own way of doing things; sometimes they're highly structured, organized, and rigid, and sometimes they're lenient and scrappy.  Keep in mind that there are also occasional imperfections, quirks, and inconsistencies in any project as well.</p>
+<h3>Read the project's git and pull request history</h3>
+<p>One of the most often overlooked and quickest ways to understand how to make pull requests, changes, commits, or adhere to a project's overall style, is to spend some time going through the project's commit and pull request history.  This will allow you to learn how they structure and style their code, their commits, and their commit messages.  You can also see what sort of pull requests are typically accepted or rejected and why.  Try to understand the project, the way they do things, and try to at least match that or better when contributing.</p>
+<p>Making these efforts will save both you and the project a lot of time, and increase the project's efficiency as a whole.</p>
+<h3>How to make a good commits</h3>
+<p>When a maintainer reviews your code, they typically don't want to see a jumble of unrelated code in a single commit diff.  It's bad for bisecting, makes it hard to review, and more likely to be rejected until corrected.  There are a number of good guidelines that typically apply well to almost any open source project:</p>
+<ul>
+<li>
+<p>Do not mix multiple changes in to a single commit: split each unrelated change, however small, in to an individual commit.  This makes each specific change easier to review, and makes it so <code>git bisect</code> can catch bugs much more efficiently.</p>
+</li>
+<li>
+<p>Make sure each commit can be fully compiled (and preferably functional) by itself.  This ensures the ability to use bisect on that specific change.</p>
+</li>
+<li>
+<p>Do not include unnecessary changes to existing code, such as code styling changes or whitespace changes.</p>
+</li>
+<li>
+<p>When submitting a pull request, do not have commits that "fix" a mistake in a prior commit within the pull request unless you are intending to squash it in to that commit later (for example, if the pull request is considered a work in progress).  Squash the fix commit in to the commit that it fixes.</p>
+</li>
+<li>
+<p>Use <code>git diff</code> frequently on your unstaged changes.  Ask yourself if this something that would be easy to read, understand, and review by itself.  If not, you may need to split the code in to multiple commits.</p>
+</li>
+<li>
+<p>Make sure the commit messages are clear and concise: treat the commit message as a brief description and annotation to the code being submitted.  The best bet is to follow the 50/72 rule:</p>
+<ul>
+<li>
+<p>First line 50 columns or less (with the exception of the module prefix in our project), present tense, with no ending punctuation.</p>
+</li>
+<li>
+<p>Second line blank.</p>
+</li>
+<li>
+<p>Remaining lines are a detailed yet concise description, word-wrapped at 72 columns.</p>
+</li>
+</ul>
+<p>Here is a recent example:</p>
+<pre><code>libobs: Add functions to get raw video output
+
+Adds obs_add_raw_video_callback() and obs_remove_raw_video_callback()
+functions which allow the ability to get raw video frames without
+necessarily needing to create an output.</code></pre>
+</li>
+</ul>
+<h3>How to make good pull requests</h3>
+<p>Similarly, when a maintainer reviews a pull request, they would prefer not to have multiple commits that are unrelated.  Ideally, a pull request should be one total overall modification to the project, not multiple.</p>
+<ul>
+<li>
+<p>A pull request should be a set of commits that are all related.  If you have multiple changes that are completely unrelated, separate them in to different pull requests.  This makes things easier to review, more organized, and more likely to be accepted.</p>
+</li>
+<li>
+<p>If you want to make a pull request that depends on another pull request, it's recommended (though not necessarily a rule) to hold off on submitting it until the first one has accepted and merged.</p>
+</li>
+<li>
+<p>Pull request messages should contain a detailed description of what it changes and why it's beneficial to the project.</p>
+</li>
+<li>
+<p>If your pull request is a work in progress or has an issue, please make sure to note that.</p>
+</li>
+<li>
+<p>Do not create pull requests from your fork's master branch.  Create a new branch to use for the pull request.</p>
+</li>
+<li>
+<p>On GitHub, a pull request is simply a reference to a branch on your fork.  This means you do not have to remake your pull request to update it.  Just push to the branch and the pull request will be automatically updated.  If you rebased and/or squashed, force push to the branch and the pull request will be automatically updated similarly.</p>
+</li>
+<li>
+<p>Do not have merge commits within your pull request.  See <a href="#git-guides">Git Guides and Other Links</a> for more information on how to use Git first.</p>
+</li>
+</ul>
+<h3>Get involved with the community</h3>
+<p>Each project has its own way of managing its community: IRC, mailing lists, forums, Discord, or all of the above.  Get involved with the community and get to know the people around it.  Contributors should know who the maintainers of the project are.  Most projects will have one maintainer, although a few may have more than one, and rarely (such as in the case of the Linux kernel), there will be a hierarchy of maintainers for different subsystems of the project.</p>
+<p>Each community is different; some communities are very formal, some are very informal, and then some are somewhere in-between.  Some are very friendly, and some are unfortunately not so friendly.  Because of this, I highly recommend spending some time getting involved with the community and seeing whether or not you feel comfortable with them.</p>
+<h3>When not to contribute</h3>
+<p><em>Every single new line of code has a maintenance cost.</em></p>
+<p>Due to the fact that open source projects typically have limited resources, the code and features of an open source project usually need to be kept as minimal and focused as possible.  Contribute changes that benefit as many people as possible and align with the project's goals.</p>
+<p>If you have a feature or change like this that benefits you and people like you specifically, but doesn't necessarily benefit the broader base of users, you should consult the project's maintainers and community on whether or not the change is something they want.</p>
+<p>While it's easy to say "my change doesn't hurt anyone", an open source project's maintainers usually want to keep things as slim and focused as possible to minimize maintenance costs and technical debt.</p>
+<p>A bunch of small and/or rarely-used features can add up over time; it makes the code progressively more complicated, less readable, makes the project more of a burden to maintain, and reduces the project's overall efficiency little by little.</p>
+<p>If your feature does not benefit many users, it may be rejected; however seemingly insignificant of a change.  Your needs may simply not match the project's overarching goals and/or the project's focus.  The maintainers typically do not mean any offense.</p>
+<p>(anchor: git-guides)</p>
+<h2>Git Guides and Other Links</h2>
+<ul>
+<li>Pro Git (free online book): <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+<li>GitHub's Git Handbook: <a href="https://guides.github.com/introduction/git-handbook/">https://guides.github.com/introduction/git-handbook/</a></li>
+<li>GitHub's Git Cheetsheet: <a href="https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf">https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf</a></li>
+</ul>      </div>
+
+    </article>
+
+  </div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/blog/how-to-contribute-to-open-source">Čeština</a> 
+                                  <a href="https://obsproject.com/da/blog/how-to-contribute-to-open-source">Dansk</a> 
+                                  <a href="https://obsproject.com/de/blog/how-to-contribute-to-open-source">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/blog/how-to-contribute-to-open-source">Español</a> 
+                                  <a href="https://obsproject.com/eu/blog/how-to-contribute-to-open-source">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/blog/how-to-contribute-to-open-source">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/blog/how-to-contribute-to-open-source">Français</a> 
+                                  <a href="https://obsproject.com/hu/blog/how-to-contribute-to-open-source">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/blog/how-to-contribute-to-open-source">日本語</a> 
+                                  <a href="https://obsproject.com/ko/blog/how-to-contribute-to-open-source">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/blog/how-to-contribute-to-open-source">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/blog/how-to-contribute-to-open-source">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/blog/how-to-contribute-to-open-source">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/blog/how-to-contribute-to-open-source">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/blog/how-to-contribute-to-open-source">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/blog/how-to-contribute-to-open-source">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/blog/how-to-contribute-to-open-source by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

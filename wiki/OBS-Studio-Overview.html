@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/wiki/OBS-Studio-Overview by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki - OBS Studio Overview | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="This guide assumes you already have a basic knowledge of streaming services and streaming terminology, and aims to give you a quick overview of the most important options and …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header><!-- Debug2 -->
+<div class="pagewidth wiki_container">
+
+	<div class="headerpusher"></div>
+
+	<div class="full_width wiki_header">
+		<h1>OBS Studio Overview</h1>
+	</div>
+
+	<div class="wiki_content">
+		<p>This guide assumes you already have a basic knowledge of streaming services and streaming terminology, and aims to give you a quick overview of the most important options and features in OBS Studio. However, even if you don't have any previous experience, don't be discouraged! This guide can still be very useful. It may seem like a lot to take in all at once; just take your time and read carefully.</p>
+<p>This guide is broken into these main sections:</p>
+<ul>
+<li><a class='debug4' href='https://obsproject.com/wiki/OBS-Studio-Quickstart'>OBS Studio Quickstart</a></li>
+<li><a href="#settings">Settings</a></li>
+<li><a href="#scenes-and-sources">Scenes and Sources</a></li>
+<li><a href="#filters">Filters</a></li>
+<li><a href="#studio-mode">Studio Mode</a></li>
+<li><a href="#testing">Testing/Finishing up</a></li>
+<li><a href="#resource-links">Resource Links</a></li>
+</ul>
+<hr />
+<p><a id='quickstart' class='anchor' aria-hidden='true'></a></p>
+<h2>Quickstart</h2>
+<p>The 4-step Quickstart guide has been moved to <a class='debug4' href='https://obsproject.com/wiki/OBS-Studio-Quickstart'>OBS Studio Quickstart</a>. Use it if you're brand new to OBS Studio and just want to get started as soon as possible!</p>
+<hr />
+<p><a id='settings' class='anchor' aria-hidden='true'></a></p>
+<h2>Settings</h2>
+<p>Overall, most settings will be fairly self-explanatory. This will not cover everything, but will be an overview of the basics and what you can do in each section.</p>
+<p><a id='general' class='anchor' aria-hidden='true'></a></p>
+<h3>General</h3>
+<p><img src="https://i.imgur.com/g1jTQuD.png" alt="OBS Settings General Window" /></p>
+<ul>
+<li>Change theme (light/dark)</li>
+<li>Enable/disable system tray icon (required for hiding to tray)</li>
+<li>Show confirmation for starting/stopping streams</li>
+<li>Enable/Disable Source snapping</li>
+<li>Enable/Disable automatic recording when streaming</li>
+</ul>
+<p><a id='stream' class='anchor' aria-hidden='true'></a></p>
+<h3>Stream</h3>
+<p><img src="https://i.imgur.com/ryaPQOK.png" alt="OBS Settings Stream Window" /></p>
+<ul>
+<li>Select one of the included Services (Check "Show all services" to see the full list in the dropdown) or set Custom Streaming Server</li>
+<li>Select the server (or enter its URL for Custom Streaming Servers)</li>
+<li>Enter your Stream Key (this can generally be found using the 'Get Stream Key' button)</li>
+</ul>
+<p><a id='output' class='anchor' aria-hidden='true'></a></p>
+<h3>Output</h3>
+<p><img src="https://i.imgur.com/4DkWnOo.png" alt="OBS Settings Output Window" /></p>
+<p>Note: This section covers Simple output mode. Advanced output mode gives you further options to configure your Stream and Recording independently if you want to. We will not be covering advanced options in this guide (see links at the end). Generally, unless you know why you need to change it, the default options are recommended.</p>
+<p><a id='for-streaming' class='anchor' aria-hidden='true'></a></p>
+<h4>For Streaming:</h4>
+<ul>
+<li>Set your Video Bitrate. This changes according to your upload speed and the limitations of the service you use (for example, 6000kbps max for Twitch.tv)</li>
+<li>Set your Audio Bitrate. Around 160kbps for streaming, or lower if you have a low upload speed</li>
+</ul>
+<p><a id='for-recording' class='anchor' aria-hidden='true'></a></p>
+<h4>For Recording:</h4>
+<ul>
+<li>Set your Recording Path</li>
+<li>Record using a preset (Same as stream, High Quality, Indistinguishable Quality, and Lossless) and a different Encoder (if available)</li>
+<li>Select a Hardware Encoder if available (only if you use a different preset than "same as stream" and if a Hardware Encoder is available)[QuickSync, NVENC or AMD VCE]<ul>
+<li>Encoder option will not show up until you select a recording quality other than Same as stream</li>
+</ul>
+</li>
+<li>Enable the Replay Buffer (hotkey to save the buffer must be set under the Hotkeys section)</li>
+</ul>
+<p><a id='audio' class='anchor' aria-hidden='true'></a></p>
+<h3>Audio</h3>
+<p><img src="https://i.imgur.com/u4jnzjk.png" alt="OBS Settings Audio Window" /></p>
+<ul>
+<li>Change the Sampling Rate</li>
+<li>Select up to two Desktop Audio Devices</li>
+<li>Select up to three Microphone/Auxiliary Devices</li>
+<li>Enable Push-to-mute or Push-to-talk for each device (keys configured in the Hotkeys section)</li>
+</ul>
+<p><a id='video' class='anchor' aria-hidden='true'></a></p>
+<h3>Video</h3>
+<p><img src="https://i.imgur.com/xAdiwLU.png" alt="OBS Settings Video Window" /></p>
+<ul>
+<li>Base (Canvas) Resolution<ul>
+<li>This is the amount of space you have to fit your sources. You usually want this to match your monitor display resolution, or if you are playing games, the game resolution. Default is your primary monitor.</li>
+</ul>
+</li>
+<li>Output (Scaled) Resolution should be the Stream Output Resolution (720p, 480p, etc)<ul>
+<li>This is the resolution that the stream/recording will output at, using the selected downscale filter. If you have 1080p sources, but want to stream at 720p, this is where you would set that.</li>
+</ul>
+</li>
+<li>Common FPS Value should match your desired output FPS (30/60 for example)<ul>
+<li>Note that 60-fps streaming can be very taxing on your system compared to 30-fps. Test ahead of time and ensure your system has enough resources available.</li>
+</ul>
+</li>
+</ul>
+<p><a id='hotkeys' class='anchor' aria-hidden='true'></a></p>
+<h3>Hotkeys</h3>
+<p><img src="https://i.imgur.com/6FJyoNC.png" alt="OBS Settings Hotkeys Window" /></p>
+<p>Here you can set hotkeys that do a variety of things. Some examples:</p>
+<ul>
+<li>Start/Stop Streaming/Recording</li>
+<li>Hide/Show Sources</li>
+<li>Switch to a specific Scene</li>
+<li>Push-to-talk/Push-to-mute</li>
+<li>Capture active window for Game Capture</li>
+<li>Start/Stop/Save Replay Buffer</li>
+</ul>
+<p>Keyboard keys are supported. To use joysticks as hotkeys on Linux and Windows, you can use <a href="https://github.com/AntiMicro/antimicro">antimicro</a> to map the joystick keys to common keyboard keys and then use them in OBS.</p>
+<p><a id='advanced' class='anchor' aria-hidden='true'></a></p>
+<h3>Advanced</h3>
+<p><img src="https://i.imgur.com/24YIJuO.png" alt="OBS Settings Advanced Window" /></p>
+<p>Most of these settings should not be changed unless you understand exactly why you need to change them. However, some settings can be useful for new streamers, such as:</p>
+<ul>
+<li>Change the Filename Formatting (or use folders: %CCYY\%MM\%DD\%hh-%mm-%ss = 2016\07\10\12-35-25.flv)<ul>
+<li>Hover over the field for a popup that explains each available variable for naming</li>
+</ul>
+</li>
+<li>Activate Stream Delay</li>
+<li>Configure Automatic Reconnect</li>
+<li>Do not touch anything else in Advanced unless you absolutely know what you're doing. Really, we mean it. If you have questions, search around or hop in the support chat and ask!</li>
+</ul>
+<hr />
+<p><a id='scenes-and-sources' class='anchor' aria-hidden='true'></a></p>
+<h2>Scenes and Sources</h2>
+<p><img src="https://i.imgur.com/yt6bmb9.png" alt="Scenes and Source" /></p>
+<p>Scenes and Sources are the meat of OBS Studio. These are where you set up your stream layout, add your games, webcams, and any other devices or media that you want in the output.</p>
+<p>Right click in the box under Scenes (or use the plus at the bottom) to add a scene if there are none listed yet. You can create as many Scenes as you want, and name them to easily distinguish between them. For example: Welcome, Desktop, Game, Break, End. The arrow buttons can be used to change the order. As an important note, all Scenes and Sources are global in OBS Studio, so they can not share a name. This means if you name a source Game, you can't have a Scene with the name  Game.</p>
+<p>Once you have created a Scene, right click in the Sources box (or use the plus at the bottom) to add what ever you want to capture. Whether it's a specific window, a capture card or game, image, text or your entire display that you want to capture, there are several different sources available in OBS Studio for you to choose from. Try them out!</p>
+<p><img src="https://i.imgur.com/KfxiZIw.png" alt="Sources List" /></p>
+<p>You can re-align sources in the preview and change their order by using drag and drop in the list, or using the up and down arrow buttons. A Source that is listed above another Source in the list will be on top and might hide what's beneath it. This can also be useful for situations where you want something on top of another source, like a webcam to show over your game play. Any time you see an eye icon, you can click it to show or hide the associated item with it (this applies to filters as well)</p>
+<p>Visible: <img src="https://i.imgur.com/cNmEq1a.png" alt="Visible" /></p>
+<p>Hidden: <img src="https://i.imgur.com/OfEFWOk.png" alt="Hidden" /></p>
+<p>When a Source is selected in the Sources list, you will see a red box that shows up around it. This is the bounding box, and can be used to position sources within the preview as well as make the source larger or smaller. </p>
+<p><img src="https://i.imgur.com/TVdxBXG.png?1" alt="Source with bounding box" /></p>
+<p>If you need to crop a source, hold the Alt key and drag the bounding box. The edges will change to green to show it's being cropped. You can see both techniques being used here to crop and enlarge only the part of the screen we want to show:</p>
+<p><img src="https://i.imgur.com/lao4Zpo.png?2" alt="Cropped Source" /></p>
+<p>If you later on change the <em>Base (Canvas) Resolution</em> of OBS Studio, you will have to re-align or re-size the sources. Changing the <em>Output (Scaled) Resolution</em> does not have this effect.</p>
+<p>The following Hotkeys are available in the preview to tweak the source position and size:</p>
+<ul>
+<li>Hold CTRL to disable Source/Edge snapping</li>
+<li>Hold ALT to enable cropping</li>
+<li>CTRL+F for fit to Screen</li>
+<li>CTRL+S for stretch to Screen</li>
+<li>CTRL+D for center to Screen</li>
+<li>CTRL+R to reset a source size/position</li>
+</ul>
+<p>You can also right-click each source in the list to access further options. This is also how you access filters, which is discussed in the very next section!</p>
+<p><img src="https://i.imgur.com/bvDjzol.png" alt="Right Click Menu" /></p>
+<p>Edit Transform menu: </p>
+<p><img src="https://i.imgur.com/ESWUP10.png" alt="Transform Menu" /></p>
+<hr />
+<p><a id='filters' class='anchor' aria-hidden='true'></a></p>
+<h2>Filters</h2>
+<p><img src="https://i.imgur.com/T49neou.png" alt="Filters Window" /></p>
+<p>Filters can be added to each Source/Audio Device, and even to a Scene. You add a filter by right-clicking onto the desired Source or Scene in the list, and then selecting Filters. For Audio devices, click the little cogwheel next to the volume bar in the Audio Mixer and select Filters. Clicking the eye icon next to an added filter will enable/disable that filter, similar to showing/hiding a source. See the <a class='debug4' href='https://obsproject.com/wiki/Filters-Guide'>Filters Guide</a> link for a more in-depth guide on Filters and their specific function. </p>
+<p>List of Effect Filters:</p>
+<ul>
+<li>Image Mask/Blend</li>
+<li>Crop/Pad</li>
+<li>Color Correction</li>
+<li>Scaling/Aspect Ratio</li>
+<li>Scroll</li>
+<li>Color Key</li>
+<li>Sharpen</li>
+<li>Chroma Key</li>
+</ul>
+<p>List of Audio/Video Filters:</p>
+<ul>
+<li>Gain</li>
+<li>Video Delay (not available for Window, Display, or Game Capture)</li>
+<li>Noise Suppression</li>
+<li>Noise Gate</li>
+</ul>
+<hr />
+<p><a id='studio-mode' class='anchor' aria-hidden='true'></a></p>
+<h2>Studio Mode</h2>
+<p><img src="https://i.imgur.com/rhS1Yjv.png?2" alt="Studio Mode" /></p>
+<p>Studio mode can be a bit confusing. First, let's understand what the purpose of Studio mode is.</p>
+<p>Activating Studio Mode allows you to change your Scenes in the background without your viewers being able to see you making those changes. After you click on the Studio Mode button, you will see the current Live Scene (what your viewers see) on the right while your edit Scene on the left.</p>
+<p>After you are done editing the Scene you can click on "Transition" (or use a Quick Transition/Hotkey if you added one) to swap the left and right, making the Scene you were editing the live Scene. If you are changing Scenes, the last active Scene will be shown in the edit area on the left. After you are done with everything and transitioned to the changed Scene, you can deactivate Studio Mode until you need to edit again. Viewers cannot see when Studio Mode is enabled or not.</p>
+<p><a id='scene-transitions' class='anchor' aria-hidden='true'></a></p>
+<h3>Scene Transitions</h3>
+<p>Some Transitions in OBS Studio are available from the first launch: Fade and Cut Transition. You can add more using the plus button in the Scene Transitions section. Currently Swipe, Slide, Fade to color, and Luma Wipe (with several wipe options) are available. More may come in the future.</p>
+<p>You can switch the currently active Transition with the drop-down menu and change its duration.</p>
+<p>After you have configured a Transition, you can also add it as a Quick Transition in Studio Mode. For Quick Transitions, you can configure the duration (length) of the transition as well. For example, you can add the same Fade to your Quick Transitions Menu with 500ms and 1000ms if you wanted. Also, you could configure a Swipe left and a Swipe right transition, then add them both as Quick Transitions and use them to first swipe left in your Scene A to change Scene B, and then swipe right back to your newly configured Scene B when you are done.</p>
+<hr />
+<p><a id='testing' class='anchor' aria-hidden='true'></a></p>
+<h2>Testing</h2>
+<p>There are many more options and functions inside OBS Studio, but I hope you got a good idea of the different things that are possible with this great tool.</p>
+<p><a id='test-test-test' class='anchor' aria-hidden='true'></a></p>
+<h3>Test, test, test!</h3>
+<p>Now it's time to start testing! Are the settings working? Is the stream running smooth? Are all your Scenes configured how you want them? It's strongly recommended that you test everything as best as you can before starting your first live stream. This can help work out any kinks or performance issues you might be having ahead of time, and save the embarrassment of any issues on the stream itself.</p>
+<p>If you have problems, start a thread in the <a href="https://obsproject.com/forum/categories/obs-studio-support.30/">Support section of the forums</a>. Be sure to <a href="https://obsproject.com/forum/threads/please-post-a-log-with-your-issue-heres-how.23074/">include a log file</a>. Alternately, you can join our <a href="https://obsproject.com/chat/">community chat</a> to get live help from community volunteers.</p>
+<p>If you want more control over your Recording settings or want to record multiple audio tracks, switch the Output Mode to Advanced and check out this guide: <a href="https://obsproject.com/wiki/Advanced-Recording-Guide-With-Multi-Track-Audio">High quality recording and multiple Audio Tracks</a></p>
+<hr />
+<p><a id='resource-links' class='anchor' aria-hidden='true'></a></p>
+<h2>Resource Links</h2>
+<ul>
+<li><a href="https://obsproject.com/wiki/Advanced-Recording-Guide-With-Multi-Track-Audio">Advanced local recording guide</a></li>
+<li><a href="https://obsproject.com/forum/resources/full-video-guide-for-obs-studio-and-twitch.377/">Video guide for OBS Studio</a></li>
+<li><a href="https://obsproject.com/forum/threads/my-stream-lags-buffers-loads-constantly-for-my-viewers-but-why.18465/">Buffering issues</a></li>
+<li><a href="https://obsproject.com/forum/threads/high-cpu-usage-high-encoding-taking-too-long-to-encode-read-this-first.23334/">CPU overload/High Encoding issues</a></li>
+<li><a href="https://obsproject.com/forum/threads/dropped-frames-disconnecting-lag-read-this-first.8870/">Dropped Frame issues</a></li>
+<li><a href="https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/">Laptop troubleshooting</a></li>
+<li><a href="https://obsproject.com/wiki/Filters-Guide">In-depth filters guide</a></li>
+<li><a href="https://obsproject.com/forum/resources/obs-studio-enable-coreaudio-aac-encoder-windows.220/">Enabled CoreAudio encoder for better audio quality</a></li>
+<li><a href="https://stream.twitch.tv/encoding/">Twitch.tv encoding guide</a></li>
+</ul>
+<p><code>Original guide created by Jack0r, edits/updates by Fenrir</code></p>
+<p>Note: This guide is a work in progress, and any updates/contributions are very welcome!</p>
+		&nbsp;
+
+	</div>
+
+	<div class="wiki_sidebar">
+
+		<h1><a href="https://obsproject.com/wiki/Home">Home</a></h1>
+<h1><a href="https://obsproject.com/wiki/install-instructions">Install instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/install-instructions#windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#macos">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#freebsd">FreeBSD</a></li>
+</ul>
+<h1><a href="https://obsproject.com/wiki/Building-OBS-Studio">Build instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Mac">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-FreeBSD">FreeBSD</a></li>
+</ul>
+<h1>Development &amp; Scripting</h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development">Getting Started with OBS Studio Development</a></li>
+<li><a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">Getting Started With OBS Scripting</a><ul>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake">Scripting Tutorial: Source Shake</a></li>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter">Scripting Tutorial: Halftone Filter</a></li>
+</ul>
+</li>
+<li><a href="https://obsproject.com/wiki/Service-Submission-Guidelines">Service Submission Guidelines</a></li>
+</ul>
+	</div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/wiki">Čeština</a> 
+                                  <a href="https://obsproject.com/da/wiki">Dansk</a> 
+                                  <a href="https://obsproject.com/de/wiki">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/wiki">Español</a> 
+                                  <a href="https://obsproject.com/eu/wiki">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/wiki">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/wiki">Français</a> 
+                                  <a href="https://obsproject.com/hu/wiki">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/wiki">日本語</a> 
+                                  <a href="https://obsproject.com/ko/wiki">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/wiki">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/wiki">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/wiki">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/wiki">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/wiki">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/wiki">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/wiki/OBS-Studio-Overview by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>Wiki - Getting Started With OBS Studio Development | OBS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta name="description" content="So you want to contribute programming for OBS Studio? Great! Whether you're making a new plugin or tinkering with OBS's core, we appreciate all contributions to the project. …">
+    <meta name="keywords" content="OBS, OBS Studio, Stream, Video, Live Streaming, Recording, Games, Twitch, YouTube, Livestream, Open Broadcaster Software">
+    <!--<link rel="preload" href="/assets/fonts/open-sans-v18-latin-ext_latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>-->
+  <link href="https://obsproject.com/assets/css/blurple.min.css?20230116-1" rel="stylesheet">    <link rel="alternate" type="application/rss+xml" title="RSS Feed obsproject.com" href="https://obsproject.com/blog/rss">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://obsproject.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://obsproject.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://obsproject.com/favicon-16x16.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-34644124-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-34644124-1', {
+      'anonymize_ip': true
+    });
+  </script>
+</head>
+
+<body class="">
+
+  <div id="wrapper">
+
+    <header id="header" class="cf">
+      <a class="logo" href="https://obsproject.com/">
+        <img src="https://obsproject.com/assets/images/new_icon_small-r.png" alt="OBS" />
+      </a>
+
+      <div class="header_title">
+        <div class="header_title_main">OBS</div>
+        <div class="header_subtitle">Open Broadcaster Software<span class="smalltext">®️</span></div>
+      </div>
+
+      <div id="SocialButtons">
+
+        <div id="DiscordButton">
+          <a href="https://discord.gg/obsproject" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord" />
+          </a>
+          <span class="tooltip">Discord</span>
+        </div>
+
+        <div id="TwitterButton">
+          <a rel="me" href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <span class="tooltip">Twitter</span>
+        </div>
+
+        <div id="MastodonButton">
+          <a rel="me" href="https://mastodon.social/@OBSProject" target="_blank" aria-label="OBS Mastodon">
+            <img src="https://obsproject.com/assets/images/Mastodon.svg" class="icon-mastodon">
+          </a>
+          <span class="tooltip">Mastodon</span>
+        </div>
+
+        <div id="GitHubButton">
+          <a rel="me" href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS Studio GitHub">
+            <i class="icon-github"></i>
+          </a>
+          <span class="tooltip">GitHub</span>
+        </div>
+        <!--
+          <div id="BlogButton">
+            <a href="https://obsproject.com/blog">
+              <i class="icon-blog"></i>
+            </a>
+          </div>
+
+          <div id="LivechatButton">
+            <a href="https://obsproject.com/chat" target="_blank">
+              <i class="icon-comment">Community Chat</i>
+            </a>
+          </div>
+        -->
+
+        <div id="ContributeButton">
+          <a href="https://obsproject.com/contribute">
+            <i class="icon-heart">Contribute</i>
+          </a>
+        </div>
+
+      </div>
+
+      <nav>
+
+  <ul class="menu cf">
+          <li>
+                <a  href="https://obsproject.com/">Home</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/download">Download</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/blog">News</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/help">Help</a>
+
+        
+      </li>
+          <li>
+                <a  href="https://obsproject.com/forum/">Forum</a>
+
+        
+      </li>
+      </ul>
+
+</nav>
+    </header><!-- Debug2 -->
+<div class="pagewidth wiki_container">
+
+	<div class="headerpusher"></div>
+
+	<div class="full_width wiki_header">
+		<h1>Getting Started With OBS Studio Development</h1>
+	</div>
+
+	<div class="wiki_content">
+		<p>So you want to contribute programming for OBS Studio? Great! Whether you're making a new plugin or tinkering with OBS's core, we appreciate all contributions to the project. Follow this guide to get up and running.</p>
+<p><a id='a-few-things-to-know' class='anchor' aria-hidden='true'></a></p>
+<h2>A few things to know</h2>
+<p>If you're interested in doing OBS Studio development, you should be experienced in both the C and C++ programming languages, and Objective-C for Apple systems (optionally). It is highly recommended that you read <a href="https://github.com/obsproject/obs-studio/blob/master/CONTRIBUTING.rst">OBS Studio's Contributing guide</a> so that you know code guidelines as well as what is required when you want to submit a change.</p>
+<p><a id='developer-chat' class='anchor' aria-hidden='true'></a></p>
+<h2>Developer Chat</h2>
+<p>Our developer community is always helpful to new developers wanting to get their feet wet with OBS programming. If you ever need help you can join the developer chat on Discord here: <strong><a href="https://discord.gg/obsproject">https://discord.gg/obsproject</a></strong></p>
+<p><a id='starting-obs-development' class='anchor' aria-hidden='true'></a></p>
+<h2>Starting OBS Development</h2>
+<p><a id='1-get-the-code' class='anchor' aria-hidden='true'></a></p>
+<h3>1. Get the code</h3>
+<p>Check out the source code for OBS Studio from Github: <a href="https://github.com/obsproject/obs-studio">https://github.com/obsproject/obs-studio</a></p>
+<pre><code>git clone --recursive https://github.com/obsproject/obs-studio.git</code></pre>
+<p>Don't forget the <code>--recursive</code> argument to get all submodules.</p>
+<p><a id='2-build-the-code' class='anchor' aria-hidden='true'></a></p>
+<h3>2. Build the code</h3>
+<p>The next step is to get the program building so that you can start making your modifications or plugins.</p>
+<p>A guide for building OBS Studio for your platform can be found here: <a href="https://obsproject.com/wiki/Building-OBS-Studio">https://obsproject.com/wiki/Building-OBS-Studio</a></p>
+<p><a id='3-read-the-documentation' class='anchor' aria-hidden='true'></a></p>
+<h3>3. Read the documentation</h3>
+<p>OBS's reference documentation can be found here: <a href="https://obsproject.com/docs/">https://obsproject.com/docs/</a></p>
+<p>It's also recommended to examine some of the default plugins to see how they interact with the API in OBS Studio. Note that the OBS core (/libobs) is separate from the OBS UI (/ui), which is also separate from OBS core plugins (/plugins), so you can begin to see how the different modules of code fit together.</p>
+<p><a id='4-check-out-issues-on-the-ideas-page-and-the-bug-tracker' class='anchor' aria-hidden='true'></a></p>
+<h3>4. Check out issues on the Ideas page and the Bug Tracker</h3>
+<p>Many user post ideas and suggestions for improvements to OBS on the OBS Ideas page. You can find the Ideas page (Fider) here: <a href="https://ideas.obsproject.com/">https://ideas.obsproject.com/</a></p>
+<p>OBS Studio currently tracks bugs on <a href="https://github.com/obsproject/obs-studio/issues">GitHub Issues</a>.</p>
+<p>Feel free to explore ideas, issues, suggestions, and bugs, and if you feel so inclined, try your hand at implementing one!</p>
+<p><a id='plugin-development' class='anchor' aria-hidden='true'></a></p>
+<h2>Plugin Development</h2>
+<p>Many people want to get into OBS Studio development in order to make a plugin, rather than alter core functionality. It turns out that OBS code is already pretty modular, and many features that are considered "core" features are actually plugins that just come bundled with OBS, so learning about OBS development really means learning about plugin development as well.</p>
+<p>For more details on plugin development, check this page of the documentation: <a href="https://obsproject.com/docs/plugins.html">https://obsproject.com/docs/plugins.html</a></p>
+<p>We strongly recommend using the OBS plugin template as a starting point for new plugin development: <strong><a href="https://github.com/obsproject/obs-plugintemplate">https://github.com/obsproject/obs-plugintemplate</a></strong></p>
+<p><a id='example-plugins' class='anchor' aria-hidden='true'></a></p>
+<h3>Example plugins</h3>
+<ul>
+<li>Example source plugin: <a href="https://github.com/obsproject/obs-studio/blob/master/plugins/image-source/color-source.c">Color Source</a></li>
+<li>Example service plugin: <a href="https://github.com/obsproject/obs-studio/blob/master/plugins/rtmp-services/rtmp-custom.c">Custom RTMP Service</a></li>
+<li>Example encoder plugin: <a href="https://github.com/obsproject/obs-studio/blob/master/plugins/obs-x264/obs-x264.c">x264 Encoder</a></li>
+<li>Example output plugin: <a href="https://github.com/obsproject/obs-studio/blob/master/plugins/obs-outputs/flv-output.c">FLV Output</a></li>
+</ul>
+<p><a id='scripting' class='anchor' aria-hidden='true'></a></p>
+<h2>Scripting</h2>
+<p>Many people want to write modules for OBS, but are not familiar with C/C++, or don't want to go through the trouble of setting up a build environment. Fortunately, OBS is capable of running Lua and Python scripts via the bundled LuaJIT or your system's Python environment. These scripts are capable of accessing the OBS API and doing many of the same things you could do by writing OBS C/C++ code directly. In fact, you can even make new plugins with Lua (though not with Python).</p>
+<p>For more details on scripting, check this page of the documentation: <a href="https://obsproject.com/docs/scripting.html">https://obsproject.com/docs/scripting.html</a></p>
+<p><a id='a-quick-note-about-licensing' class='anchor' aria-hidden='true'></a></p>
+<h2>A quick note about licensing</h2>
+<p>OBS Studio is an open source program licensed under the <a href="https://github.com/obsproject/obs-studio/blob/master/COPYING">GPLv2</a>. That means that if you create a plugin for OBS Studio or a modified version of OBS Studio and distribute it in binary form, you must give users a way to access the source code of your binary. Otherwise, you will be in violation of the license. The easiest way to do this is to have a public Github repository of your fork or plugin, and include a text file in your download for the binary containing a link to the repo. The relevant part of the license is under section 3 of the GPLv2.</p>
+<p>Thanks for being willing to help out, and good luck!</p>
+		&nbsp;
+
+	</div>
+
+	<div class="wiki_sidebar">
+
+		<h1><a href="https://obsproject.com/wiki/Home">Home</a></h1>
+<h1><a href="https://obsproject.com/wiki/install-instructions">Install instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/install-instructions#windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#macos">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/install-instructions#freebsd">FreeBSD</a></li>
+</ul>
+<h1><a href="https://obsproject.com/wiki/Building-OBS-Studio">Build instructions</a></h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Windows">Windows</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Mac">macOS</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-Linux">Linux</a></li>
+<li><a href="https://obsproject.com/wiki/Build-Instructions-For-FreeBSD">FreeBSD</a></li>
+</ul>
+<h1>Development &amp; Scripting</h1>
+<ul>
+<li><a href="https://obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development">Getting Started with OBS Studio Development</a></li>
+<li><a href="https://obsproject.com/wiki/Getting-Started-With-OBS-Scripting">Getting Started With OBS Scripting</a><ul>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Source-Shake">Scripting Tutorial: Source Shake</a></li>
+<li><a href="https://obsproject.com/wiki/Scripting-Tutorial-Halftone-Filter">Scripting Tutorial: Halftone Filter</a></li>
+</ul>
+</li>
+<li><a href="https://obsproject.com/wiki/Service-Submission-Guidelines">Service Submission Guidelines</a></li>
+</ul>
+	</div>
+
+</div>
+
+  <div class="footer_push"></div>
+</div>
+<!-- End Wrapper -->
+  
+  <footer id="footer" class="footer cf">
+    <div class="footer_extra">
+      <div class="footer_left">
+        <div class="footer_row">
+          <div class="logo"><img src="https://obsproject.com/assets/images/new_icon_small-r.png"></div>
+          <div class="footer_title">OBS Project</div>
+        </div>
+        <div class="footer_row footer_social">
+          <a href="https://twitter.com/OBSProject" target="_blank" aria-label="OBS Twitter">
+            <i class="icon-twitter"></i>
+          </a>
+          <a href="https://facebook.com/OpenBroadcasterSoftware" target="_blank" aria-label="OBS Facebook">
+            <i class="icon-facebook"></i>
+          </a>
+          <a href="https://obsproject.com/discord" target="_blank" aria-label="OBS Discord">
+            <img src="https://obsproject.com/assets/images/Discord.svg" class="icon-discord">
+          </a>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">
+            <i class="icon-github"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer_right">
+
+        <!-- App -->
+        <div class="footer_items"><div class="footer_category">OBS Studio</div>
+          <a href="https://obsproject.com/download" aria-label="Download">Download</a>
+          <a href="https://ideas.obsproject.com/" target="_blank" aria-label="Feature suggestions">Ideas</a>
+          <a href="https://obsproject.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+        </div>
+
+        <!-- Contribute -->
+        <div class="footer_items"><div class="footer_category">Contribute</div>
+          <a href="https://github.com/obsproject/obs-studio" target="_blank" aria-label="OBS GitHub">GitHub</a>
+          <a href="https://opencollective.com/obsproject" aria-label="OBS on Open Collective">Open Collective</a>
+          <a href="https://www.patreon.com/obsproject/overview" aria-label="OBS on Patreon">Patreon</a>
+        </div>
+
+        <!-- Help -->
+        <div class="footer_items"><div class="footer_category">Support</div>
+          <a href="https://obsproject.com/help" aria-label="Help Portal">Help Portal</a>
+          <a href="https://obsproject.com/forum/" aria-label="Forums">Forums</a>
+          <a href="https://obsproject.com/discord" aria-label="Official Discord">Discord</a>
+          <a href="https://obsproject.com/wiki" aria-label="Support Wiki">Wiki</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2012 - 2023. OBS and OBS Studio are created and maintained by Lain. Development by <a href="https://github.com/obsproject/OBS-studio/graphs/contributors">OBS Studio Contributors</a>.<br />
+Website designed and created by <a href="https://twitter.com/Warchamp7">Warchamp7</a>, powered by <a href="https://getkirby.com/made-with-kirby-and-love">Kirby CMS</a>. Downloads powered by <a href="https://fastly.com/">Fastly</a>.</p>    </div>
+    <br>
+    <div class="languages" arial-label="Select Language">
+    <p>
+                          <a href="https://obsproject.com/cs/wiki">Čeština</a> 
+                                  <a href="https://obsproject.com/da/wiki">Dansk</a> 
+                                  <a href="https://obsproject.com/de/wiki">Deutsch</a> 
+                                                <a href="https://obsproject.com/es/wiki">Español</a> 
+                                  <a href="https://obsproject.com/eu/wiki">Euskara</a> 
+                                  <a href="https://obsproject.com/fi/wiki">Suomi</a> 
+                                  <a href="https://obsproject.com/fr/wiki">Français</a> 
+                                  <a href="https://obsproject.com/hu/wiki">Magyar</a> 
+                                  <a href="https://obsproject.com/ja/wiki">日本語</a> 
+                                  <a href="https://obsproject.com/ko/wiki">한국어</a> 
+                                  <a href="https://obsproject.com/pt-br/wiki">Português do Brasil</a> 
+                                  <a href="https://obsproject.com/ru/wiki">ру́сский</a> 
+                                  <a href="https://obsproject.com/sv/wiki">Svenska</a> 
+                                  <a href="https://obsproject.com/tr/wiki">Türkçe</a> 
+                                  <a href="https://obsproject.com/uk/wiki">українська</a> 
+                                  <a href="https://obsproject.com/zh-cn/wiki">中文(简体)</a> 
+                  </p>
+    </div>
+
+  </footer>
+</body>
+
+<!-- Mirrored from obsproject.com/wiki/Getting-Started-with-OBS-Studio-Development by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 31 Dec 2023 03:57:04 GMT -->
+</html>
