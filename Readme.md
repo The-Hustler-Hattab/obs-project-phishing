@@ -23,9 +23,7 @@ To get started with the C2 project, follow these steps:
     git clone https://github.com/The-Hustler-Hattab/obs-project-phishing.git
     ```
 
-2. Explore the educational materials, code samples, and documentation provided.
-
-3. Ensure that you are using the information and code responsibly and ethically.
+2. Ensure that you are using the information and code responsibly and ethically.
 
 
 ## How to Spot a Potentially Malicious Clone of a Popular Download Website
