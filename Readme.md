@@ -6,7 +6,7 @@ This page is meant for educational purposes only and is part of the C2 (Command 
 
 ## Purpose
 
-This is a clone of the obs project web page with the download link replaced with a malware. Individuals who download OBS or other video streaming software often possess robust graphics cards, making their systems well-suited for efficient bitcoin mining operations.
+This is a clone of the obs project web page with the download link replaced with malware. Individuals who download OBS or other video streaming software often possess robust graphics cards, making their systems well-suited for efficient Bitcoin mining operations.
 
 
 
@@ -23,9 +23,7 @@ To get started with the C2 project, follow these steps:
     git clone https://github.com/The-Hustler-Hattab/obs-project-phishing.git
     ```
 
-2. Explore the educational materials, code samples, and documentation provided.
-
-3. Ensure that you are using the information and code responsibly and ethically.
+2. Ensure that you are using the information and code responsibly and ethically.
 
 
 ## How to Spot a Potentially Malicious Clone of a Popular Download Website
@@ -70,4 +68,10 @@ Look for user reviews and feedback about the website and its downloads. Legitima
 
 - **Check Reviews:** Search for reviews on reputable forums or review websites.
 
+## C2-Components
 
+[C2 UI](https://github.com/The-Hustler-Hattab/c2-ui)  
+[C2 Server](https://github.com/The-Hustler-Hattab/C2JavaServer)   
+[C2 JAVA Agent](https://github.com/The-Hustler-Hattab/ReverseShellWebSocketAgent)  
+[C2 C# .NET Agent (RECOMMENDED)](https://github.com/The-Hustler-Hattab/WebSocketReverseShellDotNet)  
+[Malware Distribution Phishing Page](https://github.com/The-Hustler-Hattab/obs-project-phishing)  
